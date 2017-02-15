@@ -1,11 +1,11 @@
 <?php
 /**
- * Understrap Child Functions
+ * LittleSis Functions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package understrap
- * @subpackage understrap-child
+ * @subpackage littlesis
  * @since 0.1.0
  */
 

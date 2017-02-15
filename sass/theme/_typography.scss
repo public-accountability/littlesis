@@ -1,0 +1,19 @@
+body {
+  font-size: 16px;
+  font-family: $font__sans-serif;
+  color: $color__text-primary;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font__heading;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.entry-title {
+  font-family: $font__heading;
+  font-weight: normal;
+}

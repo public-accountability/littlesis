@@ -1,0 +1,27 @@
+body {
+  background-color: $color__white;
+  color: $color__text-primary;
+}
+
+.entry-meta {
+  color: $color__text-light;
+}
+
+table {
+  @extend .table;
+  width: 100%;
+}
+
+.read-more {
+  padding-bottom: .25em;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color__black;
+}
+
+.category-link {
+  @extend .btn;
+  @extend .btn-secondary;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}

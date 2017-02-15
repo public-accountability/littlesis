@@ -1,0 +1,31 @@
+.single {
+  figure{
+    margin-left: calc(10% - 50vw);
+    margin-right: calc(10% - 50vw);
+
+    img {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+}
+
+.archive {}
+
+.sticky {}
+
+.featured-content {
+  article {
+    display: flex;
+    flex-wrap: wrap;
+
+    .post-image {
+      @extend .col-md-6;
+    }
+    .entry-body {
+      @extend .col-md-6;
+    }
+  }
+}
