@@ -1,12 +1,12 @@
 <?php
 /**
- * Understrap Child Enqueue Functions
+ * LittleSis Enqueue Functions
  *
  * @link https://developer.wordpress.org/reference/functions/wp_enqueue_script/
  * @link https://developer.wordpress.org/reference/functions/wp_enqueue_style/
  *
  * @package understrap
- * @subpackage understrap-child
+ * @subpackage littlesis
  * @since 0.1.0
  */
 
@@ -40,9 +40,10 @@ add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 function theme_enqueue_styles() {
 
 	// Get the theme data
-	$the_theme = wp_get_theme();
+  $the_theme = wp_get_theme();
 
-    wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/style.min.css', array(), $the_theme->get( 'Version' ) );
-    wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/app.min.js', array(), $the_theme->get( 'Version' ), true );
+  wp_enqueue_style( 'littlesis-styles', get_stylesheet_directory_uri() . '/css/style.min.css', array(), $the_theme->get( 'Version' ) );
+  wp_enqueue_script( 'littlesis-scripts', get_stylesheet_directory_uri() . '/js/app.min.js', array(), $the_theme->get( 'Version' ), true );
+  wp_enqueue_script( 'iframe-async', get_stylesheet_directory_uri() . '/js/iframe-async.js', array( 'jquery' ), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );

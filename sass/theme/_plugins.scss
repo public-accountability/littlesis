@@ -1,0 +1,18 @@
+.rp4wp-related-posts {
+  ul {
+    @include no-bullets;
+    @extend .row;
+
+    &> li {
+      @extend .col-md-6;
+      @extend .col-lg-4;
+    }
+
+    .rp4wp-related-post-content {
+      a {
+        @extend .entry-title;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

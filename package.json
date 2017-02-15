@@ -1,5 +1,5 @@
 {
-  "name": "understrap-child",
+  "name": "littlesis",
   "version": "0.2.1",
   "description": "Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/misfist/understrap-child.git"
+    "url": "https://github.com/misfist/littlesis.git"
   },
     "keywords": [
     "wordpress",
@@ -20,7 +20,7 @@
 
   "author": "Pea",
   "license": "GPL-2.0",
-  "homepage": "https://github.com/misfist/understrap-child",
+  "homepage": "https://github.com/misfist/littlesis",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "browser-sync": "^2.18.6",
