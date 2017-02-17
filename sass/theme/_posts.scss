@@ -1,13 +1,10 @@
 .single {
   figure{
-    margin-left: calc(10% - 50vw);
-    margin-right: calc(10% - 50vw);
-
+      width: 100%;
+      text-align: center;
     img {
       width: 100%;
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
+      height: auto;
     }
   }
 }

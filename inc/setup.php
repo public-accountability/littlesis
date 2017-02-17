@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap Set-up Functions
+ * LittleSis Set-up Functions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *

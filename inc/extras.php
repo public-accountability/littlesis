@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap Custom Functions
+ * LittleSis Custom Functions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
