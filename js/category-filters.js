@@ -1,88 +1,89 @@
 (function($) {
 
-  $('#category-filter-container').on( 'click', '.pagination a, a[data-filter]', function(event) {
-    event.preventDefault();
+  var $i = 2,
+  $params;
 
-    var $this = $(this);
+  $('#ajax-filter-container').on('click', 'a[data-filter], button[data-page]', function(event) {
 
+    if(event.preventDefault) { event.preventDefault(); }
+
+    $this = $(this);
+
+
+
+   /**
+    * Set filter active
+    */
     if ($this.data('filter')) {
+      $page = 1;
+      $paged = false;
 
       $this.closest('ul').find('.active').removeClass('active');
-      $this.parent().addClass('active');
-      var $page = $this.data('page');
 
-    } else {
+      // Toggle current active
+      $this.parent('li').toggleClass('active');
+    }
+    else {
+   /**
+    * Pagination
+    */
+      $this.data('page', $i);
+      $page = $this.data('page');
+      $paged = true;
+      $this = $('.filter-nav .active a');
 
-      var $page = parseInt($this.attr('href').replace(/\D/g,''));
-      var $this = $('.nav-filter .active a');
+      if( button.data( 'maxPages' ) >= $page ) {
+        $i++;
+      }
 
     }
 
-    var $params = {
-      'page'      : $page,
-      'tax'       : $this.data('filter'),
-      'term'      : $this.data('term'),
-      'quantity'  : $this.closest('#category-filter-container').data('paged')
-    }
+    $params    = {
+      'page' : $page,
+      'term' : $this.data('term'),
+      'tax' : $this.data('filter'),
+      'quantity' : $this.closest('#taxonomy-filter-container').data('paged'),
+      'paged' : $paged
+    };
 
-    get_posts( $params );
+    get_posts($params);
 
-    //$('a[data-term="all-terms"]').trigger('click');
+  }); // $('#ajax-filter-container')
 
-    function get_posts( $params ) {
+  /**
+   * Retrieve posts
+   */
+  function get_posts($params) {
 
-      var $container = $('.site-main.grid');
-      var $content = $container.find('.results');
-      var $status = $container.find('.status')
+    $container = $('.site-main.grid');
+    $content   = $container.find('.row.results');
 
-      $status.text('Loading...');
-
-      $.ajax({
-
-        url: littlesis_category_filters.ajax_url,
-        data: {
-          action:   'littlesis_category_filters',
-          nonce:    littlesis_category_filters.nonce,
-          params:   $params
-        },
-        type:       'post',
-        dataType:   'json',
-
-        success: function(data, textStatus, XMLHttpRequest) {
-
-          console.log(data);
-
-          if(data.status == 200) {
-            $content.html(data.content);
-          } else if(data.status == 201) {
-            $content.html(data.message);
-          } else {
-            $content.html(data.message);
-          }
-
-        },
-
-        error: function(XMLHttpRequest, textStatus, error) {
-
-          $status.html(textStatus);
-
-        },
-
-        complete: function(data, textStatus) {
-
-          var msg = textStatus;
-
-          if(textStatus == 'success') {
-            msg = data.responseJSON;
-          }
-
-          $status.html('Posts found ' + msg);
-
+    $.ajax({
+      url: littlesis_taxonomy_filters.ajax_url,
+      data: {
+        action: 'do_taxonomy_filters',
+        nonce: littlesis_taxonomy_filters.nonce,
+        params: $params
+      },
+      type: 'post',
+      dataType: 'json',
+      beforeSend: function() {
+        $content.html( 'Loading...' );
+      },
+      success: function(response) {
+        if( $params.paged ) {
+          $content.append( response.data );
+        } else {
+          $content.html( response.data );
         }
+        console.log(response);
+      },
+      error: function(xhr, textStatus, errorThrown) {
+        console.log(xhr.responseText);
+      }
+    });
 
-      });
+  } // get_posts()
 
-    }
 
-  } );
 })(jQuery);

@@ -21,7 +21,8 @@ table {
 .category-link {
   @extend .btn;
   @extend .btn-secondary;
-  border-radius: 0;
+  border: none;
+  // border-radius: 0;
   text-transform: uppercase;
   font-weight: bold;
 }

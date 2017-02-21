@@ -150,3 +150,57 @@
       echo $image;
     }
   }
+
+/**
+ * Display Taxonomy Filters
+ * Output on screen markup for taxonomy filterss
+ *
+ * @param array $args
+ * @return void
+ */
+function littlesis_taxonomy_filters( $args = array() ) {
+
+   /**
+    * Define the array of defaults
+    */
+    $defaults = array(
+      'tax'      => 'category',
+      'terms'    => false,
+      'active'   => false,
+      'per_page' => 12
+    );
+
+   /**
+    * Parse incoming $args into an array and merge it with $defaults
+    */
+    $args = wp_parse_args( $args, $defaults );
+
+    $taxonomy = $args['tax'];
+    ?>
+
+    <div id="taxonomy-filter-container" data-paged="<?php echo $args['per_page']; ?>" class="taxonomy-filters">
+
+    <?php
+    $terms = get_terms( $taxonomy );
+
+    if( !empty( $terms ) ) : ?>
+
+      <ul class="filter-nav">
+        <li class="active">
+          <a href="#" data-filter="<?php echo $taxonomy; ?>" data-term="all-terms" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
+        </li>
+
+        <?php foreach( $terms as $term ) : ?>
+
+          <li>
+            <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-filter="<?php echo $term->taxonomy ?>" data-term="<?php echo $term->slug; ?>" data-page="1"><?php echo $term->name; ?></a>
+          </li>
+
+        <?php endforeach; ?>
+      </ul>
+
+  <?php endif; ?>
+
+  </div>
+<?php
+}

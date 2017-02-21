@@ -45,12 +45,14 @@ function theme_enqueue_styles() {
   wp_enqueue_style( 'littlesis-styles', get_stylesheet_directory_uri() . '/css/style.min.css', array(), $the_theme->get( 'Version' ) );
   wp_enqueue_script( 'littlesis-scripts', get_stylesheet_directory_uri() . '/js/app.min.js', array(), $the_theme->get( 'Version' ), true );
 
-  wp_enqueue_script( 'littlesis-core-filters',  get_stylesheet_directory_uri() . '/js/category-filters.js', array( 'jquery' ), null, true );
-
-  wp_localize_script( 'littlesis-core-filters', 'littlesis_category_filters', array(
-    'nonce'				=> wp_create_nonce( 'littlesis_category_filters' ),
-    'ajax_url'		=> admin_url( 'admin-ajax.php' )
-  ) );
+  if( is_home() ) {
+    $args = array(
+      'nonce'         => wp_create_nonce( 'littlesis_taxonomy_filters' ),
+      'ajax_url'      => admin_url( 'admin-ajax.php' ),
+    );
+    wp_enqueue_script( 'littlesis-tax-filters',  get_stylesheet_directory_uri() . '/js/category-filters.js', array( 'jquery' ), null, true );
+    wp_localize_script( 'littlesis-tax-filters', 'littlesis_taxonomy_filters', $args );
+  }
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );

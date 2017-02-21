@@ -38,40 +38,16 @@ if( !empty( $sticky ) ) : ?>
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div id="ajax-filter-container" class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-			<div id="category-filter-container" data-paged="12" class="category-filters">
-
-				<?php $terms = get_terms( 'category' ); ?>
-
-				<?php if( !empty( $terms ) ) : ?>
-
-				<ul class="filter-nav">
-						<li>
-							<a href="#" data-filter="<?php echo $terms[0]->taxonomy; ?>" data-term="all-terms" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
-						</li>
-
-						<?php foreach( $terms as $term ) : ?>
-
-							<li>
-								<a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-filter="<?php echo $term->taxonomy ?>" data-term="<?php echo $term->slug; ?>" data-page="1"><?php echo $term->name; ?></a>
-							</li>
-
-						<?php endforeach; ?>
-					</ul>
-
-				<?php endif; ?>
-
-			</div>
+			<?php littlesis_taxonomy_filters(); ?>
 
 			<!-- If there is a featured post, exclude in results -->
 
 			<main class="site-main grid" id="main">
-
-				<div class="status"></div>
 
 				<div class="row results">
 
@@ -105,12 +81,13 @@ if( !empty( $sticky ) ) : ?>
 
 			</main><!-- #main -->
 
+			<?php $page = get_query_var( 'paged', 1 ); ?>
+
+
+
 			<!-- The pagination component -->
 			<?php// understrap_pagination(); ?>
 
-			<nav class="pagination infscr-pager">
-				<a href="#page-2" class="btn btn-primary"><?php _e( 'Load More', 'littlesis' ); ?></a>
-			</nav>
 
 		</div><!-- #primary -->
 
