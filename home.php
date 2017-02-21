@@ -38,16 +38,18 @@ if( !empty( $sticky ) ) : ?>
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div id="ajax-filter-container" class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-			<!-- If there is a featured post, exclude it results -->
+			<?php littlesis_taxonomy_filters(); ?>
+
+			<!-- If there is a featured post, exclude in results -->
 
 			<main class="site-main grid" id="main">
 
-				<div class="row">
+				<div class="row results">
 
 					<?php $posts = ( $sticky ) ? get_posts( array( 'exclude' => $sticky ) ) : get_posts() ; ?>
 
@@ -79,8 +81,13 @@ if( !empty( $sticky ) ) : ?>
 
 			</main><!-- #main -->
 
+			<?php $page = get_query_var( 'paged', 1 ); ?>
+
+
+
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php// understrap_pagination(); ?>
+
 
 		</div><!-- #primary -->
 

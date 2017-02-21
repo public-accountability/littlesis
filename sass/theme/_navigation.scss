@@ -1,0 +1,30 @@
+nav.infinite-scroll {
+  width: 100%;
+  button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.taxonomy-filters {
+    margin-bottom: .5em;
+}
+
+.filter-nav {
+  @include no-bullets;
+
+  li {
+    display: inline-block;
+
+    a {
+      @extend .category-link;
+    }
+
+    &.active {
+      a {
+        @extend .btn-primary;
+        color: $color__text-inverted;
+      }
+    }
+  }
+}
