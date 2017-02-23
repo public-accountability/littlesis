@@ -22,3 +22,29 @@
    return $post_excerpt . ' ...<p><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More &rarr;',
    'littlesis' ) . '</a></p>';
  }
+
+/**
+ * Modify Markup of Thumbnail
+ *
+ * @since 0.1.0
+ *
+ * @param  string $html
+ * @param  int  $post_id
+ * @param  int  $post_thumbnail_id
+ * @param  mixed (string || array)  $size
+ * @param  array $attr
+ * @return string $html
+ */
+function littlesis_modify_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+    $id = get_post_thumbnail_id();
+    $src = wp_get_attachment_image_src( $id, $size );
+    $alt = get_the_title( $id );
+    $class = $attr['class'];
+
+    if( 'thumbnail' == $size || 'medium' == $size ) {
+      $html = sprintf( '<figure class="featured-image">%s</figure>', $html );
+    }
+
+    return $html;
+}
+add_filter( 'post_thumbnail_html', 'littlesis_modify_post_thumbnail_html', 99, 5 );

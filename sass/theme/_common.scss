@@ -3,8 +3,26 @@ body {
   color: $color__text-primary;
 }
 
-.entry-meta {
+.entry-title a {
+  color: $color__text-primary;
+}
+
+.entry-meta,
+.entry-meta a {
   color: $color__text-light;
+  text-transform: uppercase;
+
+  .byline,
+  .posted-on {
+    display: inline;
+  }
+
+  .byline + .posted-on {
+    &:before {
+      content: ' | ';
+    }
+  }
+  
 }
 
 table {

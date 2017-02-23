@@ -13,6 +13,12 @@
 
 .sticky {}
 
+.home {
+  .grid article {
+    align-items: stretch;
+  }
+}
+
 .featured-content {
   article {
     display: flex;
