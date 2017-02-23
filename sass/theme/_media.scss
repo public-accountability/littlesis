@@ -12,3 +12,16 @@
 iframe {
   border: 0;
 }
+
+.grid {
+   .featured-image {
+     @include aspect-ratio(7, 5);
+     overflow: hidden;
+     background-color: $color__gray-light;
+
+     img {
+       width: 100%;
+       object-fit: cover;
+     }
+   }
+}

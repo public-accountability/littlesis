@@ -160,6 +160,9 @@
  */
 function littlesis_taxonomy_filters( $args = array() ) {
 
+    $uncategorized = get_terms( array( 'slug' => 'uncategorized' ) );
+    $uncategorized_id = ( !empty( $uncategorized ) ) ? $uncategorized[0]->term_id : null;
+
    /**
     * Define the array of defaults
     */
@@ -175,19 +178,23 @@ function littlesis_taxonomy_filters( $args = array() ) {
     */
     $args = wp_parse_args( $args, $defaults );
 
-    $taxonomy = $args['tax'];
+    $term_args['taxonomy'] = $args['tax'];
+    if( $uncategorized_id  ) {
+      $term_args['exclude'] = (int) $uncategorized_id;
+    }
+
     ?>
 
     <div id="taxonomy-filter-container" data-paged="<?php echo $args['per_page']; ?>" class="taxonomy-filters">
 
     <?php
-    $terms = get_terms( $taxonomy );
+    $terms = get_terms( $term_args );
 
     if( !empty( $terms ) ) : ?>
 
       <ul class="filter-nav">
         <li class="active">
-          <a href="#" data-filter="<?php echo $taxonomy; ?>" data-term="all-terms" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
+          <a href="#" data-filter="<?php echo $args['tax']; ?>" data-term="all-terms" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
         </li>
 
         <?php foreach( $terms as $term ) : ?>
