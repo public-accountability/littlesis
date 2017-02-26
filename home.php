@@ -38,7 +38,7 @@ if( !empty( $sticky ) ) : ?>
 
 	<div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
 
-		<div id="ajax-filter-container" class="row">
+		<div id="taxonomy-filter-container" class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
@@ -81,9 +81,7 @@ if( !empty( $sticky ) ) : ?>
 
 			</main><!-- #main -->
 
-			<?php $page = get_query_var( 'paged', 1 ); ?>
-
-
+			<div id="infinite-scroll"></div>
 
 			<!-- The pagination component -->
 			<?php// understrap_pagination(); ?>

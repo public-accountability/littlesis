@@ -1,89 +1,51 @@
 (function($) {
 
-  var $i = 2,
-  $params;
-
-  $('#ajax-filter-container').on('click', 'a[data-filter], button[data-page]', function(event) {
-
-    if(event.preventDefault) { event.preventDefault(); }
-
-    $this = $(this);
-
-
-
-   /**
-    * Set filter active
-    */
-    if ($this.data('filter')) {
-      $page = 1;
-      $paged = false;
-
-      $this.closest('ul').find('.active').removeClass('active');
-
-      // Toggle current active
-      $this.parent('li').toggleClass('active');
-    }
-    else {
-   /**
-    * Pagination
-    */
-      $this.data('page', $i);
-      $page = $this.data('page');
-      $paged = true;
-      $this = $('.filter-nav .active a');
-
-      if( button.data( 'maxPages' ) >= $page ) {
-        $i++;
-      }
-
-    }
-
-    $params    = {
-      'page' : $page,
-      'term' : $this.data('term'),
-      'tax' : $this.data('filter'),
-      'quantity' : $this.closest('#taxonomy-filter-container').data('paged'),
-      'paged' : $paged
-    };
-
-    get_posts($params);
-
-  }); // $('#ajax-filter-container')
+  var filterEl = $( '#taxonomy-filters a' );
+  var contentEl = $( '#main .results' );
+  var buttonContainer = $( '#infinite-scroll' );
+  var button = '<button class="btn btn-primary" data-page="2">' + littlesis_taxonomy_filters.button_text + '</button>';
 
   /**
-   * Retrieve posts
+   * Filter
+   * @type {[type]}
    */
-  function get_posts($params) {
+  filterEl.click(function(event) {
+    event.preventDefault();
 
-    $container = $('.site-main.grid');
-    $content   = $container.find('.row.results');
+    var $this = $( this );
 
+    $this.closest('ul').find('li').removeClass('active');
+    $this.parent('li').addClass('active');
+
+    var args = $this[0].dataset;
+
+    args.posts_per_page = $( '#taxonomy-filters' ).data( 'paged' );
+
+    get_posts(args);
+
+  });
+
+  function get_posts(args) {
     $.ajax({
       url: littlesis_taxonomy_filters.ajax_url,
       data: {
         action: 'do_taxonomy_filters',
         nonce: littlesis_taxonomy_filters.nonce,
-        params: $params
+        args: args
       },
-      type: 'post',
-      dataType: 'json',
-      beforeSend: function() {
-        $content.html( 'Loading...' );
-      },
-      success: function(response) {
-        if( $params.paged ) {
-          $content.append( response.data );
-        } else {
-          $content.html( response.data );
-        }
-        console.log(response);
-      },
-      error: function(xhr, textStatus, errorThrown) {
-        console.log(xhr.responseText);
-      }
+      type: 'POST'
+    })
+    .success(function(response, textStatus, XMLHttpRequest) {
+      contentEl.html( response.content );
+      //console.log( 'response', response );
+    })
+    .error(function(response) {
+      //console.log('error', response);
+    })
+    .complete(function(response) {
+      //console.log('complete ', response);
     });
-
-  } // get_posts()
+  }
 
 
 })(jQuery);
