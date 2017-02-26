@@ -46,9 +46,11 @@ function theme_enqueue_styles() {
   wp_enqueue_script( 'littlesis-scripts', get_stylesheet_directory_uri() . '/js/app.min.js', array(), $the_theme->get( 'Version' ), true );
 
   if( is_home() ) {
+    $button_text = get_option( 'taxonomy_filters_button_text', __( 'Load More', 'littlesis' ) );
     $args = array(
       'nonce'         => wp_create_nonce( 'littlesis_taxonomy_filters' ),
       'ajax_url'      => admin_url( 'admin-ajax.php' ),
+      'button_text'   => $button_text
     );
     wp_enqueue_script( 'littlesis-tax-filters',  get_stylesheet_directory_uri() . '/js/category-filters.js', array( 'jquery' ), null, true );
     wp_localize_script( 'littlesis-tax-filters', 'littlesis_taxonomy_filters', $args );
