@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.2
-Version: 0.0.2
+Version: 0.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,9 @@ var browserSyncOptions = {
 
 ## Changelog
 
+* 0.0.3 February 25, 2017
+   * Updated AJAX filtering
+   * To do: add infinite scrolling
 * 0.0.2 February 22, 2017
    * General style updates for homepage
    * Removed `uncategorized` from filter-nav list
