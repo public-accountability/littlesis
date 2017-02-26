@@ -4,20 +4,22 @@
 *
 * @package understrap
 * @subpackage littlesis
-* @since 0.1.0
+* @since 0.0.3
 */
 
 /**
 * Get Posts
 * Get $_POST values and return content
 *
-* @since 0.1.0
+* @since 0.0.3
 *
-* @uses WP_Query()
+* @uses do_taxonomy_filters action
 * @uses wp_ajax_ action hook
-* @uses ob_start()
+* @uses WP_Query()
+* @uses wp_verify_nonce()
 *
 * @link https://codex.wordpress.org/Class_Reference/WP_Query
+* @link https://codex.wordpress.org/Plugin_API/Action_Reference/wp_ajax_(action)
 *
 * @return void
 */
@@ -27,121 +29,116 @@ function littlesis_filter_posts() {
     die( 'Permission denied' );
   }
 
-  $tax  = sanitize_text_field( $_POST['params']['tax'] );
-  $term = sanitize_text_field( $_POST['params']['term'] );
-  $page = intval( $_POST['params']['page'] );
-  $quantity  = intval( $_POST['params']['quantity'] );
-  $args = isset( $_POST['query'] ) ? array_map( 'esc_attr', $_POST['query'] ) : array();
-
   $tax_query[] = array(
-    'taxonomy' => $tax,
-    'field'    => 'slug',
-    'terms'    => $term,
+    'taxonomy'  => sanitize_text_field( $_POST['args']['taxonomy'] ),
+    'field'     => 'slug',
+    'terms'     => sanitize_text_field( $_POST['args']['term'] )
   );
 
-  if ( $term == 'all-terms' ) {
-    $tax_query[0]['operator'] = 'NOT IN';
+  $args = array(
+    'posts_per_page'  => intval( $_POST['args']['posts_per_page'] ),
+    'post_type'       => 'post'
+  );
+
+  if( $_POST['args']['term'] ) {
+    $args['tax_query'] = $tax_query;
   }
 
- /**
-  * Setup query
-  */
-  $args = array(
-    'paged'          => $page,
-    'post_type'      => 'post',
-    'posts_per_page' => $quantity,
-    'tax_query'      => $tax_query
-  );
+  $posts_query = new WP_Query( $args );
 
   ob_start();
 
-  $query = new WP_Query( $args );
+  if( $posts_query->have_posts() ) {
 
-  if ( $query->have_posts() ) { ?>
+    while( $posts_query->have_posts() ) :
+      $posts_query->the_post();
 
-    <?php
-    while ( $query->have_posts() ) : $query->the_post();
-
-    get_template_part( 'loop-templates/content', 'grid' );
+      get_template_part( 'loop-templates/content', 'grid' );
 
     endwhile;
-    wp_reset_postdata(); ?>
 
-  <?php
+  } else {
+
+    get_template_part( 'loop-templates/content', 'none' );
+
   }
 
-  //littlesis_ajax_pager( $query, $page );
+  $response = array(
+    'content'         => ob_get_clean(),
+    'posts_found'     => intval( $posts_query->found_posts ),
+    'paged'           => $posts_query->query_vars['paged'],
+    'posts_per_page'  => intval( $posts_query->query_vars['posts_per_page'] ),
+    'query_vars'      => $posts_query->query_vars
+  );
 
-  $data = ob_get_clean();
+  wp_send_json( $response );
 
-	wp_send_json_success( $data );
-
-	wp_die();
+  // die( json_encode( $response ) );
 
 }
 add_action( 'wp_ajax_do_taxonomy_filters', 'littlesis_filter_posts' );
 add_action( 'wp_ajax_nopriv_do_taxonomy_filters', 'littlesis_filter_posts' );
 
 /**
- * Filter Shortcode
+ * Display Taxonomy Filters
+ * Output on screen markup for taxonomy filterss
  *
- * @since 0.1.0
- *
- * @uses littlesis_taxonomy_filters()
- *
- * @param  array  $atts
- * @return string $result
- */
-function littlesis_filter_posts_sc( $atts ) {
-
-  $args = shortcode_atts( array(
-    'tax'      => 'category',
-    'terms'    => false,
-    'active'   => false,
-  ), $atts );
-
-  $result = NULL;
-
-  ob_start(); ?>
-
-  <?php littlesis_taxonomy_filters( $args ); ?>
-
-  <?php $result = ob_get_clean();
-
-  return $result;
-}
-add_shortcode( 'ajax_filter_posts', 'littlesis_filter_posts_sc' );
-
-/**
- * Pager
- *
- * @since 0.1.0
- *
- * @param  obj  $query
- * @param  integer $paged
+ * @param array $args
  * @return void
  */
-function littlesis_ajax_pager( $query = null, $page = 1 ) {
+function littlesis_taxonomy_filters( $args = array() ) {
 
-  if ( !$query ) {
-    return;
-  }
+    $uncategorized = get_terms( array( 'slug' => 'uncategorized' ) );
+    $uncategorized_id = ( !empty( $uncategorized ) ) ? $uncategorized[0]->term_id : null;
 
-  $paginate = paginate_links([
-    'base'      => '%_%',
-    'type'      => 'array',
-    'total'     => $query->max_num_pages,
-    'format'    => '#page=%#%',
-    'current'   => max( 1, $page ),
-    'prev_text' => 'Prev',
-    'next_text' => 'Next'
-  ]);
+   /**
+    * Define the array of defaults
+    */
+    $defaults = array(
+      'taxonomy'        => 'category',
+      'terms'           => false,
+      'active'          => false,
+      'posts_per_page'  => 12
+    );
 
-  ?>
+   /**
+    * Parse incoming $args into an array and merge it with $defaults
+    */
+    $args = wp_parse_args( $args, $defaults );
 
-  <nav class="pagination infinite-scroll" data-max-pages="<?php echo $query->max_num_pages; ?>">
-    <button type="button" name="button"  data-max-pages="<?php echo $query->max_num_pages; ?>" class="btn btn-primary load-more" data-page="<?php echo $page; ?>" <?php echo ( $page >= $query->max_num_pages ) ? disabled : ''; ?>><?php _e( 'Load More' ); ?></button>
-  </nav>
+    $term_args = array(
+      'taxonomy' => $args['taxonomy'],
+      'terms'    => $args['terms']
+    );
 
+    if( $uncategorized_id  ) {
+      $term_args['exclude'] = (int) $uncategorized_id;
+    }
+    ?>
+
+    <div id="taxonomy-filters" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-paged="<?php echo $args['posts_per_page']; ?>" class="taxonomy-filters">
+
+    <?php
+    $terms = get_terms( $term_args );
+
+    if( !empty( $terms ) ) : ?>
+
+      <ul class="filter-nav">
+        <li class="active">
+          <a href="#" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-term="" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
+        </li>
+
+        <?php foreach( $terms as $term ) : ?>
+
+          <li>
+            <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-taxonomy="<?php echo $term->taxonomy ?>" data-term="<?php echo $term->slug; ?>" data-page="1"><?php echo $term->name; ?></a>
+          </li>
+
+        <?php endforeach; ?>
+      </ul>
+
+  <?php endif; ?>
+
+  </div>
 <?php
 }
