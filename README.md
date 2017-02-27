@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.2
-Version: 0.0.3
+Version: 0.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,10 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.0.4 February 26, 2017
+   * Added default thumbnail that appears when there is no featured image
+   * Overrode default JetPack OpenGraph image
 
 * 0.0.3 February 25, 2017
    * Updated AJAX filtering

@@ -48,3 +48,38 @@ function littlesis_modify_post_thumbnail_html( $html, $post_id, $post_thumbnail_
     return $html;
 }
 add_filter( 'post_thumbnail_html', 'littlesis_modify_post_thumbnail_html', 99, 5 );
+
+/**
+ * Default Open Graph Image
+ * Replaces JetPack's default image with a custom image
+ *
+ * @return string $image[0] || url
+ */
+function littlesis_default_jetpack_open_graph_image() {
+
+  $default_src = get_stylesheet_directory_uri() . '/images/thumbnail-default.svg';
+
+  // If the default image exists, use it
+  if( file_exists( $default_src ) ) {
+
+    return esc_url( $default_src );
+
+  }
+  // If there is a custom logo, use it
+  elseif( function_exists( 'the_custom_logo' ) ) {
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+
+    if( !empty( $custom_logo_id ) ) {
+      $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+      return esc_url( $image[0] );
+    }
+
+  }
+
+  // Otherwise, return the default JetPack image
+  return esc_url( 'https://s0.wp.com/i/blank.jpg' );
+
+}
+add_filter( 'jetpack_open_graph_image_default', 'littlesis_default_jetpack_open_graph_image' );
