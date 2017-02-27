@@ -40,6 +40,12 @@ function littlesis_filter_posts() {
     'post_type'       => 'post'
   );
 
+  $sticky = get_option( 'sticky_posts' );
+  if( $sticky ) {
+    $sticky = intval( $sticky[0] );
+    $args['post__not_in'] = array( $sticky );
+  }
+
   if( $_POST['args']['term'] ) {
     $args['tax_query'] = $tax_query;
   }
