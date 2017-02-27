@@ -34,7 +34,7 @@ var rimraf = require('gulp-rimraf');
 var clone = require('gulp-clone');
 var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
-var imagemin = require('imagemin');
+var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 
@@ -91,12 +91,25 @@ gulp.task('sass', function () {
     return stream;
 });
 
+
+gulp.task('images', function () {
+    var images = gulp.src('./src/images/*')
+      .pipe(imagemin({
+          optimizationLevel: 5,
+          progressive: true,
+          interlaced: true
+      }))
+      .pipe(gulp.dest('./images/'));
+    return images;
+});
+
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/style.css', ['cssnano']);
+    gulp.watch('./src/images/*', ['images']);
     gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts'])
 });
 
@@ -238,4 +251,4 @@ gulp.task('clean-dist-product', function () {
   return del(['dist-product/**/*',]);
 });
 
-gulp.task( 'default', [ 'watch-bs', 'scss-for-dev', 'scripts' ], function() {});
+gulp.task( 'default', [ 'watch-bs', 'scss-for-dev', 'scripts', 'images' ], function() {});
