@@ -1,6 +1,38 @@
 .single {
+
+  .entry-header,
+  .entry-content {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .entry-title {
+    margin-bottom: .75em;
+  }
+
+  .entry-meta {
+    margin-bottom: 1.5em;
+  }
+
+  .category-links {
+    margin-bottom: 1em;
+  }
+
+  .single-post-image {
+    @include aspect-ratio(7, 5);
+    background-color: $color__accent;
+  }
+
+  .no-post-thumbnail {
+    background-image: url('../images/thumbnail-default.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   figure{
       width: 100%;
+      margin-bottom: 1.5em;
       text-align: center;
     img {
       width: 100%;
@@ -16,7 +48,6 @@
 .home {
   .grid article {
     align-items: stretch;
-
     margin-bottom: 2.5em;
 
     @include breakpoint(md) {

@@ -38,3 +38,18 @@ nav.infinite-scroll {
 .wrapper-navbar {
   border-bottom: 1px solid $color__gray;
 }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  .nav-previous,
+  .nav-next {
+    @extend .col-sm-6;
+  }
+
+  .nav-next {
+    text-align: right;
+  }
+}
