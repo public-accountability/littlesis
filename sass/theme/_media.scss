@@ -25,3 +25,11 @@ iframe {
      }
    }
 }
+
+article:not(.has-post-thumbnail) {
+  .featured-image {
+    background-image: url('../images/thumbnail-default.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
