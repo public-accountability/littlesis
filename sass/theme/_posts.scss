@@ -16,19 +16,68 @@
 .home {
   .grid article {
     align-items: stretch;
+
+    margin-bottom: 2.5em;
+
+    @include breakpoint(md) {
+      margin-bottom: 5em;
+    }
+
+    .entry-title {
+      margin-bottom: .75em;
+    }
+
+    .featured-image {
+      margin-bottom: 1.75em;
+    }
+    .entry-meta {
+      margin-bottom: 1.75em;
+    }
   }
 }
 
-.featured-content {
-  article {
-    display: flex;
-    flex-wrap: wrap;
+.archive {
+  .page-title {
+    font-weight: bold;
+  }
 
-    .post-image {
-      @extend .col-md-6;
-    }
-    .entry-body {
-      @extend .col-md-6;
+  .taxonomy-description {
+
+    margin-bottom: 2em;
+
+    @include breakpoint(md) {
+      width: 50%;
+      margin-bottom: 4em;
     }
   }
+
+  .post {
+    margin-bottom: 3em;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .featured-image {
+    @extend .col-md-4;
+
+    @include aspect-ratio(7, 5);
+    overflow: hidden;
+    background-color: $color__accent;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .entry-body{
+    @media (max-width: $screen__md - 1) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    @extend .col-md-8;
+  }
+
+
 }

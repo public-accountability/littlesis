@@ -83,3 +83,22 @@ function littlesis_default_jetpack_open_graph_image() {
 
 }
 add_filter( 'jetpack_open_graph_image_default', 'littlesis_default_jetpack_open_graph_image' );
+
+/**
+ * Modify Default Archive title
+ *
+ * @since 0.0.6
+ *
+ * @uses
+ * @link https://developer.wordpress.org/reference/hooks/get_the_archive_title/
+ *
+ * @param  string $title
+ * @return string $title
+ */
+function littlesis_get_the_archive_title( $title ) {
+  if( is_category() ) {
+    $title = single_cat_title( '', false );
+  }
+  return $title;
+}
+add_filter( 'get_the_archive_title', 'littlesis_get_the_archive_title' );

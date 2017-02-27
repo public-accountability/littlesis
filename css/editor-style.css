@@ -345,10 +345,10 @@ blockquote {
   margin: 0 0 1rem; }
 
 a {
-  color: #194568;
+  color: #1C4767;
   text-decoration: none; }
   a:focus, a:hover {
-    color: #0a1c2a;
+    color: #0c1e2b;
     text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -631,24 +631,24 @@ pre {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 25px;
+  padding-left: 25px; }
   @media (min-width: 576px) {
     .container {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 768px) {
     .container {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 992px) {
     .container {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 1200px) {
     .container {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 576px) {
     .container {
       width: 540px;
@@ -670,46 +670,46 @@ pre {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 25px;
+  padding-left: 25px; }
   @media (min-width: 576px) {
     .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 768px) {
     .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 992px) {
     .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 1200px) {
     .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px; } }
+      padding-right: 25px;
+      padding-left: 25px; } }
 
 .row, .rp4wp-related-posts ul {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -25px;
+  margin-left: -25px; }
   @media (min-width: 576px) {
     .row, .rp4wp-related-posts ul {
-      margin-right: -15px;
-      margin-left: -15px; } }
+      margin-right: -25px;
+      margin-left: -25px; } }
   @media (min-width: 768px) {
     .row, .rp4wp-related-posts ul {
-      margin-right: -15px;
-      margin-left: -15px; } }
+      margin-right: -25px;
+      margin-left: -25px; } }
   @media (min-width: 992px) {
     .row, .rp4wp-related-posts ul {
-      margin-right: -15px;
-      margin-left: -15px; } }
+      margin-right: -25px;
+      margin-left: -25px; } }
   @media (min-width: 1200px) {
     .row, .rp4wp-related-posts ul {
-      margin-right: -15px;
-      margin-left: -15px; } }
+      margin-right: -25px;
+      margin-left: -25px; } }
 
 .no-gutters {
   margin-right: 0;
@@ -719,28 +719,28 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .featured-content article .post-image, .featured-content article .entry-body, .rp4wp-related-posts ul > li, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image, .col-md-5, .col-md-6, .rp4wp-related-posts ul > li, .featured-content article .post-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 25px;
+  padding-left: 25px; }
   @media (min-width: 576px) {
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .featured-content article .post-image, .featured-content article .entry-body, .rp4wp-related-posts ul > li, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 15px;
-      padding-left: 15px; } }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image, .col-md-5, .col-md-6, .rp4wp-related-posts ul > li, .featured-content article .post-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 768px) {
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .featured-content article .post-image, .featured-content article .entry-body, .rp4wp-related-posts ul > li, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 15px;
-      padding-left: 15px; } }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image, .col-md-5, .col-md-6, .rp4wp-related-posts ul > li, .featured-content article .post-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 992px) {
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .featured-content article .post-image, .featured-content article .entry-body, .rp4wp-related-posts ul > li, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 15px;
-      padding-left: 15px; } }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image, .col-md-5, .col-md-6, .rp4wp-related-posts ul > li, .featured-content article .post-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
+      padding-right: 25px;
+      padding-left: 25px; } }
   @media (min-width: 1200px) {
-    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .featured-content article .post-image, .featured-content article .entry-body, .rp4wp-related-posts ul > li, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 15px;
-      padding-left: 15px; } }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image, .col-md-5, .col-md-6, .rp4wp-related-posts ul > li, .featured-content article .post-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
+      padding-right: 25px;
+      padding-left: 25px; } }
 
 .col {
   flex-basis: 0;
@@ -1048,19 +1048,19 @@ pre {
   .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-  .col-md-4 {
+  .col-md-4, .archive .featured-image {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
   .col-md-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-  .col-md-6, .featured-content article .post-image, .featured-content article .entry-body, .rp4wp-related-posts ul > li {
+  .col-md-6, .rp4wp-related-posts ul > li, .featured-content article .post-image, .featured-content article .entry-body {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-md-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-  .col-md-8 {
+  .col-md-8, .archive .entry-body {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
   .col-md-9 {
@@ -2377,7 +2377,7 @@ fieldset[disabled] a.category-link {
 
 .btn-link {
   font-weight: normal;
-  color: #194568;
+  color: #1C4767;
   border-radius: 0; }
   .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {
     background-color: transparent; }
@@ -2386,7 +2386,7 @@ fieldset[disabled] a.category-link {
   .btn-link:hover {
     border-color: transparent; }
   .btn-link:focus, .btn-link:hover {
-    color: #0a1c2a;
+    color: #0c1e2b;
     text-decoration: none;
     background-color: transparent; }
   .btn-link:disabled {
@@ -3879,9 +3879,9 @@ tbody.collapse.show {
       flex: 1 0 0;
       flex-direction: column; }
       .card-deck .card:not(:first-child) {
-        margin-left: 15px; }
+        margin-left: 25px; }
       .card-deck .card:not(:last-child) {
-        margin-right: 15px; } }
+        margin-right: 25px; } }
 
 @media (min-width: 576px) {
   .card-group {
@@ -3981,11 +3981,11 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #194568;
+  color: #1C4767;
   background-color: #fff;
   border: 1px solid #ddd; }
   .page-link:focus, .page-link:hover {
-    color: #0a1c2a;
+    color: #0c1e2b;
     text-decoration: none;
     background-color: #eceeef;
     border-color: #ddd; }
@@ -6819,7 +6819,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 .wrapper {
-  padding: 30px 0; }
+  padding: 50px 0; }
 
 #wrapper-hero {
   padding: 0px !important; }
@@ -9347,7 +9347,7 @@ table {
   width: 100%; }
 
 .read-more {
-  padding-bottom: .25em;
+  padding-bottom: .5em;
   text-transform: uppercase;
   border-bottom: 1px solid #2a2a2a; }
 
@@ -9411,11 +9411,57 @@ nav.infinite-scroll {
     height: auto; }
 
 .home .grid article {
-  align-items: stretch; }
+  align-items: stretch;
+  margin-bottom: 2.5em; }
+  @media screen and (min-width: 961px) {
+    .home .grid article {
+      margin-bottom: 5em; } }
+  .home .grid article .entry-title, .home .grid article .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content .home .grid article a {
+    margin-bottom: .75em; }
+  .home .grid article .featured-image {
+    margin-bottom: 1.75em; }
+  .home .grid article .entry-meta {
+    margin-bottom: 1.75em; }
 
-.featured-content article {
+.archive .page-title {
+  font-weight: bold; }
+
+.archive .taxonomy-description {
+  margin-bottom: 2em; }
+  @media screen and (min-width: 961px) {
+    .archive .taxonomy-description {
+      width: 50%;
+      margin-bottom: 4em; } }
+
+.archive .post {
+  margin-bottom: 3em;
   display: flex;
   flex-wrap: wrap; }
+
+.archive .featured-image {
+  position: relative;
+  overflow: hidden;
+  background-color: #1C4767; }
+  .archive .featured-image:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 71.42857%; }
+  .archive .featured-image > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover; }
+  .archive .featured-image img {
+    width: 100%;
+    object-fit: cover; }
+
+@media (max-width: 960px) {
+  .archive .entry-body {
+    padding-right: 0;
+    padding-left: 0; } }
 
 .iframe-container iframe {
   min-height: 600px;
@@ -9460,3 +9506,24 @@ article:not(.has-post-thumbnail) .featured-image {
 #wrapper-static-hero {
   background-color: transparent;
   border-bottom: 1px solid #9f9f9f; }
+
+@media screen and (min-width: 961px) {
+  .featured-content > .wrapper {
+    padding-top: 50px; } }
+
+.featured-content article {
+  display: flex;
+  flex-wrap: wrap; }
+  @media screen and (min-width: 961px) {
+    .featured-content article .post-image {
+      padding-right: 30px; }
+    .featured-content article .entry-body {
+      padding-left: 30px; }
+      .featured-content article .entry-body .entry-title, .featured-content article .entry-body .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content .featured-content article .entry-body a {
+        margin-bottom: 30px; }
+      .featured-content article .entry-body .entry-meta {
+        margin-bottom: 30px; } }
+
+@media screen and (min-width: 961px) {
+  #wrapper-index {
+    padding-top: 5em; } }

@@ -2,3 +2,51 @@
   background-color: transparent;
   border-bottom: 1px solid $color__gray;
 }
+
+.featured-content {
+
+  &> .wrapper {}
+
+  @include breakpoint(md) {
+    &> .wrapper {
+      padding-top: 50px;
+    }
+  }
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+
+    .post-image {
+      @extend .col-md-6;
+    }
+    .entry-body {
+      @extend .col-md-6;
+    }
+
+    @include breakpoint(md) {
+      .post-image {
+        padding-right: 30px;
+      }
+      .entry-body {
+        padding-left: 30px;
+
+        .entry-title {
+          margin-bottom: 30px;
+        }
+
+        .entry-meta {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+}
+
+#wrapper-index {
+
+  @include breakpoint(md) {
+    padding-top: 5em;
+  }
+}
