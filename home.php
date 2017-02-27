@@ -51,7 +51,7 @@ if( !empty( $sticky ) ) : ?>
 
 				<div class="row results">
 
-					<?php $posts = ( $sticky ) ? get_posts( array( 'exclude' => $sticky ) ) : get_posts() ; ?>
+					<?php $posts = ( $sticky ) ? get_posts( array( 'post__not_in' => array( $sticky ) ) ) : get_posts() ; ?>
 
 						<?php /* Start the Loop */ ?>
 
