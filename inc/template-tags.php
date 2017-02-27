@@ -77,14 +77,10 @@
  * @return void
  */
  function littlesis_get_the_term_list( $taxonomy = 'category' ) {
-   $term_list = get_the_term_list( get_the_ID(), $taxonomy, '', esc_html__( ', ', 'littlesis' ), '' );
+
+   $term_list = get_the_term_list( get_the_ID(), $taxonomy, '<ul class="' . $taxonomy . '-links"><li class="' . $taxonomy . '-link">', '</li><li class="' . $taxonomy . '-link">', '</li></ul>' );
     if ( $term_list ) {
-      echo '<div class="' . esc_html( $taxonomy, 'littlesis' ) . '-links">';
-      printf( '<span class="%1$s-link">%2$s</span>',
-        $taxonomy,
-        $term_list
-      ); // WPCS: XSS OK.
-      echo '</div>';
+      echo $term_list;
     }
  }
 
@@ -125,7 +121,7 @@
        get_the_post_thumbnail( $post_id, $size ),
        $caption
      );
-     echo $image;
+    echo $image;
    }
  }
 
@@ -147,6 +143,8 @@
         get_the_post_thumbnail( $post_id, $size ),
         $caption
       );
-      echo $image;
+    } else {
+      $image = '<figure class="single-post-image no-post-thumbnail"></figure>';
     }
+    echo $image;
   }

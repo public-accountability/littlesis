@@ -1,0 +1,86 @@
+#wrapper-footer-full {
+
+  color: $color__text-light;
+
+  .widget_wpcom_social_media_icons_widget {
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  .widget_caldera_forms_widget,
+  .widget_wpcom_social_media_icons_widget {
+    .widget-title {
+      margin-bottom: 1.75em;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: $font__sans-serif;
+      color: $color__text-light;
+    }
+
+    input[type=submit] {
+      background-color: $color__gray;
+      border-color: $color__gray;
+      text-transform: uppercase;
+    }
+
+    .control-label {
+      @include visually-hidden;
+    }
+
+    .genericon {
+      color: $color__text-inverted;
+      background-color: $color__gray;
+      padding: .5em;
+      border-radius: 50%;
+    }
+
+    @include breakpoint(sm) {
+      .first_col {
+        padding-right: 0;
+
+        .form-control {
+          border-right: none;
+          border-top-left-radius: $border-radius-sm;
+          border-bottom-left-radius: $border-radius-sm;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+      .last_col {
+        padding-left: 0;
+
+        input[type=submit] {
+          border-left: none;
+          border-top-right-radius: $border-radius-sm;
+          border-bottom-right-radius: $border-radius-sm;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+  }
+
+  .widget_text {
+    .littlesis-logo {
+      width: 200px;
+      height: 43px;
+      background-image: url( '../images/littlesis-logo-gray.png' );
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    .footer-widget + .footer-widget {
+      border-left: 1px solid $color__gray;
+    }
+
+  }
+
+}

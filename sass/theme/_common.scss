@@ -36,11 +36,28 @@ table {
   border-bottom: 1px solid $color__black;
 }
 
+.category-links {
+  @include no-bullets;
+}
 .category-link {
-  @extend .btn;
-  @extend .btn-secondary;
-  border: none;
-  // border-radius: 0;
+  display: inline-block;
   text-transform: uppercase;
   font-weight: bold;
+
+  a {
+    @extend .btn;
+    @extend .btn-secondary;
+    background-color: $color__gray-lightest;
+    border: none;
+
+    color: $color__gray-dark;
+  }
+}
+.category-link + .category-link {
+  margin-left: .25em;
+  margin-right: 25em;
+}
+
+.screen-reader-text {
+  @include visually-hidden;
 }
