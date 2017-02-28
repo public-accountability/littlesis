@@ -17,12 +17,12 @@
       font-size: 1rem;
       font-weight: bold;
       font-family: $font__sans-serif;
-      color: $color__text-light;
+      color: $color__accent;
     }
 
     input[type=submit] {
-      background-color: $color__gray;
-      border-color: $color__gray;
+      background-color: $color__accent;
+      border-color: $color__accent;
       text-transform: uppercase;
     }
 
@@ -32,7 +32,7 @@
 
     .genericon {
       color: $color__text-inverted;
-      background-color: $color__gray;
+      background-color: $color__accent;
       padding: .5em;
       border-radius: 50%;
     }
@@ -68,7 +68,7 @@
     .littlesis-logo {
       width: 200px;
       height: 43px;
-      background-image: url( '../images/littlesis-logo-gray.png' );
+      background-image: url( '../images/littlesis-logo.png' );
       background-repeat: no-repeat;
       background-size: contain;
     }

@@ -9357,7 +9357,7 @@ body {
     display: inline; }
   .entry-meta .byline + .posted-on:before,
   .entry-meta a .byline + .posted-on:before {
-    content: ' | '; }
+    content: '  |  '; }
 
 table {
   width: 100%; }
@@ -9405,9 +9405,23 @@ h4 {
   font-style: normal;
   line-height: 1.2; }
 
+h2 {
+  font-size: 1.75em; }
+
 .entry-title, .rp4wp-related-posts ul .rp4wp-related-post-content a {
   font-family: "Merriweather", Georgia, serif;
   font-weight: normal; }
+
+#main-menu {
+  text-transform: uppercase;
+  font-weight: bold; }
+  #main-menu .menu-item + .menu-item {
+    margin-left: 1em; }
+  #main-menu a {
+    color: #261b15; }
+
+.navbar-toggler-icon {
+  background-image: url("../images/menu.svg"); }
 
 nav.infinite-scroll {
   width: 100%; }
@@ -9430,11 +9444,11 @@ nav.infinite-scroll {
     margin-right: .5em;
     margin-left: .5em; }
     .filter-nav li a {
-      color: #261b15;
-      font-size: 1.4rem;
-      font-weight: bold; }
+      color: #9f9f9f;
+      font-size: 1.4rem; }
     .filter-nav li.active a {
-      border-bottom: 1px solid #261b15; }
+      color: #1C4767;
+      font-weight: bold; }
 
 .wrapper-navbar {
   border-bottom: 1px solid #9f9f9f; }
@@ -9588,11 +9602,11 @@ article:not(.has-post-thumbnail) .featured-image {
     font-size: 1rem;
     font-weight: bold;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: #9f9f9f; }
+    color: #1C4767; }
   #wrapper-footer-full .widget_caldera_forms_widget input[type=submit],
   #wrapper-footer-full .widget_wpcom_social_media_icons_widget input[type=submit] {
-    background-color: #9f9f9f;
-    border-color: #9f9f9f;
+    background-color: #1C4767;
+    border-color: #1C4767;
     text-transform: uppercase; }
   #wrapper-footer-full .widget_caldera_forms_widget .control-label,
   #wrapper-footer-full .widget_wpcom_social_media_icons_widget .control-label {
@@ -9604,7 +9618,7 @@ article:not(.has-post-thumbnail) .featured-image {
   #wrapper-footer-full .widget_caldera_forms_widget .genericon,
   #wrapper-footer-full .widget_wpcom_social_media_icons_widget .genericon {
     color: #fff;
-    background-color: #9f9f9f;
+    background-color: #1C4767;
     padding: .5em;
     border-radius: 50%; }
   @media screen and (min-width: 620px) {
@@ -9737,7 +9751,7 @@ article:not(.has-post-thumbnail) .featured-image {
   #wrapper-footer-full .widget_text .littlesis-logo {
     width: 200px;
     height: 43px;
-    background-image: url("../images/littlesis-logo-gray.png");
+    background-image: url("../images/littlesis-logo.png");
     background-repeat: no-repeat;
     background-size: contain; }
   @media screen and (min-width: 961px) {
