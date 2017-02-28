@@ -94,57 +94,70 @@ add_action( 'wp_ajax_nopriv_do_taxonomy_filters', 'littlesis_filter_posts' );
  */
 function littlesis_taxonomy_filters( $args = array() ) {
 
-    $uncategorized = get_terms( array( 'slug' => 'uncategorized' ) );
-    $uncategorized_id = ( !empty( $uncategorized ) ) ? $uncategorized[0]->term_id : null;
+ /**
+  * Define the array of defaults
+  */
+  $defaults = array(
+    'taxonomy'        => 'category',
+    'terms'           => false,
+    'active'          => false,
+    'posts_per_page'  => 12
+  );
 
-   /**
-    * Define the array of defaults
-    */
-    $defaults = array(
-      'taxonomy'        => 'category',
-      'terms'           => false,
-      'active'          => false,
-      'posts_per_page'  => 12
-    );
+ /**
+  * Parse incoming $args into an array and merge it with $defaults
+  */
+  $args = wp_parse_args( $args, $defaults );
 
-   /**
-    * Parse incoming $args into an array and merge it with $defaults
-    */
-    $args = wp_parse_args( $args, $defaults );
+  $terms_option = get_option( 'options_littlesis_category_terms' );
+
+  if( $terms_option ) {
 
     $term_args = array(
       'taxonomy' => $args['taxonomy'],
-      'terms'    => $args['terms']
+      'include'  => $terms_option
     );
+
+  } else {
+
+    $term_args = array(
+      'taxonomy' => $args['taxonomy'],
+    );
+
+    $uncategorized = get_terms( array( 'slug' => 'uncategorized' ) );
+    $uncategorized_id = ( !empty( $uncategorized ) ) ? $uncategorized[0]->term_id : null;
 
     if( $uncategorized_id  ) {
       $term_args['exclude'] = (int) $uncategorized_id;
     }
-    ?>
 
-    <div id="taxonomy-filters" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-paged="<?php echo $args['posts_per_page']; ?>" class="taxonomy-filters">
+  }
+
+  ?>
+
+  <div id="taxonomy-filters" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-paged="<?php echo $args['posts_per_page']; ?>" class="taxonomy-filters">
 
     <?php
     $terms = get_terms( $term_args );
 
     if( !empty( $terms ) ) : ?>
 
-      <ul class="filter-nav">
-        <li class="active">
-          <a href="#" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-term="" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
+    <ul class="filter-nav">
+      <li class="active">
+        <a href="#" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-term="" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
+      </li>
+
+      <?php foreach( $terms as $term ) : ?>
+
+        <li>
+          <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-taxonomy="<?php echo $term->taxonomy ?>" data-term="<?php echo $term->slug; ?>" data-page="1"><?php echo $term->name; ?></a>
         </li>
 
-        <?php foreach( $terms as $term ) : ?>
-
-          <li>
-            <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-taxonomy="<?php echo $term->taxonomy ?>" data-term="<?php echo $term->slug; ?>" data-page="1"><?php echo $term->name; ?></a>
-          </li>
-
-        <?php endforeach; ?>
-      </ul>
+      <?php endforeach; ?>
+    </ul>
 
   <?php endif; ?>
 
-  </div>
+</div>
 <?php
 }
