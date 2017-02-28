@@ -1,3 +1,20 @@
+#main-menu {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  .menu-item + .menu-item {
+    margin-left: 1em;
+  }
+
+  a {
+    color: $color__text-primary;
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url( '../images/menu.svg' );
+}
+
 nav.infinite-scroll {
   width: 100%;
   button {
@@ -22,14 +39,14 @@ nav.infinite-scroll {
     margin-left: .5em;
 
     a {
-      color: $color__text-primary;
+      color: $color__text-light;
       font-size: 1.4rem;
-      font-weight: bold;
     }
 
     &.active {
       a {
-        border-bottom: 1px solid $color__text-primary;
+        color: $color__accent;
+        font-weight: bold;
       }
     }
   }
