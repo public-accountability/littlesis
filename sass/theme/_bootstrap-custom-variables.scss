@@ -19,9 +19,17 @@ $btn-secondary-border:           $color__gray-light;
 $border-radius:                   0;
 $border-radius-sm:                .2rem;
 
-$grid-gutter-width-base:          50px;
+$grid-gutter-width-base:          37px;
 
 // Basics of a navbar
 $navbar-height:                    60px;
 $navbar-margin-bottom:             0px;
 $navbar-border-radius:             0px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $screen__sm,
+  md: $screen__md,
+  lg: $screen__lg,
+  xl: $screen__xl
+);

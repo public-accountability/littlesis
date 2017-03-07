@@ -112,39 +112,55 @@
  */
  function littlesis_the_post_thumbnail( $post_id = null, $size = 'thumbnail' ) {
    $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
-   if( has_post_thumbnail( $post_id ) ) {
-     $image_id = get_post_thumbnail_id( $post_id );
-     $caption = get_post_field( 'post_excerpt', $image_id );
-     $image = sprintf(' <figure class="post-image size-%s"><a href="%s" rel="bookmark">%s</a><figcaption>%s</figcaption></figure>',
-       $size,
-       get_permalink(  $post_id ),
-       get_the_post_thumbnail( $post_id, $size ),
-       $caption
-     );
-    echo $image;
-   }
+
+   $image_id = get_post_thumbnail_id( $post_id );
+   $caption = get_post_field( 'post_excerpt', $image_id );
+   $image = sprintf(' <figure class="featured-image size-%s %s"><a href="%s" rel="bookmark">%s</a></figure>',
+     $size,
+     ( has_post_thumbnail( $post_id ) ) ? esc_attr( ' has-thumbnail' ) : esc_attr( ' no-thumbnail' ),
+     get_permalink(  $post_id ),
+     get_the_post_thumbnail( $post_id, $size )
+   );
+
+   echo $image;
  }
 
- /**
-  * Display Image with Markup for Single Posts
-  *
-  * @since 0.1.0
-  * @param  int $post_id
-  * @param  string  $size
-  * @return void
-  */
-  function littlesis_the_post_thumbnail_single( $post_id = null, $size = 'full' ) {
-    $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
-    if( has_post_thumbnail( $post_id ) ) {
-      $image_id = get_post_thumbnail_id( $post_id );
-      $caption = get_post_field( 'post_excerpt', $image_id );
-      $image = sprintf(' <figure class="single-post-image size-%s">%s<figcaption>%s</figcaption></figure>',
-        $size,
-        get_the_post_thumbnail( $post_id, $size ),
-        $caption
-      );
-    } else {
-      $image = '<figure class="single-post-image no-post-thumbnail"></figure>';
-    }
-    echo $image;
+/**
+ * Display Image with Markup for Single Posts
+ *
+ * @since 0.1.0
+ * @param  int $post_id
+ * @param  string  $size
+ * @return void
+ */
+function littlesis_the_post_thumbnail_single( $post_id = null, $size = 'full' ) {
+  $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
+  if( has_post_thumbnail( $post_id ) ) {
+    $image_id = get_post_thumbnail_id( $post_id );
+    $caption = get_post_field( 'post_excerpt', $image_id );
+    $image = sprintf(' <figure class="single-post-image size-%s">%s<figcaption>%s</figcaption></figure>',
+      $size,
+      get_the_post_thumbnail( $post_id, $size ),
+      $caption
+    );
   }
+  echo $image;
+}
+
+/**
+ * JetPack Share Template Tag
+ *
+ * @since 0.0.9
+ *
+ * @return void
+ */
+function littlesis_jetpack_share() {
+  if ( function_exists( 'sharing_display' ) ) {
+    sharing_display( '', true );
+  }
+
+  if ( class_exists( 'Jetpack_Likes' ) ) {
+    $custom_likes = new Jetpack_Likes;
+    echo $custom_likes->post_likes( '' );
+  }
+}

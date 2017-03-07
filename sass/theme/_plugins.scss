@@ -1,4 +1,15 @@
 .rp4wp-related-posts {
+
+  h3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2.5em;
+    font-family: $font__sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color__gray-light;
+  }
+
   ul {
     @include no-bullets;
     @extend .row;
@@ -6,13 +17,65 @@
     &> li {
       @extend .col-md-6;
       @extend .col-lg-4;
+
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    @include breakpoint(md) {
+      &> li {
+        padding-right: 25px;
+        padding-left: 25px;
+      }
+
+      &> li {
+        &:nth-child(odd) {
+          padding-left: 0;
+        }
+        &:nth-child(even) {
+          padding-right: 0;
+        }
+      }
+    }
+
+    @include breakpoint(lg) {
+      &> li {
+        &:nth-child(odd) {
+          padding-left: 25px;
+        }
+        &:nth-child(even) {
+          padding-right: 25px;
+        }
+      }
+
+      &> li {
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
 
     .rp4wp-related-post-content {
       a {
         @extend .entry-title;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        color: $color__text-primary;
+      }
+
+      .read-more {
+        margin-top: 2em;
+        padding-bottom: .5em;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: normal;
+        font-family: $font__sans-serif;
+        color: $color__link;
+        border-bottom: 1px solid $color__accent;
       }
     }
+
   }
 }

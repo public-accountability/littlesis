@@ -7,37 +7,71 @@
     margin-left: auto;
   }
 
+  .entry-header {
+    margin-bottom: 3.75em;
+  }
+
+  .entry-footer {
+    margin-bottom: 2em;
+  }
+
   .entry-title {
     margin-bottom: .75em;
   }
 
   .entry-meta {
-    margin-bottom: 1.5em;
+
+    @extend .row;
+
+    .post-meta,
+    .sd-sharing-enabled {
+      @extend .col-md-6;
+    }
+
+    .sd-sharing-enabled {
+      ul {
+        text-align: right;
+      }
+
+      a.sd-button {
+        background-color: $color__gray !important;
+      }
+    }
+
+  }
+
+  .byline,
+  .posted-on {
+    display: block;
+  }
+
+  .entry-meta a {
+    text-transform: none;
+  }
+
+  .byline {
+    font-size: 1.35rem;
+    text-transform: lowercase;
+
+    a {
+      text-transform: none;
+    }
+  }
+
+  .posted-on,
+  .posted-on a {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .byline + .posted-on {
+    &:before {
+      content: none;
+    }
   }
 
   .category-links {
     margin-bottom: 1em;
-  }
-
-  .single-post-image {
-    @include aspect-ratio(7, 5);
-    background-color: $color__accent;
-  }
-
-  .no-post-thumbnail {
-    background-image: url('../images/thumbnail-default.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  figure{
-      width: 100%;
-      margin-bottom: 1.5em;
-      text-align: center;
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 }
 
@@ -67,18 +101,21 @@
   }
 }
 
-.archive {
+.archive,
+.search {
+
+  .page-header {
+    margin-bottom: 2em;
+  }
+
   .page-title {
     font-weight: bold;
   }
 
   .taxonomy-description {
 
-    margin-bottom: 2em;
-
     @include breakpoint(md) {
-      width: 50%;
-      margin-bottom: 4em;
+      width: 70%;
     }
   }
 
@@ -91,15 +128,13 @@
 
   .featured-image {
     @extend .col-md-4;
+    padding-right: 0;
+    padding-left: 0;
 
-    @include aspect-ratio(7, 5);
-    overflow: hidden;
-    background-color: $color__accent;
-
-    img {
-      width: 100%;
-      object-fit: cover;
+    @include breakpoint(md) {
+      padding-right: $grid-gutter-width-base;
     }
+
   }
 
   .entry-body{

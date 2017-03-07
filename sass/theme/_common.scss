@@ -1,6 +1,7 @@
 body {
   background-color: $color__white;
   color: $color__text-primary;
+  overflow-x: hidden;
 }
 
 .entry-title a {
@@ -9,7 +10,7 @@ body {
 
 .entry-meta,
 .entry-meta a {
-  color: $color__text-light;
+  color: $color__text-xlight;
   text-transform: uppercase;
 
   .byline,
@@ -41,23 +42,18 @@ table {
 }
 .category-link {
   display: inline-block;
-  text-transform: uppercase;
-  font-weight: bold;
 
   a {
-    @extend .btn;
-    @extend .btn-secondary;
-    background-color: $color__gray-lightest;
     border: none;
-
-    color: $color__gray-dark;
+    font-family: $font__serif;
+    color: $color__text-light;
   }
 }
 .category-link + .category-link {
-  margin-left: .25em;
-  margin-right: 25em;
+  margin-left: 2em;
 }
 
-.screen-reader-text {
+.screen-reader-text,
+.assistive-text {
   @include visually-hidden;
 }

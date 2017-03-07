@@ -24,32 +24,6 @@
  }
 
 /**
- * Modify Markup of Thumbnail
- *
- * @since 0.1.0
- *
- * @param  string $html
- * @param  int  $post_id
- * @param  int  $post_thumbnail_id
- * @param  mixed (string || array)  $size
- * @param  array $attr
- * @return string $html
- */
-function littlesis_modify_post_thumbnail_html( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
-    $id = get_post_thumbnail_id();
-    $src = wp_get_attachment_image_src( $id, $size );
-    $alt = get_the_title( $id );
-    $class = $attr['class'];
-
-    if( 'thumbnail' == $size || 'medium' == $size ) {
-      $html = sprintf( '<figure class="featured-image">%s</figure>', $html );
-    }
-
-    return $html;
-}
-add_filter( 'post_thumbnail_html', 'littlesis_modify_post_thumbnail_html', 99, 5 );
-
-/**
  * Default Open Graph Image
  * Replaces JetPack's default image with a custom image
  *
@@ -85,11 +59,30 @@ function littlesis_default_jetpack_open_graph_image() {
 add_filter( 'jetpack_open_graph_image_default', 'littlesis_default_jetpack_open_graph_image' );
 
 /**
+ * Remove JetPack Share Links from Content and Excerpt
+ *
+ * @since 0.0.9
+ *
+ * @link https://jetpack.com/2013/06/10/moving-sharing-icons/
+ *
+ * @return void
+ */
+function littlesis_jetpack_remove_share() {
+    remove_filter( 'the_content', 'sharing_display', 19 );
+    remove_filter( 'the_excerpt', 'sharing_display', 19 );
+
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+add_action( 'loop_start', 'littlesis_jetpack_remove_share' );
+
+/**
  * Modify Default Archive title
  *
  * @since 0.0.6
  *
- * @uses
+ * @uses get_the_archive_title filter hook
  * @link https://developer.wordpress.org/reference/hooks/get_the_archive_title/
  *
  * @param  string $title
@@ -102,3 +95,46 @@ function littlesis_get_the_archive_title( $title ) {
   return $title;
 }
 add_filter( 'get_the_archive_title', 'littlesis_get_the_archive_title' );
+
+/**
+ * Modify Related Posts Excerpt
+ *
+ * @since 0.0.9
+ *
+ * @uses rp4wp_post_excerpt filter hook
+ *
+ * @param  string  $excerpt
+ * @param  int  $id
+ * @return string $excerpt
+ */
+function littlesis_related_posts_excerpt( $excerpt, $id ) {
+  $excerpt = '<a class="read-more" href="' . get_permalink( $id ) . '">' . __( 'Read More <span>&rarr;</span>',
+  'littlesis' ) . '</a>';
+  return $excerpt;
+}
+add_filter( 'rp4wp_post_excerpt', 'littlesis_related_posts_excerpt' );
+
+/**
+ * Modify Related Posts Thumbnail Size
+ *
+ * @since 0.0.9
+ *
+ * @uses rp4wp_thumbnail_size filter hook
+ *
+ * @return string
+ */
+function littlesis_related_posts_thumbnail() {
+  return 'medium';
+}
+add_filter( 'rp4wp_thumbnail_size', 'littlesis_related_posts_thumbnail' );
+
+/**
+ * Don't Automatically Append Related Posts to Content
+ *
+ * @since 0.0.9
+ *
+ * @uses rp4wp_append_content filter hook
+ *
+ * @return false
+ */
+add_filter( 'rp4wp_append_content', '__return_false' );
