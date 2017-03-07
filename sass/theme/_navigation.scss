@@ -40,7 +40,7 @@ nav.infinite-scroll {
 
     a {
       color: $color__text-light;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
     }
 
     &.active {
@@ -53,12 +53,11 @@ nav.infinite-scroll {
 }
 
 .wrapper-navbar {
-  border-bottom: 1px solid $color__gray;
+  border-bottom: 1px solid $color__gray-light;
 }
 
 .nav-links {
-  display: flex;
-  flex-wrap: wrap;
+  @extend .row;
   align-content: space-between;
 
   .nav-previous,
@@ -68,5 +67,72 @@ nav.infinite-scroll {
 
   .nav-next {
     text-align: right;
+  }
+}
+
+.menu-search-icon {
+  a {
+    @extend .fa;
+    @extend .fa-search;
+  }
+}
+
+.top-search {
+  @extend .row;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid $color__gray-light;
+  transition: all .2s ease-in-out;
+
+  &.collapsed {
+    max-height: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &.expanded {
+    max-height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #searchform {
+    @extend .col-10;
+    @extend .col-md-7;
+
+    @include breakpoint( md ) {
+      padding-left: 0;
+    }
+  }
+  input[type=text] {
+    border: none;
+
+    font-size: 1.2rem;
+    color: $color__text-light;
+
+    &::placeholder {
+      font-size: 1.2rem;
+      color: $color__text-xlight;
+    }
+  }
+  input[type=submit] {
+    @include visually-hidden;
+  }
+
+  .search-control {
+    @extend .col-2;
+    @extend .col-md-5;
+    text-align: right;
+
+    button {
+      height: 17px;
+      width: 17px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-image: url( '../images/close.svg' );
+    }
   }
 }

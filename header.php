@@ -80,4 +80,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav><!-- .site-navigation -->
 
+		<div class="top-search collapsed" aria-expanded="false">
+
+			<div class="container">
+				<div class="row">
+					<?php get_search_form(); ?>
+					<div class="search-control"><button type="button" name="close" class="close-button"><div class="screen-reader-text"><?php _e( 'Close', 'littlesis' ); ?></div></button></div>
+				</div>
+			</div>
+		</div>
+
 	</div><!-- .wrapper-navbar end -->
