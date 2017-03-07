@@ -16,7 +16,11 @@
 
 		<div class="entry-meta">
 
-			<?php understrap_posted_on(); ?>
+			<div class="post-meta">
+					<?php understrap_posted_on(); ?>
+			</div>
+
+			<?php littlesis_jetpack_share(); ?>
 
 		</div><!-- .entry-meta -->
 
@@ -42,6 +46,10 @@
 		<?php littlesis_get_the_term_list( 'post_tag' ); ?>
 
 		<?php littlesis_get_the_term_list( 'series' ); ?>
+
+		<?php if( function_exists( 'rp4wp_children' ) ) : ?>
+			<?php rp4wp_children(); ?>
+		<?php endif; ?>
 
 	</footer><!-- .entry-footer -->
 

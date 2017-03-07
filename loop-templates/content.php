@@ -9,10 +9,10 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+	<?php littlesis_the_post_thumbnail( $post->ID, 'medium' ); ?>
 
 	<div class="entry-body">
-		
+
 		<header class="entry-header">
 
 			<?php if ( 'post' == get_post_type() ) : ?>
