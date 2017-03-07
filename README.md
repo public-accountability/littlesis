@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.2
-Version: 0.0.8
+Version: 0.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,13 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.0.9 March 6, 2017
+  * Implemented search
+  * Updated styles
+  * Modified featured image function to add class for `no-thumbnail`
+  * Removed comments
+  * Implemented related articles
 
 * 0.0.8 February 27, 2017
   * Modified filter to select from categories selected from Category Filters menu

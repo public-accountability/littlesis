@@ -1,6 +1,17 @@
+.embed-responsive {
+  background-color: $color__gray-light;
+
+  @include breakpoint(md) {
+    width: 110%;
+    margin-left: -5%;
+  }
+
+}
+
 .iframe-container {
   @extend .embed-responsive;
   @extend .embed-responsive-4by3;
+  margin-top: 42px;
 
   iframe {
       min-height: 600px;
@@ -13,23 +24,39 @@ iframe {
   border: 0;
 }
 
-.grid {
-   .featured-image {
-     @include aspect-ratio(7, 5);
-     overflow: hidden;
-     background-color: $color__gray-light;
-
-     img {
-       width: 100%;
-       object-fit: cover;
-     }
-   }
+figure {
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-article:not(.has-post-thumbnail) {
-  .featured-image {
+.featured-image {
+  a {
+    display: block;
+    @include aspect-ratio(7, 5);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.no-thumbnail a {
     background-image: url('../images/thumbnail-default.svg');
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.single-post-image {
+  margin-bottom: 42px;
+  @include aspect-ratio(7, 5);
+  background-color: $color__accent;
 }
