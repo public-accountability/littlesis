@@ -19,7 +19,7 @@
 
     var args = $this[0].dataset;
 
-    args.posts_per_page = $( '#taxonomy-filters' ).data( 'paged' );
+    args.posts_per_page =  littlesis_taxonomy_filters.posts_per_page;
 
     get_posts(args);
 

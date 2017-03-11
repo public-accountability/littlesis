@@ -49,9 +49,10 @@ function theme_enqueue_styles() {
   if( is_home() ) {
     $button_text = get_option( 'taxonomy_filters_button_text', __( 'Load More', 'littlesis' ) );
     $args = array(
-      'nonce'         => wp_create_nonce( 'littlesis_taxonomy_filters' ),
-      'ajax_url'      => admin_url( 'admin-ajax.php' ),
-      'button_text'   => $button_text
+      'nonce'           => wp_create_nonce( 'littlesis_taxonomy_filters' ),
+      'ajax_url'        => admin_url( 'admin-ajax.php' ),
+      'button_text'     => $button_text,
+      'posts_per_page'  => get_option( 'posts_per_page' )
     );
     wp_enqueue_script( 'littlesis-tax-filters',  get_stylesheet_directory_uri() . '/js/category-filters.js', array( 'jquery' ), null, true );
     wp_localize_script( 'littlesis-tax-filters', 'littlesis_taxonomy_filters', $args );
