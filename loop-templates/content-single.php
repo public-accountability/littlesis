@@ -34,7 +34,7 @@
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'littlesis' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -43,12 +43,10 @@
 
 	<footer class="entry-footer">
 
-		<?php littlesis_get_the_term_list( 'post_tag' ); ?>
-
 		<?php littlesis_get_the_term_list( 'series' ); ?>
 
-		<?php if( function_exists( 'rp4wp_children' ) ) : ?>
-			<?php rp4wp_children(); ?>
+		<?php if( function_exists( 'littlesis_core_related_posts' ) ) : ?>
+			<?php littlesis_core_related_posts(); ?>
 		<?php endif; ?>
 
 	</footer><!-- .entry-footer -->
