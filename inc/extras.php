@@ -9,6 +9,7 @@
  * @since 0.1.0
  */
 
+
 /**
  * Override Parent Post Excerpt
  *
@@ -95,46 +96,3 @@ function littlesis_get_the_archive_title( $title ) {
   return $title;
 }
 add_filter( 'get_the_archive_title', 'littlesis_get_the_archive_title' );
-
-/**
- * Modify Related Posts Excerpt
- *
- * @since 0.0.9
- *
- * @uses rp4wp_post_excerpt filter hook
- *
- * @param  string  $excerpt
- * @param  int  $id
- * @return string $excerpt
- */
-function littlesis_related_posts_excerpt( $excerpt, $id ) {
-  $excerpt = '<a class="read-more" href="' . get_permalink( $id ) . '">' . __( 'Read More <span>&rarr;</span>',
-  'littlesis' ) . '</a>';
-  return $excerpt;
-}
-add_filter( 'rp4wp_post_excerpt', 'littlesis_related_posts_excerpt' );
-
-/**
- * Modify Related Posts Thumbnail Size
- *
- * @since 0.0.9
- *
- * @uses rp4wp_thumbnail_size filter hook
- *
- * @return string
- */
-function littlesis_related_posts_thumbnail() {
-  return 'medium';
-}
-add_filter( 'rp4wp_thumbnail_size', 'littlesis_related_posts_thumbnail' );
-
-/**
- * Don't Automatically Append Related Posts to Content
- *
- * @since 0.0.9
- *
- * @uses rp4wp_append_content filter hook
- *
- * @return false
- */
-add_filter( 'rp4wp_append_content', '__return_false' );

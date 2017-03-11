@@ -56,7 +56,5 @@ figure {
 }
 
 .single-post-image {
-  margin-bottom: 42px;
   @include aspect-ratio(7, 5);
-  background-color: $color__accent;
 }

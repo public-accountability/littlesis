@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.2
-Version: 0.0.9
+Version: 0.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,14 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.0.10 March 11, 2017
+  * Added custom Related Posts template and styling
+  * Removed old related posts filters
+  * Removed post navigation from single posts
+  * Removed post tags from single posts
+  * Added `posts_per_page` property to localized  `littlesis_taxonomy_filters` object, based on `posts_per_page` option selected in admin. Applied to home page
+  * General style updates
 
 * 0.0.9 March 6, 2017
   * Implemented search

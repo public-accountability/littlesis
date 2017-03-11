@@ -25,8 +25,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-						<?php understrap_post_nav(); ?>
-
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->

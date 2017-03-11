@@ -79,3 +79,34 @@
 
   }
 }
+
+#related-posts {
+  margin-top: 1em;
+
+  .related-header {
+    flex-basis: 100%;
+    padding: 1em 0;
+    margin-bottom: 2.5em;
+    font-family: $font__sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color__gray-light;
+  }
+
+  article {
+
+    .entry-header {
+      margin-bottom: .5em;
+    }
+
+    .entry-title {
+      font-size: 22px;
+    }
+  }
+
+  @include breakpoint(md) {}
+
+  @include breakpoint(lg) {}
+
+
+}

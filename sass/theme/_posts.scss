@@ -1,22 +1,28 @@
 .single {
 
-  .entry-header,
-  .entry-content {
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  .site-main > article {
+    &> .entry-header,
+    &> .entry-content {
+      margin-right: auto;
+      margin-left: auto;
+    }
 
-  .entry-header {
-    margin-bottom: 3.75em;
-  }
+    &> .entry-header {
+      max-width: 814px;
+      margin-bottom: 3.75em;
+    }
 
-  .entry-footer {
-    margin-bottom: 2em;
+    &> .entry-content {
+      max-width: 754px;
+    }
   }
 
   .entry-title {
     margin-bottom: .75em;
+  }
+
+  .entry-footer {
+    margin-bottom: 2em;
   }
 
   .entry-meta {
@@ -72,6 +78,13 @@
 
   .category-links {
     margin-bottom: 1em;
+  }
+
+  .single-post-image {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 938px;
+    margin-bottom: 42px;
   }
 }
 
@@ -144,6 +157,5 @@
     }
     @extend .col-md-8;
   }
-
 
 }

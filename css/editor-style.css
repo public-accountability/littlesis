@@ -9471,20 +9471,23 @@ nav.infinite-scroll {
   padding-top: 56px;
   padding-bottom: 180px; }
 
-.single .entry-header,
-.single .entry-content {
-  width: 90%;
+.single .site-main > article > .entry-header,
+.single .site-main > article > .entry-content {
   margin-right: auto;
   margin-left: auto; }
 
-.single .entry-header {
+.single .site-main > article > .entry-header {
+  max-width: 814px;
   margin-bottom: 3.75em; }
 
-.single .entry-footer {
-  margin-bottom: 2em; }
+.single .site-main > article > .entry-content {
+  max-width: 754px; }
 
 .single .entry-title, .single .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content .single a {
   margin-bottom: .75em; }
+
+.single .entry-footer {
+  margin-bottom: 2em; }
 
 .single .entry-meta .sd-sharing-enabled ul {
   text-align: right; }
@@ -9515,6 +9518,12 @@ nav.infinite-scroll {
 
 .single .category-links {
   margin-bottom: 1em; }
+
+.single .single-post-image {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 938px;
+  margin-bottom: 42px; }
 
 .home .grid article {
   align-items: stretch;
@@ -9616,9 +9625,7 @@ figure {
   background-size: cover; }
 
 .single-post-image {
-  margin-bottom: 42px;
-  position: relative;
-  background-color: #194668; }
+  position: relative; }
   .single-post-image:before {
     display: block;
     content: "";
@@ -9739,6 +9746,21 @@ figure {
     font-family: "Source Sans Pro", sans-serif;
     color: #194668;
     border-bottom: 1px solid #194668; }
+
+#related-posts {
+  margin-top: 1em; }
+  #related-posts .related-header {
+    flex-basis: 100%;
+    padding: 1em 0;
+    margin-bottom: 2.5em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d3d3d3; }
+  #related-posts article .entry-header {
+    margin-bottom: .5em; }
+  #related-posts article .entry-title, #related-posts article .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content #related-posts article a {
+    font-size: 22px; }
 
 #wrapper-static-hero {
   background-color: transparent;
