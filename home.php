@@ -51,7 +51,9 @@ if( !empty( $sticky ) ) : ?>
 
 				<div class="row results">
 
-					<?php $posts = ( $sticky ) ? get_posts( array( 'post__not_in' => array( $sticky ) ) ) : get_posts() ; ?>
+					<?php $posts_per_page = get_option( 'posts_per_page' ); ?>
+					<?php $args = ( $sticky ) ?  array( 'posts_per_page' => $posts_per_page, 'post__not_in' => array( $sticky ) ) : array( 'posts_per_page' => $posts_per_page ); ?>
+					<?php $posts = get_posts( $args ); ?>
 
 						<?php /* Start the Loop */ ?>
 
