@@ -39,6 +39,8 @@ add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
  */
 function theme_enqueue_styles() {
 
+  wp_deregister_style( 'the-neverending-homepage' );
+
 	// Get the theme data
   $the_theme = wp_get_theme();
 

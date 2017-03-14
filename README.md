@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.2
-Version: 0.1.0
+Version: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,10 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.1.1 March 14, 2017
+  * Disabled JetPack infinite scroll styling
+  * Moved byline below title on archive pages
 
 * 0.1.0 March 14, 2017
   * Style updates
