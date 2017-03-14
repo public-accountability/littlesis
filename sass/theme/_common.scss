@@ -1,3 +1,7 @@
+// html {
+//   font-size: 14px;
+// }
+
 body {
   background-color: $color__white;
   color: $color__text-primary;
@@ -16,6 +20,10 @@ body {
   .byline,
   .posted-on {
     display: inline;
+    font-weight: 600;
+    font-size: .75rem;
+    letter-spacing: 0.4px;
+    line-height: 1;
   }
 
   .byline + .posted-on {
@@ -34,7 +42,13 @@ table {
 .read-more {
   padding-bottom: .5em;
   text-transform: uppercase;
-  border-bottom: 1px solid $color__black;
+  border-bottom: 1px solid $color__text-xlight;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    color: $color__secondary;
+  }
 }
 
 .category-links {

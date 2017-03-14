@@ -8,6 +8,8 @@
 
   a {
     color: $color__text-primary;
+    font-size: 14px;
+    letter-spacing: 0.3px;
   }
 }
 
@@ -35,12 +37,13 @@ nav.infinite-scroll {
   li {
     display: inline-block;
     font-family: $font__serif;
-    margin-right: .5em;
-    margin-left: .5em;
+    margin-right: .75em;
+    margin-left: .75em;
 
     a {
-      color: $color__text-light;
-      font-size: 1.25rem;
+      color: $color__text-primary;
+      font-size: $font__size-h5;
+      font-weight: 700;
     }
 
     &.active {
@@ -53,7 +56,7 @@ nav.infinite-scroll {
 }
 
 .wrapper-navbar {
-  border-bottom: 1px solid $color__gray-light;
+  border-bottom: 2px solid $color__border;
 }
 
 .nav-links {
@@ -72,8 +75,14 @@ nav.infinite-scroll {
 
 .menu-search-icon {
   a {
-    @extend .fa;
-    @extend .fa-search;
+    display: block;
+    width: 23px;
+    height: 23px;
+    padding: 0 !important;
+    margin-top: 6px;
+    background-image: url( '../images/search.svg' );
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -81,7 +90,7 @@ nav.infinite-scroll {
   @extend .row;
   padding-top: 1em;
   padding-bottom: 1em;
-  border-top: 1px solid $color__gray-light;
+  border-top: 2px solid $color__border;
   transition: all .2s ease-in-out;
 
   &.collapsed {
@@ -108,12 +117,14 @@ nav.infinite-scroll {
   input[type=text] {
     border: none;
 
-    font-size: 1.2rem;
+    font-size: $font__size-h5;
     color: $color__text-light;
+    font-family: $font__sans-serif;
 
     &::placeholder {
-      font-size: 1.2rem;
+      font-size: $font__size-h5;
       color: $color__text-xlight;
+      font-family: $font__sans-serif;
     }
   }
   input[type=submit] {

@@ -21,10 +21,14 @@ $border-radius-sm:                .2rem;
 
 $grid-gutter-width-base:          37px;
 
+//$spacer:                          1rem !default;
+
 // Basics of a navbar
 $navbar-height:                    60px;
 $navbar-margin-bottom:             0px;
 $navbar-border-radius:             0px;
+//$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                 33px;
 
 $grid-breakpoints: (
   xs: 0,
@@ -33,3 +37,7 @@ $grid-breakpoints: (
   lg: $screen__lg,
   xl: $screen__xl
 );
+
+$font-size-h1: $font__size-h1;
+$font-size-h2: $font__size-h2;
+$font-size-h3: $font__size-h3;

@@ -3,6 +3,7 @@
  * The template for displaying all single posts.
  *
  * @package understrap
+ * @subpackage littlesis
  */
 
 get_header();

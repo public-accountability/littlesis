@@ -30,7 +30,6 @@
     .widget-title {
       margin-bottom: 1em;
       text-transform: uppercase;
-      font-size: 1rem;
       font-weight: bold;
       font-family: $font__sans-serif;
       color: $color__text-light;
@@ -57,7 +56,7 @@
     input[type=submit] {
       height: 50px;
       border: none;
-      font-size: 14px;
+      font-size: $font__size-small;
       border-radius: 0;
     }
 
@@ -94,9 +93,7 @@
 
   @include breakpoint(md) {
 
-    .footer-widget + .footer-widget {
-      // border-left: 1px solid $color__gray;
-    }
+    .footer-widget + .footer-widget {}
 
   }
 

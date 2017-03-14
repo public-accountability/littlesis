@@ -24,29 +24,29 @@
       $post = intval( $post );
       setup_postdata( $post ); ?>
 
-      <article <?php post_class( 'col-md-6 col-lg-4' ); ?> id="post-<?php the_ID(); ?>">
+      <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-        <header class="entry-header">
+          <header class="entry-header">
 
-          <?php littlesis_core_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
+            <?php littlesis_core_the_post_thumbnail( get_the_ID(), 'medium' ); ?>
 
-          <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-          '</a></h2>' ); ?>
+            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+            '</a></h2>' ); ?>
 
-        </header><!-- .entry-header -->
+          </header><!-- .entry-header -->
 
-        <div class="entry-content">
+          <div class="entry-content">
 
-          <p><a class="read-more" href="<?php get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More <span>&rarr;</span>',
-          'littlesis' ); ?></a></p>
+            <p><a class="read-more" href="<?php get_permalink( get_the_ID() ); ?>"><?php _e( 'Read More <span>&rarr;</span>',
+            'littlesis' ); ?></a></p>
 
-        </div><!-- .entry-content -->
+          </div><!-- .entry-content -->
 
-        <footer class="entry-footer">
+          <footer class="entry-footer">
 
-        </footer><!-- .entry-footer -->
+          </footer><!-- .entry-footer -->
 
-      </article><!-- #post-## -->
+        </article><!-- #post-## -->
 
     <?php endforeach; ?>
     <?php wp_reset_postdata(); ?>

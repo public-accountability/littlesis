@@ -9,7 +9,7 @@
 
     &> .entry-header {
       max-width: 814px;
-      margin-bottom: 3.75em;
+      margin-bottom: 2em;
     }
 
     &> .entry-content {
@@ -19,6 +19,9 @@
 
   .entry-title {
     margin-bottom: .75em;
+    font-size: 3.4375rem;
+    line-height: 61px;
+    letter-spacing: 0.74px;
   }
 
   .entry-footer {
@@ -49,6 +52,7 @@
   .byline,
   .posted-on {
     display: block;
+    line-height: 1.125;
   }
 
   .entry-meta a {
@@ -78,6 +82,13 @@
 
   .category-links {
     margin-bottom: 1em;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.23px;
+
+    a {
+      color: $color__text-xlight;
+    }
   }
 
   .single-post-image {
@@ -123,6 +134,7 @@
 
   .page-title {
     font-weight: bold;
+    font-size: 2.25rem;
   }
 
   .taxonomy-description {
@@ -137,6 +149,10 @@
 
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .entry-content {
+    margin-top: .5em;
   }
 
   .featured-image {
