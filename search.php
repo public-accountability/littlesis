@@ -1,8 +1,9 @@
 <?php
 /**
  * The template for displaying search results pages.
- *
+ * 
  * @package understrap
+ * @subpackage littlesis
  */
 
 get_header();
@@ -26,7 +27,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<header class="page-header">
 
-						<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'understrap' ),
+						<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'littlesis' ),
 						'<span>' . get_search_query() . '</span>' ); ?></h1>
 
 					</header><!-- .page-header -->
