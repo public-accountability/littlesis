@@ -49,7 +49,9 @@
   span {
     @extend .btn;
     @extend .btn-secondary;
+
+  }
+  button {
     text-transform: uppercase;
   }
-  button {}
 }
