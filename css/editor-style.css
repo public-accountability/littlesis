@@ -458,13 +458,13 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 3.4375rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 1.625rem; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 1rem; }
 
 h4, .h4 {
   font-size: 1.5rem; }
@@ -689,25 +689,25 @@ pre {
       padding-right: 18.5px;
       padding-left: 18.5px; } }
 
-.row, .nav-links, .top-search, .single .entry-meta, .rp4wp-related-posts ul {
+.row, .nav-links, .top-search, .single .entry-meta {
   display: flex;
   flex-wrap: wrap;
   margin-right: -18.5px;
   margin-left: -18.5px; }
   @media (min-width: 576px) {
-    .row, .nav-links, .top-search, .single .entry-meta, .rp4wp-related-posts ul {
+    .row, .nav-links, .top-search, .single .entry-meta {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 768px) {
-    .row, .nav-links, .top-search, .single .entry-meta, .rp4wp-related-posts ul {
+    .row, .nav-links, .top-search, .single .entry-meta {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 992px) {
-    .row, .nav-links, .top-search, .single .entry-meta, .rp4wp-related-posts ul {
+    .row, .nav-links, .top-search, .single .entry-meta {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 1200px) {
-    .row, .nav-links, .top-search, .single .entry-meta, .rp4wp-related-posts ul {
+    .row, .nav-links, .top-search, .single .entry-meta {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
 
@@ -722,7 +722,7 @@ pre {
 .col-1, .col-2, .top-search .search-control, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .top-search #searchform, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .nav-links .nav-previous,
 .nav-links .nav-next, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image,
 .search .featured-image, #wrapper-footer-full .widget-2, #wrapper-footer-full .widget-3, .col-md-5, .col-md-6, .single .entry-meta .post-meta,
-.single .entry-meta .sd-sharing-enabled, .rp4wp-related-posts ul > li, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
+.single .entry-meta .sd-sharing-enabled, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
 .search .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
   position: relative;
   width: 100%;
@@ -733,7 +733,7 @@ pre {
     .col-1, .col-2, .top-search .search-control, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .top-search #searchform, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .nav-links .nav-previous,
     .nav-links .nav-next, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image,
     .search .featured-image, #wrapper-footer-full .widget-2, #wrapper-footer-full .widget-3, .col-md-5, .col-md-6, .single .entry-meta .post-meta,
-    .single .entry-meta .sd-sharing-enabled, .rp4wp-related-posts ul > li, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
+    .single .entry-meta .sd-sharing-enabled, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
     .search .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
       padding-right: 18.5px;
       padding-left: 18.5px; } }
@@ -741,7 +741,7 @@ pre {
     .col-1, .col-2, .top-search .search-control, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .top-search #searchform, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .nav-links .nav-previous,
     .nav-links .nav-next, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image,
     .search .featured-image, #wrapper-footer-full .widget-2, #wrapper-footer-full .widget-3, .col-md-5, .col-md-6, .single .entry-meta .post-meta,
-    .single .entry-meta .sd-sharing-enabled, .rp4wp-related-posts ul > li, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
+    .single .entry-meta .sd-sharing-enabled, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
     .search .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
       padding-right: 18.5px;
       padding-left: 18.5px; } }
@@ -749,7 +749,7 @@ pre {
     .col-1, .col-2, .top-search .search-control, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .top-search #searchform, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .nav-links .nav-previous,
     .nav-links .nav-next, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image,
     .search .featured-image, #wrapper-footer-full .widget-2, #wrapper-footer-full .widget-3, .col-md-5, .col-md-6, .single .entry-meta .post-meta,
-    .single .entry-meta .sd-sharing-enabled, .rp4wp-related-posts ul > li, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
+    .single .entry-meta .sd-sharing-enabled, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
     .search .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
       padding-right: 18.5px;
       padding-left: 18.5px; } }
@@ -757,7 +757,7 @@ pre {
     .col-1, .col-2, .top-search .search-control, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .top-search #searchform, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .nav-links .nav-previous,
     .nav-links .nav-next, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .archive .featured-image,
     .search .featured-image, #wrapper-footer-full .widget-2, #wrapper-footer-full .widget-3, .col-md-5, .col-md-6, .single .entry-meta .post-meta,
-    .single .entry-meta .sd-sharing-enabled, .rp4wp-related-posts ul > li, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
+    .single .entry-meta .sd-sharing-enabled, .featured-content article .featured-image, .featured-content article .entry-body, .col-md-7, .col-md-8, .archive .entry-body,
     .search .entry-body, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
       padding-right: 18.5px;
       padding-left: 18.5px; } }
@@ -1077,7 +1077,7 @@ pre {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
   .col-md-6, .single .entry-meta .post-meta,
-  .single .entry-meta .sd-sharing-enabled, .rp4wp-related-posts ul > li, .featured-content article .featured-image, .featured-content article .entry-body {
+  .single .entry-meta .sd-sharing-enabled, .featured-content article .featured-image, .featured-content article .entry-body {
     flex: 0 0 50%;
     max-width: 50%; }
   .col-md-7, .top-search #searchform {
@@ -1193,7 +1193,7 @@ pre {
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-  .col-lg-4, .rp4wp-related-posts ul > li {
+  .col-lg-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
   .col-lg-5 {
@@ -1745,7 +1745,8 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-sm > textarea.form-control-static, .wpcf7 .input-group-sm > .form-control-static.wpcf7-validation-errors,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.form-control-static[type=submit], .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .wpcf7 .input-group-lg > input.form-control-static[type=text],
+  .input-group-sm > .input-group-btn > input.form-control-static[type=submit], #infinite-handle
+  .input-group-sm > .input-group-btn > span.form-control-static, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .wpcf7 .input-group-lg > input.form-control-static[type=text],
   .wpcf7 .input-group-lg > input.form-control-static[type=search],
   .wpcf7 .input-group-lg > input.form-control-static[type=url],
   .wpcf7 .input-group-lg > input.form-control-static[type=tel],
@@ -1765,7 +1766,8 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-lg > textarea.form-control-static, .wpcf7 .input-group-lg > .form-control-static.wpcf7-validation-errors,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.form-control-static[type=submit] {
+  .input-group-lg > .input-group-btn > input.form-control-static[type=submit], #infinite-handle
+  .input-group-lg > .input-group-btn > span.form-control-static {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1789,7 +1791,8 @@ select.form-control:focus::-ms-value,
 .wpcf7 .input-group-sm > textarea, .wpcf7 .input-group-sm > .wpcf7-validation-errors,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .wpcf7
-.input-group-sm > .input-group-btn > input[type=submit] {
+.input-group-sm > .input-group-btn > input[type=submit], #infinite-handle
+.input-group-sm > .input-group-btn > span {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -1820,7 +1823,8 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .wpcf7 .input-group-lg > textarea, .wpcf7 .input-group-lg > .wpcf7-validation-errors,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .wpcf7
-.input-group-lg > .input-group-btn > input[type=submit] {
+.input-group-lg > .input-group-btn > input[type=submit], #infinite-handle
+.input-group-lg > .input-group-btn > span {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
@@ -2122,7 +2126,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .has-feedback .form-control-feedback {
       top: 0; } }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], #infinite-handle span {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2135,15 +2139,15 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   border-radius: 0;
   transition: all 0.2s ease-in-out; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .btn:hover, .wpcf7 input[type=submit]:hover {
+  .btn:focus, .wpcf7 input[type=submit]:focus, #infinite-handle span:focus, .btn:hover, .wpcf7 input[type=submit]:hover, #infinite-handle span:hover {
     text-decoration: none; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .wpcf7 input.focus[type=submit] {
+  .btn:focus, .wpcf7 input[type=submit]:focus, #infinite-handle span:focus, .btn.focus, .wpcf7 input.focus[type=submit], #infinite-handle span.focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgba(38, 27, 21, 0.25); }
-  .btn.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .wpcf7 input[type=submit]:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], #infinite-handle span.disabled, .btn:disabled, .wpcf7 input[type=submit]:disabled, #infinite-handle span:disabled {
     cursor: not-allowed;
     opacity: .65; }
-  .btn:active, .wpcf7 input[type=submit]:active, .btn.active, .wpcf7 input.active[type=submit] {
+  .btn:active, .wpcf7 input[type=submit]:active, #infinite-handle span:active, .btn.active, .wpcf7 input.active[type=submit], #infinite-handle span.active {
     background-image: none; }
 
 a.btn.disabled,
@@ -2170,21 +2174,22 @@ fieldset[disabled] a.btn {
     background-image: none;
     border-color: black; }
 
-.btn-secondary {
+.btn-secondary, #infinite-handle span {
   color: #555;
   background-color: #d3d3d3;
   border-color: #d3d3d3; }
-  .btn-secondary:hover {
+  .btn-secondary:hover, #infinite-handle span:hover {
     color: #555;
     background-color: #bababa;
     border-color: #b4b4b4; }
-  .btn-secondary:focus, .btn-secondary.focus {
+  .btn-secondary:focus, #infinite-handle span:focus, .btn-secondary.focus, #infinite-handle span.focus {
     box-shadow: 0 0 0 2px rgba(211, 211, 211, 0.5); }
-  .btn-secondary.disabled, .btn-secondary:disabled {
+  .btn-secondary.disabled, #infinite-handle span.disabled, .btn-secondary:disabled, #infinite-handle span:disabled {
     background-color: #d3d3d3;
     border-color: #d3d3d3; }
-  .btn-secondary:active, .btn-secondary.active,
-  .show > .btn-secondary.dropdown-toggle {
+  .btn-secondary:active, #infinite-handle span:active, .btn-secondary.active, #infinite-handle span.active,
+  .show > .btn-secondary.dropdown-toggle, #infinite-handle
+  .show > span.dropdown-toggle {
     color: #555;
     background-color: #bababa;
     background-image: none;
@@ -2410,12 +2415,12 @@ fieldset[disabled] a.btn {
     .btn-link:disabled:focus, .btn-link:disabled:hover {
       text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], #infinite-handle .btn-group-lg > span {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], #infinite-handle .btn-group-sm > span {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -2566,44 +2571,71 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit],
+  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], #infinite-handle .btn-group > span,
   .btn-group-vertical > .btn, .wpcf7
-  .btn-group-vertical > input[type=submit] {
+  .btn-group-vertical > input[type=submit], #infinite-handle
+  .btn-group-vertical > span {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover,
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, #infinite-handle .btn-group > span:hover,
     .btn-group-vertical > .btn:hover, .wpcf7
-    .btn-group-vertical > input[type=submit]:hover {
+    .btn-group-vertical > input[type=submit]:hover, #infinite-handle
+    .btn-group-vertical > span:hover {
       z-index: 2; }
-    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit],
+    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, #infinite-handle .btn-group > span:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, #infinite-handle .btn-group > span:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], #infinite-handle .btn-group > span.active,
     .btn-group-vertical > .btn:focus, .wpcf7
-    .btn-group-vertical > input[type=submit]:focus,
+    .btn-group-vertical > input[type=submit]:focus, #infinite-handle
+    .btn-group-vertical > span:focus,
     .btn-group-vertical > .btn:active, .wpcf7
-    .btn-group-vertical > input[type=submit]:active,
+    .btn-group-vertical > input[type=submit]:active, #infinite-handle
+    .btn-group-vertical > span:active,
     .btn-group-vertical > .btn.active, .wpcf7
-    .btn-group-vertical > input.active[type=submit] {
+    .btn-group-vertical > input.active[type=submit], #infinite-handle
+    .btn-group-vertical > span.active {
       z-index: 2; }
-  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit],
+  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group #infinite-handle span + .btn, #infinite-handle .btn-group span + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group #infinite-handle .wpcf7 span + input[type=submit], .wpcf7 .btn-group #infinite-handle span + input[type=submit], #infinite-handle .btn-group .wpcf7 span + input[type=submit], .wpcf7 #infinite-handle .btn-group span + input[type=submit], .btn-group #infinite-handle .btn + span, #infinite-handle .btn-group .btn + span, .btn-group .wpcf7 #infinite-handle input[type=submit] + span, #infinite-handle .btn-group .wpcf7 input[type=submit] + span, .wpcf7 .btn-group #infinite-handle input[type=submit] + span, #infinite-handle .wpcf7 .btn-group input[type=submit] + span, .btn-group #infinite-handle span + span, #infinite-handle .btn-group span + span,
   .btn-group .btn + .btn-group,
   .btn-group .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group input[type=submit] + .btn-group,
+  .btn-group #infinite-handle span + .btn-group, #infinite-handle
+  .btn-group span + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group .btn-group + input[type=submit],
+  .btn-group #infinite-handle .btn-group + span, #infinite-handle
+  .btn-group .btn-group + span,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn, .wpcf7
   .btn-group-vertical input[type=submit] + .btn,
+  .btn-group-vertical #infinite-handle span + .btn, #infinite-handle
+  .btn-group-vertical span + .btn,
   .btn-group-vertical .wpcf7 .btn + input[type=submit], .wpcf7
   .btn-group-vertical .btn + input[type=submit],
   .btn-group-vertical .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .btn-group-vertical input[type=submit] + input[type=submit],
+  .btn-group-vertical #infinite-handle .wpcf7 span + input[type=submit], .wpcf7
+  .btn-group-vertical #infinite-handle span + input[type=submit], #infinite-handle
+  .btn-group-vertical .wpcf7 span + input[type=submit], .wpcf7 #infinite-handle
+  .btn-group-vertical span + input[type=submit],
+  .btn-group-vertical #infinite-handle .btn + span, #infinite-handle
+  .btn-group-vertical .btn + span,
+  .btn-group-vertical .wpcf7 #infinite-handle input[type=submit] + span, #infinite-handle
+  .btn-group-vertical .wpcf7 input[type=submit] + span, .wpcf7
+  .btn-group-vertical #infinite-handle input[type=submit] + span, #infinite-handle .wpcf7
+  .btn-group-vertical input[type=submit] + span,
+  .btn-group-vertical #infinite-handle span + span, #infinite-handle
+  .btn-group-vertical span + span,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group-vertical input[type=submit] + .btn-group,
+  .btn-group-vertical #infinite-handle span + .btn-group, #infinite-handle
+  .btn-group-vertical span + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group-vertical .btn-group + input[type=submit],
+  .btn-group-vertical #infinite-handle .btn-group + span, #infinite-handle
+  .btn-group-vertical .btn-group + span,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2613,16 +2645,16 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle), #infinite-handle .btn-group > span:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child {
+.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, #infinite-handle .btn-group > span:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle), #infinite-handle .btn-group > span:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child), #infinite-handle .btn-group > span:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2630,15 +2662,15 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit], #infinite-handle .btn-group > .btn-group:not(:first-child):not(:last-child) > span {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, #infinite-handle .btn-group > .btn-group:first-child:not(:last-child) > span:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, #infinite-handle .btn-group > .btn-group:last-child:not(:first-child) > span:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2646,17 +2678,17 @@ tbody.collapse.show {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split, #infinite-handle span + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
-  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after, #infinite-handle span + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, #infinite-handle .btn-group-sm > span + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, #infinite-handle .btn-group-lg > span + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem; }
 
@@ -2665,48 +2697,53 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit],
+  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical #infinite-handle span, #infinite-handle .btn-group-vertical span,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit],
+  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, #infinite-handle .btn-group-vertical > span + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], #infinite-handle .wpcf7 .btn-group-vertical > span + input[type=submit], .wpcf7 #infinite-handle .btn-group-vertical > span + input[type=submit], #infinite-handle .btn-group-vertical > .btn + span, .wpcf7 #infinite-handle .btn-group-vertical > input[type=submit] + span, #infinite-handle .wpcf7 .btn-group-vertical > input[type=submit] + span, #infinite-handle .btn-group-vertical > span + span,
   .btn-group-vertical > .btn + .btn-group, .wpcf7
-  .btn-group-vertical > input[type=submit] + .btn-group,
+  .btn-group-vertical > input[type=submit] + .btn-group, #infinite-handle
+  .btn-group-vertical > span + .btn-group,
   .btn-group-vertical > .btn-group + .btn, .wpcf7
-  .btn-group-vertical > .btn-group + input[type=submit],
+  .btn-group-vertical > .btn-group + input[type=submit], #infinite-handle
+  .btn-group-vertical > .btn-group + span,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child), #infinite-handle .btn-group-vertical > span:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child), #infinite-handle .btn-group-vertical > span:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child), #infinite-handle .btn-group-vertical > span:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit] {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit], #infinite-handle .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > span {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, #infinite-handle .btn-group-vertical > .btn-group:first-child:not(:last-child) > span:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, #infinite-handle .btn-group-vertical > .btn-group:last-child:not(:first-child) > span:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"], #infinite-handle [data-toggle="buttons"] > span input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > input[type=submit] input[type="checkbox"],
+[data-toggle="buttons"] > input[type=submit] input[type="checkbox"], #infinite-handle
+[data-toggle="buttons"] > span input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"],
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"], #infinite-handle
+[data-toggle="buttons"] > .btn-group > span input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"], #infinite-handle
+[data-toggle="buttons"] > .btn-group > span input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
@@ -3051,7 +3088,8 @@ tbody.collapse.show {
   .wpcf7 .input-group-sm > textarea.input-group-addon, .wpcf7 .input-group-sm > .input-group-addon.wpcf7-validation-errors,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit] {
+  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit], #infinite-handle
+  .input-group-sm > .input-group-btn > span.input-group-addon {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     border-radius: 0.2rem; }
@@ -3075,7 +3113,8 @@ tbody.collapse.show {
   .wpcf7 .input-group-lg > textarea.input-group-addon, .wpcf7 .input-group-lg > .input-group-addon.wpcf7-validation-errors,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit] {
+  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit], #infinite-handle
+  .input-group-lg > .input-group-btn > span.input-group-addon {
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
     border-radius: 0.3rem; }
@@ -3120,14 +3159,18 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:last-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:last-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit],
+.input-group-btn:not(:last-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:last-child) > span,
 .input-group-btn:not(:last-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group > input[type=submit],
+.input-group-btn:not(:last-child) > .btn-group > input[type=submit], #infinite-handle
+.input-group-btn:not(:last-child) > .btn-group > span,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle), #infinite-handle
+.input-group-btn:not(:first-child) > span:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit] {
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > span {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
@@ -3171,14 +3214,18 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:first-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:first-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit],
+.input-group-btn:not(:first-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:first-child) > span,
 .input-group-btn:not(:first-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group > input[type=submit],
+.input-group-btn:not(:first-child) > .btn-group > input[type=submit], #infinite-handle
+.input-group-btn:not(:first-child) > .btn-group > span,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child), .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child),
+.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child), #infinite-handle
+.input-group-btn:not(:last-child) > span:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit] {
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > span {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3206,21 +3253,21 @@ tbody.collapse.show {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit] {
+  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit], #infinite-handle .input-group-btn > span {
     position: relative;
     flex: 1; }
-    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit] {
+    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, #infinite-handle .input-group-btn > span + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit], #infinite-handle .wpcf7 .input-group-btn > span + input[type=submit], .wpcf7 #infinite-handle .input-group-btn > span + input[type=submit], #infinite-handle .input-group-btn > .btn + span, .wpcf7 #infinite-handle .input-group-btn > input[type=submit] + span, #infinite-handle .wpcf7 .input-group-btn > input[type=submit] + span, #infinite-handle .input-group-btn > span + span {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover {
+    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, #infinite-handle .input-group-btn > span:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, #infinite-handle .input-group-btn > span:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover, #infinite-handle .input-group-btn > span:hover {
       z-index: 3; }
-  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit],
+  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit], #infinite-handle .input-group-btn:not(:last-child) > span,
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit],
+  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit], #infinite-handle .input-group-btn:not(:first-child) > span,
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, #infinite-handle .input-group-btn:not(:first-child) > span:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, #infinite-handle .input-group-btn:not(:first-child) > span:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover, #infinite-handle .input-group-btn:not(:first-child) > span:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -3439,7 +3486,7 @@ tbody.collapse.show {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 1rem; }
+  padding: 33px 1rem; }
 
 .navbar-brand {
   display: inline-block;
@@ -4013,7 +4060,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .wpcf7 input[type=submit] .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge, #infinite-handle span .badge {
   position: relative;
   top: -1px; }
 
@@ -6956,7 +7003,7 @@ h1.navbar-brand a:hover {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .menu-search-icon a {
+.fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -7013,10 +7060,10 @@ h1.navbar-brand a:hover {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .menu-search-icon a.fa-pull-left {
+.fa.fa-pull-left {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .menu-search-icon a.fa-pull-right {
+.fa.fa-pull-right {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -7026,10 +7073,10 @@ h1.navbar-brand a:hover {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .menu-search-icon a.pull-left {
+.fa.pull-left {
   margin-right: .3em; }
 
-.fa.pull-right, .menu-search-icon a.pull-right {
+.fa.pull-right {
   margin-left: .3em; }
 
 .fa-spin {
@@ -7124,7 +7171,7 @@ h1.navbar-brand a:hover {
 .fa-music:before {
   content: ""; }
 
-.fa-search:before, .menu-search-icon a:before {
+.fa-search:before {
   content: ""; }
 
 .fa-envelope-o:before {
@@ -9313,7 +9360,7 @@ body {
   color: #333;
   overflow-x: hidden; }
 
-.entry-title a, .rp4wp-related-posts ul .rp4wp-related-post-content a a {
+.entry-title a {
   color: #333; }
 
 .entry-meta,
@@ -9324,7 +9371,11 @@ body {
   .entry-meta .posted-on,
   .entry-meta a .byline,
   .entry-meta a .posted-on {
-    display: inline; }
+    display: inline;
+    font-weight: 600;
+    font-size: .75rem;
+    letter-spacing: 0.4px;
+    line-height: 1; }
   .entry-meta .byline + .posted-on:before,
   .entry-meta a .byline + .posted-on:before {
     content: '  |  '; }
@@ -9335,7 +9386,10 @@ table {
 .read-more {
   padding-bottom: .5em;
   text-transform: uppercase;
-  border-bottom: 1px solid #2a2a2a; }
+  border-bottom: 1px solid #9b9b9b;
+  font-weight: 600; }
+  .read-more:hover, .read-more:focus {
+    color: #ce5351; }
 
 .category-links {
   margin: 0;
@@ -9373,10 +9427,7 @@ h4 {
   font-style: normal;
   line-height: 1.2; }
 
-h2 {
-  font-size: 1.75em; }
-
-.entry-title, .rp4wp-related-posts ul .rp4wp-related-post-content a {
+.entry-title {
   font-family: "Lora", serif;
   font-weight: bold; }
 
@@ -9386,7 +9437,9 @@ h2 {
   #main-menu .menu-item + .menu-item {
     margin-left: 1em; }
   #main-menu a {
-    color: #333; }
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 0.3px; }
 
 .navbar-toggler-icon {
   background-image: url("../images/menu.svg"); }
@@ -9409,27 +9462,38 @@ nav.infinite-scroll {
   .filter-nav li {
     display: inline-block;
     font-family: "Lora", serif;
-    margin-right: .5em;
-    margin-left: .5em; }
+    margin-right: .75em;
+    margin-left: .75em; }
     .filter-nav li a {
-      color: #555;
-      font-size: 1.25rem; }
+      color: #333;
+      font-size: 1.125rem;
+      font-weight: 700; }
     .filter-nav li.active a {
       color: #194668;
       font-weight: bold; }
 
 .wrapper-navbar {
-  border-bottom: 1px solid #d3d3d3; }
+  border-bottom: 2px solid #e7e7e7; }
 
 .nav-links {
   align-content: space-between; }
   .nav-links .nav-next {
     text-align: right; }
 
+.menu-search-icon a {
+  display: block;
+  width: 23px;
+  height: 23px;
+  padding: 0 !important;
+  margin-top: 6px;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-size: contain; }
+
 .top-search {
   padding-top: 1em;
   padding-bottom: 1em;
-  border-top: 1px solid #d3d3d3;
+  border-top: 2px solid #e7e7e7;
   transition: all .2s ease-in-out; }
   .top-search.collapsed {
     max-height: 0;
@@ -9440,16 +9504,18 @@ nav.infinite-scroll {
     max-height: 300px;
     visibility: visible;
     opacity: 1; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     .top-search #searchform {
       padding-left: 0; } }
   .top-search input[type=text] {
     border: none;
-    font-size: 1.2rem;
-    color: #555; }
+    font-size: 1.125rem;
+    color: #555;
+    font-family: "Source Sans Pro", sans-serif; }
     .top-search input[type=text]::placeholder {
-      font-size: 1.2rem;
-      color: #9b9b9b; }
+      font-size: 1.125rem;
+      color: #9b9b9b;
+      font-family: "Source Sans Pro", sans-serif; }
   .top-search input[type=submit] {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -9478,13 +9544,16 @@ nav.infinite-scroll {
 
 .single .site-main > article > .entry-header {
   max-width: 814px;
-  margin-bottom: 3.75em; }
+  margin-bottom: 2em; }
 
 .single .site-main > article > .entry-content {
   max-width: 754px; }
 
-.single .entry-title, .single .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content .single a {
-  margin-bottom: .75em; }
+.single .entry-title {
+  margin-bottom: .75em;
+  font-size: 3.4375rem;
+  line-height: 61px;
+  letter-spacing: 0.74px; }
 
 .single .entry-footer {
   margin-bottom: 2em; }
@@ -9497,7 +9566,8 @@ nav.infinite-scroll {
 
 .single .byline,
 .single .posted-on {
-  display: block; }
+  display: block;
+  line-height: 1.125; }
 
 .single .entry-meta a {
   text-transform: none; }
@@ -9517,7 +9587,12 @@ nav.infinite-scroll {
   content: none; }
 
 .single .category-links {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.23px; }
+  .single .category-links a {
+    color: #9b9b9b; }
 
 .single .single-post-image {
   margin-right: auto;
@@ -9528,10 +9603,10 @@ nav.infinite-scroll {
 .home .grid article {
   align-items: stretch;
   margin-bottom: 2.5em; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     .home .grid article {
       margin-bottom: 5em; } }
-  .home .grid article .entry-title, .home .grid article .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content .home .grid article a {
+  .home .grid article .entry-title {
     margin-bottom: .75em; }
   .home .grid article .featured-image {
     margin-bottom: 1.75em; }
@@ -9544,9 +9619,10 @@ nav.infinite-scroll {
 
 .archive .page-title,
 .search .page-title {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 2.25rem; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   .archive .taxonomy-description,
   .search .taxonomy-description {
     width: 70%; } }
@@ -9557,16 +9633,20 @@ nav.infinite-scroll {
   display: flex;
   flex-wrap: wrap; }
 
+.archive .entry-content,
+.search .entry-content {
+  margin-top: .5em; }
+
 .archive .featured-image,
 .search .featured-image {
   padding-right: 0;
   padding-left: 0; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     .archive .featured-image,
     .search .featured-image {
       padding-right: 37px; } }
 
-@media (max-width: 767px) {
+@media (max-width: 959px) {
   .archive .entry-body,
   .search .entry-body {
     padding-right: 0;
@@ -9574,7 +9654,7 @@ nav.infinite-scroll {
 
 .embed-responsive, .iframe-container {
   background-color: #d3d3d3; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     .embed-responsive, .iframe-container {
       width: 110%;
       margin-left: -5%; } }
@@ -9643,7 +9723,7 @@ figure {
   color: #555; }
   #wrapper-footer-full .widget-1 {
     margin-bottom: 2em; }
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 40em) {
       #wrapper-footer-full .widget-1 {
         margin-bottom: 0; } }
   #wrapper-footer-full .widget_wpcom_social_media_icons_widget ul {
@@ -9653,7 +9733,6 @@ figure {
   #wrapper-footer-full .widget_wpcom_social_media_icons_widget .widget-title {
     margin-bottom: 1em;
     text-transform: uppercase;
-    font-size: 1rem;
     font-weight: bold;
     font-family: "Source Sans Pro", sans-serif;
     color: #555; }
@@ -9681,7 +9760,7 @@ figure {
   #wrapper-footer-full .widget_wpcom_social_media_icons_widget input[type=submit] {
     height: 50px;
     border: none;
-    font-size: 14px;
+    font-size: 0.875;
     border-radius: 0; }
   #wrapper-footer-full .widget_caldera_forms_widget input[type=email]::placeholder,
   #wrapper-footer-full .widget_wpcom_social_media_icons_widget input[type=email]::placeholder {
@@ -9701,91 +9780,62 @@ figure {
     background-repeat: no-repeat;
     background-size: contain; }
 
-.rp4wp-related-posts h3 {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  margin-bottom: 2.5em;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-bottom: 1px solid #d3d3d3; }
-
-.rp4wp-related-posts ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .rp4wp-related-posts ul > li {
-    padding-right: 0;
-    padding-left: 0; }
-  @media screen and (min-width: 768px) {
-    .rp4wp-related-posts ul > li {
-      padding-right: 25px;
-      padding-left: 25px; }
-    .rp4wp-related-posts ul > li:nth-child(odd) {
-      padding-left: 0; }
-    .rp4wp-related-posts ul > li:nth-child(even) {
-      padding-right: 0; } }
-  @media screen and (min-width: 992px) {
-    .rp4wp-related-posts ul > li:nth-child(odd) {
-      padding-left: 25px; }
-    .rp4wp-related-posts ul > li:nth-child(even) {
-      padding-right: 25px; }
-    .rp4wp-related-posts ul > li:first-child {
-      padding-left: 0; }
-    .rp4wp-related-posts ul > li:last-child {
-      padding-right: 0; } }
-  .rp4wp-related-posts ul .rp4wp-related-post-content a {
-    font-size: 1.4rem;
-    color: #333; }
-  .rp4wp-related-posts ul .rp4wp-related-post-content .read-more {
-    margin-top: 2em;
-    padding-bottom: .5em;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: normal;
-    font-family: "Source Sans Pro", sans-serif;
-    color: #194668;
-    border-bottom: 1px solid #194668; }
-
 #related-posts {
-  margin-top: 1em; }
+  margin: 2em 0 0 -2em;
+  display: flex; }
+  #related-posts article {
+    padding: 0 0 0 2em; }
+  @media screen and (min-width: 960px) {
+    #related-posts article {
+      flex: 0 0 50%; } }
+  @media screen and (min-width: 70em) {
+    #related-posts article {
+      flex: 0 0 33.3333%; } }
   #related-posts .related-header {
     flex-basis: 100%;
+    margin: 0 0 0 32px;
     padding: 1em 0;
     margin-bottom: 2.5em;
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 0.875;
     text-transform: uppercase;
+    letter-spacing: 0.3px;
     border-bottom: 1px solid #d3d3d3; }
   #related-posts article .entry-header {
     margin-bottom: .5em; }
-  #related-posts article .entry-title, #related-posts article .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content #related-posts article a {
-    font-size: 22px; }
+  #related-posts article .entry-title {
+    font-size: 22px;
+    line-height: 1.125; }
+
+#infinite-handle span {
+  text-transform: uppercase; }
 
 #wrapper-static-hero {
   background-color: transparent;
-  border-bottom: 1px solid #9b9b9b; }
+  padding-bottom: 0; }
 
-@media screen and (min-width: 768px) {
-  .featured-content > .wrapper {
-    padding-top: 50px; } }
+#wrapper-static-content {
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 37px; }
 
-.featured-content .entry-title, .featured-content .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content .featured-content a {
-  font-size: 40px; }
+.featured-content .entry-title {
+  font-size: 2.5rem;
+  letter-spacing: 1.33px; }
 
 .featured-content article {
   display: flex;
   flex-wrap: wrap; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     .featured-content article .featured-image {
       padding-right: 30px; }
     .featured-content article .entry-body {
       padding-left: 30px; }
-      .featured-content article .entry-body .entry-title, .featured-content article .entry-body .rp4wp-related-posts ul .rp4wp-related-post-content a, .rp4wp-related-posts ul .rp4wp-related-post-content .featured-content article .entry-body a {
+      .featured-content article .entry-body .entry-title {
         margin-bottom: 30px; }
       .featured-content article .entry-body .entry-meta {
         margin-bottom: 30px; } }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 960px) {
   #wrapper-index {
-    padding-top: 5em; } }
+    padding-top: 4em; } }

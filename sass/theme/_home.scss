@@ -1,6 +1,11 @@
 #wrapper-static-hero {
   background-color: transparent;
-  border-bottom: 1px solid $color__gray;
+  padding-bottom: 0;
+}
+
+#wrapper-static-content {
+  border-bottom: 1px solid $color__border;
+  padding-bottom: 37px;
 }
 
 .featured-content {
@@ -8,13 +13,12 @@
   &> .wrapper {}
 
   @include breakpoint(md) {
-    &> .wrapper {
-      padding-top: 50px;
-    }
+    &> .wrapper {}
   }
 
   .entry-title {
-    font-size: 40px;
+    font-size: 2.5rem;
+    letter-spacing: 1.33px;
   }
 
   article {
@@ -51,6 +55,6 @@
 #wrapper-index {
 
   @include breakpoint(md) {
-    padding-top: 5em;
+    padding-top: 4em;
   }
 }

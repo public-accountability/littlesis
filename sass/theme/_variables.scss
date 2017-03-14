@@ -22,7 +22,7 @@ $color__white: #fff;
 $color__primary:        #261b15;
 $color__primary-light:  lighten( $color__primary, 20% );
 $color__primary-dark:   darken( $color__primary, 20% );
-$color__secondary:      #CC5454;
+$color__secondary:      #ce5351;
 $color__accent:         #194668;
 
 $color__gray-lightest:  #f6f6f6;
@@ -49,7 +49,7 @@ $color__background:     $color__white;
 $color__foreground:     $color__black;
 
 $color__link:           $color__accent;
-$color__link-hover:     darken($color__link, 10%);
+$color__link-hover:     $color__secondary;
 
 $color__text-primary:   $color__gray-darkest;
 $color__text-dark:      $color__black;
@@ -57,7 +57,7 @@ $color__text-light:     $color__gray-dark;
 $color__text-xlight:    $color__gray;
 $color__text-inverted:  $color__white;
 
-$color__border:         #bdbdbd;
+$color__border:         #e7e7e7;
 
 /**
  * Typography Variables
@@ -77,14 +77,14 @@ $font__work-sans:   $font__sans-serif;
 
 $font__heading:     $font__serif;
 
-$font__size-h1:         3em;
-$font__size-h2:         2.25em;
-$font__size-h3:         1.75em;
-$font__size-h4:         1.375em;
-$font__size-h5:         1.125em;
-$font__size-h6:         1em;
-$font__size-small:      .875;
-$font__size-smaller:    .75;
+$font__size-h1:         3.4375rem; //55px
+$font__size-h2:         1.625rem;
+$font__size-h3:         1rem;
+$font__size-h4:         1.375rem;
+$font__size-h5:         1.125rem;
+$font__size-h6:         1rem; //16px
+$font__size-small:      .875; //14px
+$font__size-smaller:    .75; //12px
 $font__size-smallest:   .6875;
 
 $font__weight-default:  400;
