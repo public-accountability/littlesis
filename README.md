@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.2
-Version: 0.1.2
+Version: 0.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,11 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.1.3 March 15, 2017
+  * Modified post date to display date published (no update)
+  * Removed post navigation from search page
+  * Changed LittleSis logo to svg
 
 * 0.1.2 March 14, 2017
   * Fixed JetPack load more button style
