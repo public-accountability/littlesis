@@ -9,15 +9,12 @@
  * @since 0.1.0
  */
  function understrap_posted_on() {
- 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
- 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
- 		$time_string = '<time class="updated" datetime="%1$s">%2$s</time>';
- 	}
- 	$time_string = sprintf( $time_string,
- 		esc_attr( get_the_modified_date( 'c' ) ),
- 		esc_html( get_the_modified_date() )
+ 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+
+ 	$posted_on = sprintf( $time_string,
+    get_the_date( 'c', get_the_ID() ),
+    get_the_date( get_option( 'date_format' ), get_the_ID() )
  	);
- 	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
   if ( function_exists( 'coauthors_posts_links' ) ) {
     $byline = coauthors_posts_links( null, null, __( 'By ', 'littlesis' ), null, false );

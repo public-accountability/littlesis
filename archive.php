@@ -60,7 +60,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php// understrap_pagination(); ?>
+			<?php// understrap_pagination(); // We're using JetPack infinite scroll  ?>
 
 		</div><!-- #primary -->
 
