@@ -73,9 +73,9 @@
  * @param  string  $taxonomy
  * @return void
  */
- function littlesis_get_the_term_list( $taxonomy = 'category' ) {
-
-   $term_list = get_the_term_list( get_the_ID(), $taxonomy, '<ul class="' . $taxonomy . '-links"><li class="' . $taxonomy . '-link">', '</li><li class="' . $taxonomy . '-link">', '</li></ul>' );
+ function littlesis_get_the_term_list( $taxonomy = 'category', $post_id = null ) {
+   $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
+   $term_list = get_the_term_list( $post_id, $taxonomy, '<ul class="' . $taxonomy . '-links"><li class="' . $taxonomy . '-link">', '</li><li class="' . $taxonomy . '-link">', '</li></ul>' );
     if ( $term_list ) {
       echo $term_list;
     }
@@ -89,13 +89,12 @@
  * @param  int $post_id
  * @return void
  */
- function littlesis_series( $post_id = null ) {
+ function littlesis_series( $post_id = null, $taxonomy = 'series' ) {
    $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
-   $series = get_the_terms( $post_id, 'series' );
-
-   if( $series ) {
-     $series = $series[0];
-   }
+   $term_list = get_the_term_list( $post_id, $taxonomy, '<ul class="' . $taxonomy . '-links"><span class="taxonomy-label">' . __( 'In the Series:', 'littlesis' ) . '</span> <li class="' . $taxonomy . '-link">', '</li><li class="' . $taxonomy . '-link">', '</li></ul>' );
+    if ( $term_list ) {
+      echo $term_list;
+    }
 
  }
 

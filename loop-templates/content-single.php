@@ -43,7 +43,7 @@
 
 	<footer class="entry-footer">
 
-		<?php littlesis_get_the_term_list( 'series' ); ?>
+		<?php littlesis_series(); ?>
 
 		<?php if( function_exists( 'littlesis_core_related_posts' ) ) : ?>
 			<?php littlesis_core_related_posts(); ?>
