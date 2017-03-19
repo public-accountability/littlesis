@@ -1,0 +1,29 @@
+%placeholder {
+  font-size: $font__size-h5;
+  color: $color__text-xlight;
+  font-family: $font__sans-serif;
+}
+
+::-webkit-input-placeholder {
+  @extend %placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  @extend %placeholder;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  @extend %placeholder;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  @extend %placeholder;
+}
+
+::-ms-input-placeholder { /* Edge */
+  @extend %placeholder;
+}
+
+:placeholder-shown { /* Standard one last! */
+  @extend %placeholder;
+}

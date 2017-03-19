@@ -5,12 +5,20 @@
 // As example you find one of the most important Bootstrap variable below: $brand-primary.
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
+//
+$brand-primary:             $color__accent;
+$brand-success:             $color__success;
+$brand-info:                $color__info;
+$brand-warning:             $color__warning;
+$brand-danger:              $color__danger;
+$brand-inverse:             $color__primary;
 
+$brand-primary:             $color__primary;
+$link-color:                $color__link;
 
-$brand-primary:         $color__primary;
-$link-color:            $color__link;
+$link-hover-color:          $color__link-hover;
 
-$link-hover-decoration: none;
+$line-height-base:          $spacing__body;
 
 $btn-secondary-color:            $color__gray-dark;
 $btn-secondary-bg:               $color__gray-light;

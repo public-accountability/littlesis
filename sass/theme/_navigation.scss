@@ -10,6 +10,11 @@
     color: $color__text-primary;
     font-size: 14px;
     letter-spacing: 0.3px;
+
+    &:hover,
+    &:focus {
+      color: $color__link-hover;
+    }
   }
 }
 
@@ -121,7 +126,7 @@ nav.infinite-scroll {
     color: $color__text-light;
     font-family: $font__sans-serif;
 
-    &::placeholder {
+    &:placeholder {
       font-size: $font__size-h5;
       color: $color__text-xlight;
       font-family: $font__sans-serif;
@@ -137,13 +142,14 @@ nav.infinite-scroll {
     text-align: right;
 
     button {
-      height: 17px;
+      height: 38.5px;
       width: 17px;
       padding: 0;
       border: none;
       background-color: transparent;
       background-repeat: no-repeat;
       background-image: url( '../images/close.svg' );
+      background-position: center;
     }
   }
 }

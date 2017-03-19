@@ -8,12 +8,12 @@
     }
 
     &> .entry-header {
-      max-width: 814px;
+      max-width: $size__content-width;
       margin-bottom: 2em;
     }
 
     &> .entry-content {
-      max-width: 754px;
+      max-width: $size__content-width;
     }
   }
 
@@ -21,20 +21,24 @@
     margin-bottom: .75em;
     font-size: 3.4375rem;
     line-height: 61px;
-    letter-spacing: 0.74px;
+    letter-spacing: 0.73px;
   }
 
   .entry-footer {
     margin-bottom: 2em;
+    margin-top: 2.25em;
   }
 
   .entry-meta {
 
     @extend .row;
 
-    .post-meta,
+    .post-meta {
+      @extend .col-md-8;
+    }
+
     .sd-sharing-enabled {
-      @extend .col-md-6;
+      @extend .col-md-4;
     }
 
     .sd-sharing-enabled {
@@ -52,7 +56,7 @@
   .byline,
   .posted-on {
     display: block;
-    line-height: 1.125;
+    //line-height: 1.125;
   }
 
   .entry-meta a {
@@ -60,8 +64,9 @@
   }
 
   .byline {
-    font-size: 1.35rem;
+    font-size: 1.375rem;
     text-transform: lowercase;
+    line-height: 1.3;
 
     a {
       text-transform: none;
@@ -85,10 +90,6 @@
     font-weight: 700;
     font-size: 0.875rem;
     letter-spacing: 0.23px;
-
-    a {
-      color: $color__text-xlight;
-    }
   }
 
   .single-post-image {
@@ -96,6 +97,22 @@
     margin-left: auto;
     max-width: 938px;
     margin-bottom: 42px;
+  }
+}
+
+.page {
+  .site-main {
+    &> article {
+      width: $size__content-width;
+      margin-right: auto;
+      margin-left: auto;
+
+      .entry-title {
+        font-size: 2.25rem;
+      }
+
+      .entry-content {}
+    }
   }
 }
 
@@ -114,6 +131,11 @@
 
     .entry-title {
       margin-bottom: .75em;
+      letter-spacing: 0.73px;
+    }
+
+    .entry-content {
+      line-height: $line-height_small;
     }
 
     .featured-image {
@@ -145,7 +167,7 @@
   }
 
   .post {
-    margin-bottom: 3em;
+    margin-bottom: 40px;
 
     display: flex;
     flex-wrap: wrap;
@@ -153,6 +175,7 @@
 
   .entry-content {
     margin-top: .5em;
+    line-height: $line-height_small;
   }
 
   .featured-image {
@@ -162,6 +185,7 @@
 
     @include breakpoint(md) {
       padding-right: $grid-gutter-width-base;
+      margin-bottom: 0;
     }
 
   }

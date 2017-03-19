@@ -3,8 +3,8 @@
 Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
-Tested up to: 4.7.2
-Version: 0.1.3
+Tested up to: 4.7.3
+Version: 0.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,12 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.1.4 March 18, 2017
+  * Added `max_pages` var to localized taxonomy-filter object
+  * Added series template tag
+  * Added SVG images for social icons and search
+  * Updated styling
 
 * 0.1.3 March 15, 2017
   * Modified post date to display date published (no update)
