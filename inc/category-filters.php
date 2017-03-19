@@ -40,6 +40,10 @@ function littlesis_filter_posts() {
     'post_type'       => 'post'
   );
 
+  if( isset( $_POST['args']['posts_per_page'] ) ) {
+    $args['paged'] = intval( $_POST['args']['paged'] );
+  }
+
   $sticky = get_option( 'sticky_posts' );
   if( $sticky ) {
     $sticky = intval( $sticky[0] );
@@ -74,12 +78,13 @@ function littlesis_filter_posts() {
     'posts_found'     => intval( $posts_query->found_posts ),
     'paged'           => $posts_query->query_vars['paged'],
     'posts_per_page'  => intval( $posts_query->query_vars['posts_per_page'] ),
+    'max_pages'       => ceil( intval( $posts_query->found_posts ) / intval( $posts_query->query_vars['posts_per_page'] ) ),
     'query_vars'      => $posts_query->query_vars
   );
 
   wp_send_json( $response );
 
-  // die( json_encode( $response ) );
+  die();
 
 }
 add_action( 'wp_ajax_do_taxonomy_filters', 'littlesis_filter_posts' );
