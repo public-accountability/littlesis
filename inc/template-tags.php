@@ -139,8 +139,9 @@ function littlesis_the_post_thumbnail_single( $post_id = null, $size = 'full' ) 
       get_the_post_thumbnail( $post_id, $size ),
       $caption
     );
+    echo $image;
   }
-  echo $image;
+
 }
 
 /**
