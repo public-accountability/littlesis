@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.3
-Version: 0.1.4
+Version: 0.1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,9 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.1.4.1 March 20, 2017
+  * Reduced weight of single post byline
 
 * 0.1.4 March 18, 2017
   * Added `max_pages` var to localized taxonomy-filter object
