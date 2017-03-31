@@ -9477,6 +9477,14 @@ li[class$='link'] + li[class$='link'] {
 .btn, .wpcf7 input[type=submit], #infinite-scroll button, #infinite-handle button {
   text-transform: uppercase; }
 
+.archive .site-main,
+.page .site-main,
+.single .site-main,
+.search .site-main {
+  max-width: 936px;
+  margin-left: auto;
+  margin-right: auto; }
+
 body {
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
@@ -9609,11 +9617,14 @@ nav.infinite-scroll {
   margin-left: auto; }
 
 .single .site-main > article > .entry-header {
-  max-width: 754px;
+  max-width: 818px;
   margin-bottom: 2em; }
+  @media screen and (min-width: 960px) {
+    .single .site-main > article > .entry-header {
+      margin-left: 109px; } }
 
 .single .site-main > article > .entry-content {
-  max-width: 754px;
+  max-width: 718px;
   /* Text Styles */ }
   .single .site-main > article > .entry-content h1,
   .single .site-main > article > .entry-content h2,
@@ -9692,13 +9703,6 @@ nav.infinite-scroll {
   max-width: 938px;
   margin-bottom: 42px; }
 
-.page .site-main > article {
-  width: 754px;
-  margin-right: auto;
-  margin-left: auto; }
-  .page .site-main > article .entry-title {
-    font-size: 2.25rem; }
-
 .home .grid article {
   align-items: stretch;
   margin-bottom: 2.5em; }
@@ -9750,14 +9754,14 @@ nav.infinite-scroll {
       padding-right: 37px;
       margin-bottom: 0; } }
 
-@media (max-width: 959px) {
-  .archive .entry-body,
-  .search .entry-body {
-    padding-right: 0;
-    padding-left: 0; } }
+.archive .entry-body,
+.search .entry-body {
+  padding-right: 0;
+  padding-left: 0; }
 
 .page .entry-title {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  font-size: 2.25rem; }
 
 .author .author-avatar {
   float: left;

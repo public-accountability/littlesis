@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.3
-Version: 0.1.4.1
+Version: 0.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,9 @@ var browserSyncOptions = {
 
 
 ## Changelog
+
+* 0.1.6 March 31, 2017
+  * Updated content widths
 
 * 0.1.5 March 30, 2017
   * Create author.php template
