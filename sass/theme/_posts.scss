@@ -14,7 +14,7 @@
       @include breakpoint(md) {
         margin-left: 109px;
       }
-      
+
     }
 
     &> .entry-content {
@@ -138,8 +138,13 @@
   .single-post-image {
     margin-right: auto;
     margin-left: auto;
-    max-width: 938px;
-    margin-bottom: 42px;
+    width: 938px;
+    height: 600px;
+    max-width: 100%;
+
+    img {
+      object-fit: cover;
+    }
   }
 }
 

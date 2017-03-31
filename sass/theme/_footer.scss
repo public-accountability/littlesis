@@ -10,12 +10,12 @@
     }
   }
   .widget-2 {
-    @extend.col-md-4;
-    @extend.offset-md-4;
+    @extend .col-md-4;
+    @extend .offset-md-4;
   }
   .widget-3 {
-    @extend.col-md-4;
-    @extend.offset-md-8;
+    @extend .col-md-4;
+    @extend .offset-md-8;
   }
 
   .widget_wpcom_social_media_icons_widget {
@@ -35,6 +35,17 @@
       color: $color__text-light;
     }
 
+    .genericon {
+      color: $color__text-inverted;
+      background-color: $color__accent;
+      padding: .5em;
+      border-radius: 50%;
+    }
+
+  }
+
+  .widget_caldera_forms_widget {
+
     input[type=submit] {
       background-color: $color__secondary;
       border-color: $color__secondary;
@@ -43,13 +54,6 @@
 
     .control-label {
       @include visually-hidden;
-    }
-
-    .genericon {
-      color: $color__text-inverted;
-      background-color: $color__accent;
-      padding: .5em;
-      border-radius: 50%;
     }
 
     input[type=email],
@@ -66,14 +70,18 @@
       }
     }
 
-    input[type=submit] {}
+    $button-width: 72px;
 
-    .first_col {
+    .col-sm-9 {
+      flex-basis: calc( 100% - #{$button-width} );
       padding-right: 0;
+      padding-left: 5px;
       margin-right: 0;
 
     }
-    .last_col {
+    .col-sm-3 {
+      flex-basis: $button-width;
+      padding-right: 0;
       padding-left: 0;
       margin-left: 0;
     }
@@ -88,12 +96,6 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
-
-  }
-
-  @include breakpoint(md) {
-
-    .footer-widget + .footer-widget {}
 
   }
 

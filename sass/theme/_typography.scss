@@ -1,7 +1,16 @@
 body {
-  font-size: 16px;
+  font-size: 14px;
   font-family: $font__sans-serif;
   color: $color__text-primary;
+
+  // @include breakpoint(sm) {
+  //   font-size: 15px;
+  // }
+
+  @include breakpoint(md) {
+    font-size: 16px;
+  }
+
 }
 
 h1,

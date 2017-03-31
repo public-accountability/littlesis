@@ -33,6 +33,7 @@ figure {
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -55,6 +56,6 @@ figure {
   }
 }
 
-.single-post-image {
-  @include aspect-ratio(7, 5);
-}
+// .single-post-image {
+//   @include aspect-ratio(7, 5);
+// }
