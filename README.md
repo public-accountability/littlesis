@@ -81,6 +81,13 @@ var browserSyncOptions = {
 
 ## Changelog
 
+* 0.1.5 March 30, 2017
+  * Create author.php template
+  * Changed search to use standard post loop template
+  * Added new default thumbnail
+  * Added infinite scroll on homepage that works with filtering
+  * Updated styles
+
 * 0.1.4.1 March 20, 2017
   * Reduced weight of single post byline
 

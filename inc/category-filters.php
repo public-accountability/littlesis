@@ -40,7 +40,7 @@ function littlesis_filter_posts() {
     'post_type'       => 'post'
   );
 
-  if( isset( $_POST['args']['posts_per_page'] ) ) {
+  if( isset( $_POST['args']['paged'] ) ) {
     $args['paged'] = intval( $_POST['args']['paged'] );
   }
 
@@ -140,7 +140,7 @@ function littlesis_taxonomy_filters( $args = array() ) {
 
   ?>
 
-  <div id="taxonomy-filters" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-paged="<?php echo $args['posts_per_page']; ?>" class="taxonomy-filters">
+  <div id="taxonomy-filters" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-posts-per-page="<?php echo $args['posts_per_page']; ?>" class="taxonomy-filters">
 
     <?php
     $terms = get_terms( $term_args );
@@ -149,13 +149,13 @@ function littlesis_taxonomy_filters( $args = array() ) {
 
     <ul class="filter-nav">
       <li class="active">
-        <a href="#" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-term="" data-page="1"><?php _e( 'All', 'littlesis' ) ?></a>
+        <a href="#" data-taxonomy="<?php echo $args['taxonomy']; ?>" data-term=""><?php _e( 'All', 'littlesis' ) ?></a>
       </li>
 
       <?php foreach( $terms as $term ) : ?>
 
         <li>
-          <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-taxonomy="<?php echo $term->taxonomy ?>" data-term="<?php echo $term->slug; ?>" data-page="1"><?php echo $term->name; ?></a>
+          <a href="<?php echo get_term_link( $term, $term->taxonomy ); ?>" data-taxonomy="<?php echo $term->taxonomy ?>" data-term="<?php echo $term->slug; ?>"><?php echo $term->name; ?></a>
         </li>
 
       <?php endforeach; ?>

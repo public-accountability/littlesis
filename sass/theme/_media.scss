@@ -39,7 +39,7 @@ figure {
 .featured-image {
   a {
     display: block;
-    @include aspect-ratio(7, 5);
+    @include aspect-ratio(176, 131);
     overflow: hidden;
 
     img {

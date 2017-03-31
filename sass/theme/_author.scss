@@ -1,0 +1,31 @@
+.author {
+
+  .author-header {}
+
+  .author-avatar {
+    float: left;
+    margin-right: 30px;
+    width: 127px;
+    height: 127px;
+    @include aspect-ratio(1, 1);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .author-posts {
+    clear: both;
+    flex-basis: 100%;
+    margin: 42px 0 0 0;
+    padding: 1em 0 ;
+    margin-bottom: 2.5em;
+    font-family: $font__sans-serif;
+    font-weight: bold;
+    font-size: $font__size-small;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid $color__gray-light;
+  }
+}

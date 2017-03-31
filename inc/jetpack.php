@@ -68,11 +68,7 @@ add_filter( 'infinite_scroll_js_settings', 'littlesis_jetpack_infinite_scroll_js
 function littlesis_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
-		if ( is_search() ) :
-			get_template_part( 'loop-templates/content', 'search' );
-		else :
-			get_template_part( 'loop-templates/content' );
-		endif;
+		get_template_part( 'loop-templates/content' );
 	}
 }
 

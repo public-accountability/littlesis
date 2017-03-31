@@ -20,9 +20,13 @@ $link-hover-color:          $color__link-hover;
 
 $line-height-base:          $spacing__body;
 
-$btn-secondary-color:            $color__gray-dark;
-$btn-secondary-bg:               $color__gray-light;
-$btn-secondary-border:           $color__gray-light;
+$btn-primary-color:         $color__text-inverted;
+$btn-primary-bg:            $color__secondary;
+$btn-primary-border:        $color__secondary;
+
+$btn-secondary-color:       $color__text-inverted;
+$btn-secondary-bg:          $color__accent;
+$btn-secondary-border:      $color__accent;
 
 $border-radius:                   0;
 $border-radius-sm:                .2rem;
