@@ -2,10 +2,6 @@
   text-transform: uppercase;
   font-weight: bold;
 
-  .menu-item + .menu-item {
-    margin-left: 1em;
-  }
-
   a {
     color: $color__text-primary;
     font-size: 14px;
@@ -16,68 +12,65 @@
       color: $color__link-hover;
     }
   }
+
+  @include breakpoint(md) {
+    .menu-item + .menu-item {
+      margin-left: 1em;
+    }
+  }
 }
 
-.navbar-toggler-icon {
+/**
+ * Mobile
+ */
+
+[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url( '../images/close.svg' );
+  background-size: 20px 20px;
+}
+
+[aria-expanded="false"] .navbar-toggler-icon {
   background-image: url( '../images/menu.svg' );
+  background-size: 30px 30px;
 }
 
-nav.infinite-scroll {
-  width: 100%;
-  button {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
+@media screen and ( max-width: $screen__md ) {
+  .navbar {
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
 
-.taxonomy-filters {
-    margin-bottom: .5em;
-}
-
-.filter-nav {
-  @include no-bullets;
-  text-align: center;
-  margin-bottom: 2.75em;
-
-  li {
-    display: inline-block;
-    font-family: $font__serif;
-    margin-right: .75em;
-    margin-left: .75em;
-
-    a {
-      color: $color__text-primary;
-      font-size: $font__size-h5;
-      font-weight: 700;
-    }
-
-    &.active {
-      a {
-        color: $color__accent;
-        font-weight: bold;
-      }
+    &>.container {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
     }
   }
-}
 
-.wrapper-navbar {
-  border-bottom: 2px solid $color__border;
-}
-
-.nav-links {
-  @extend .row;
-  align-content: space-between;
-
-  .nav-previous,
-  .nav-next {
-    @extend .col-sm-6;
+  .navbar-toggler {
+    padding-right: 0;
+    margin-right: 14px;
   }
 
-  .nav-next {
-    text-align: right;
+  .navbar-brand {
+    margin-bottom: 22px;
+    margin-left: 14px;
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  .navbar-nav {
+    padding: 22px 14px;
+    background-color: $color__gray-lightest;
   }
 }
 
+/**
+ * Search Bar
+ */
 .menu-search-icon {
   a {
     display: block;
@@ -154,6 +147,63 @@ nav.infinite-scroll {
   }
 }
 
+/**
+ * Homepage Filters
+ */
+.taxonomy-filters {
+    margin-bottom: .5em;
+}
+
+.filter-nav {
+  @include no-bullets;
+  text-align: center;
+  margin-bottom: 2.75em;
+
+  li {
+    display: inline-block;
+    font-family: $font__serif;
+    margin-right: .75em;
+    margin-left: .75em;
+
+    a {
+      color: $color__text-primary;
+      font-size: $font__size-h5;
+      font-weight: 700;
+    }
+
+    &.active {
+      a {
+        color: $color__accent;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.wrapper-navbar {
+  border-bottom: 2px solid $color__border;
+}
+
+/**
+ * Page Navigation
+ */
+.nav-links {
+  @extend .row;
+  align-content: space-between;
+
+  .nav-previous,
+  .nav-next {
+    @extend .col-sm-6;
+  }
+
+  .nav-next {
+    text-align: right;
+  }
+}
+
+/**
+ * Infinite Scroll
+ */
 #infinite-scroll {
   button {
     @extend .btn;

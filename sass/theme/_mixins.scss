@@ -1,9 +1,3 @@
-$screen__xs: 20em; // Mobile Small ( < 320px )
-$screen__sm: 40em; // Mobile Extra Large ( < 640px )
-$screen__md: 960px; // Desktop Small ( < 960px )
-$screen__lg: 70em; // Desktop Large ( < 1120px )
-$screen__xl: 80em; //Desktop X-Large ( < 1200px )
-$screen__xxl: 1475px;
 
 @mixin breakpoint($point) {
   @if $point == xs {
