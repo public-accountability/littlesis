@@ -153,3 +153,10 @@ nav.infinite-scroll {
     }
   }
 }
+
+#infinite-scroll {
+  button {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
+}

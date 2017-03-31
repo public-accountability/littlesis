@@ -18,6 +18,12 @@ body {
     display: inline;
     font-size: .75rem;
     letter-spacing: 0.4px;
+
+    a:hover,
+    a:focus {
+      color: $color__link-hover;
+      text-decoration: none;
+    }
   }
 
   .byline + .posted-on {
@@ -43,6 +49,7 @@ table {
   &:focus {
     color: $color__secondary;
     text-decoration: none;
+    border-bottom-color: $color__link-hover;
   }
 }
 
@@ -79,4 +86,8 @@ li[class$='link'] a {
 
 li[class$='link'] + li[class$='link'] {
   margin-left: 2em;
+}
+
+.btn {
+  text-transform: uppercase;
 }
