@@ -39,3 +39,16 @@ function littlesis_widgets(){
   ) );
 }
 add_action( 'widgets_init', 'littlesis_widgets' );
+
+/**
+ * Add Filters to `meta_content`
+ * Ensures that `meta_content` is return like `the_content`
+ *
+ * @since 0.1.8
+ */
+add_filter( 'meta_content', 'wptexturize'        );
+add_filter( 'meta_content', 'convert_smilies'    );
+add_filter( 'meta_content', 'convert_chars'      );
+add_filter( 'meta_content', 'wpautop'            );
+add_filter( 'meta_content', 'shortcode_unautop'  );
+add_filter( 'widget_text', 'do_shortcode' );
