@@ -117,24 +117,40 @@
 
 }
 
-.widget_wpcom_social_media_icons_widget {
-  .genericon {
-    height: 30px;
-    width: 30px;
+.social-menu-icons {
+  ul {
+    @include no-bullets;
+    margin: 0;
+    padding: 0;
 
-    &:before {
-      content: none;
+    li {
+      display: inline-block;
+      margin-right: .5em;
     }
 
-    &.genericon-facebook {
-      background-image: url( '../images/facebook.svg' );
-      background-repeat: no-repeat;
-      background-position: center !important;
+    .genericon {
+      display: block;
+      height: 30px;
+      width: 30px;
+      padding: 0;
+      border-radius: 50%;
+      background-color: $color__accent;
+      color: $color__text-inverted;
+      font-family: Genericons;
+
+      &.genericon-facebook {
+        background-image: url( '../images/facebook.svg' );
+        background-repeat: no-repeat;
+        background-position: center !important;
+      }
+      &.genericon-twitter {
+        background-image: url( '../images/twitter.svg' );
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
     }
-    &.genericon-twitter {
-      background-image: url( '../images/twitter.svg' );
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+
   }
+
 }

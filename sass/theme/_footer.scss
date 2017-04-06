@@ -5,6 +5,7 @@
   color: $color__text-light;
 
   .widget-1 {
+    @extend .col-md-4;
     margin-bottom: 2em;
 
     @include breakpoint(sm) {
@@ -17,36 +18,18 @@
   }
   .widget-3 {
     @extend .col-md-4;
-    @extend .offset-md-8;
   }
 
-  .widget_wpcom_social_media_icons_widget {
-    ul {
-      margin-left: 0;
-      padding-left: 0;
-    }
+  .widget-title {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $font__sans-serif;
+    color: $color__text-light;
   }
 
   .widget_caldera_forms_widget,
-  .widget_wpcom_social_media_icons_widget {
-    .widget-title {
-      margin-bottom: 1em;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-family: $font__sans-serif;
-      color: $color__text-light;
-    }
-
-    .genericon {
-      color: $color__text-inverted;
-      background-color: $color__accent;
-      padding: .5em;
-      border-radius: 50%;
-    }
-
-  }
-
-  .widget_caldera_forms_widget {
+  .caldera-grid {
 
     .control-label {
       @include visually-hidden;
