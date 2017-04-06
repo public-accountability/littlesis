@@ -21,7 +21,7 @@
     $related_posts = $data;
 
     foreach( $related_posts as $post ) :
-      $post = intval( $post );
+      $post = (int) $post;
       setup_postdata( $post ); ?>
 
       <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">

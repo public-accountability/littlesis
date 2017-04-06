@@ -34,22 +34,23 @@ Uses the Enqueue method the load and sort the CSS file the right way instead of 
 
 ## Editing
 
-Add your own CSS styles to /sass/theme/_child_theme.scss
-or import you own files into /sass/theme/littlesis.scss
+WordPress will use the parent theme templates to render pages except when there is an appropriate template in the LittleSis child theme.
+
+Add your own CSS styles to /sass/theme/_{file}.scss
 
 To overwrite Bootstrap or UnderStraps base variables just add your own value to:
-/sass/theme/_child_theme_variables.scss
+/sass/theme/_bootstrap-custom-variables.scss
 
 For example:
 the "$brand-primary" variable is used by both, Bootstrap and UnderStrap.
 Add your own color like:
 $brand-primary: #ff6600;
-in /sass/theme/_child_theme_variables.scss to overwrite it.
+in /sass/theme/_bootstrap-custom-variables.scss overwrite it.
 That will change automatically all elements who use this variable.
 It will be outputted into:
-/css/littlesis.min.css
+/css/style.min.css
 and
-/css/littlesis.css
+/css/style.css
 
 So you have one clean CSS file at the end and just one request.
 
@@ -58,7 +59,7 @@ So you have one clean CSS file at the end and just one request.
 ### Installing Dependencies
 - Make sure you have installed Node.js, Bower, and Browser-Sync [1] on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
-- Run: `$ npm install` then: `$ gulp copy-assets`
+- Run: `npm install` then: `gulp`
 
 ### Running
 To work and compile your Sass files on the fly start:
@@ -78,8 +79,18 @@ var browserSyncOptions = {
 
 [1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync
 
+## Structure
+
+Theme functions are in separate files within `/inc/`
+Templates
+
+
 
 ## Changelog
+
+* 0.1.8 April 5, 2017
+  * Final styling updates
+  * Removed author image from author page
 
 * 0.1.7 March 31, 2017
   * Mobile styling updates

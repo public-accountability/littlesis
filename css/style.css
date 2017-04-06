@@ -689,25 +689,25 @@ pre {
       padding-right: 18.5px;
       padding-left: 18.5px; } }
 
-.row, .top-search, .nav-links, .single .entry-meta {
+.row, .nav-links, .single .entry-meta, .top-search {
   display: flex;
   flex-wrap: wrap;
   margin-right: -18.5px;
   margin-left: -18.5px; }
   @media (min-width: 640px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 936px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 1140px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 1200px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
 
@@ -9603,6 +9603,18 @@ button {
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif; }
 
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #194668;
+  border-color: #194668;
+  color: #fff; }
+
+.btn-secondary:hover, #infinite-handle button:hover,
+#infinite-scroll button:hover, .btn-secondary:focus, #infinite-handle button:focus,
+#infinite-scroll button:focus {
+  background-color: #ce5351;
+  border-color: #ce5351;
+  color: #fff !important; }
+
 .archive .site-main,
 .page .site-main,
 .single .site-main,
@@ -9690,50 +9702,6 @@ h4 {
   background-repeat: no-repeat;
   background-size: contain; }
 
-.top-search {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-top: 2px solid #e7e7e7;
-  transition: all .2s ease-in-out; }
-  .top-search.collapsed {
-    max-height: 0;
-    padding: 0;
-    visibility: hidden;
-    opacity: 0; }
-  .top-search.expanded {
-    max-height: 300px;
-    visibility: visible;
-    opacity: 1; }
-  @media screen and (min-width: 936px) {
-    .top-search #searchform {
-      padding-left: 0; } }
-  .top-search input[type=text] {
-    border: none;
-    font-size: 1.125rem;
-    color: #555;
-    font-family: "Source Sans Pro", sans-serif; }
-    .top-search input[type=text]:placeholder {
-      font-size: 1.125rem;
-      color: #9b9b9b;
-      font-family: "Source Sans Pro", sans-serif; }
-  .top-search input[type=submit] {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    position: absolute !important; }
-  .top-search .search-control {
-    text-align: right; }
-    .top-search .search-control button {
-      height: 38.5px;
-      width: 17px;
-      padding: 0;
-      border: none;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-image: url("../images/close.svg");
-      background-position: center; }
-
 /**
  * Homepage Filters
  */
@@ -9769,13 +9737,6 @@ h4 {
   align-content: space-between; }
   .nav-links .nav-next {
     text-align: right; }
-
-/**
- * Infinite Scroll
- */
-#wrapper-footer-full {
-  padding-top: 56px;
-  padding-bottom: 180px; }
 
 .single .site-main > article > .entry-header,
 .single .site-main > article > .entry-content {
@@ -9820,14 +9781,17 @@ h4 {
       margin-top: .5em; }
 
 .single .entry-title {
-  margin-bottom: .75em;
-  font-size: 3.4375rem;
-  line-height: 61px;
+  margin-bottom: .5em;
+  font-size: 2rem;
+  /*line-height: 61px;*/
   letter-spacing: 0.73px; }
+  @media screen and (min-width: 936px) {
+    .single .entry-title {
+      font-size: 3.4375rem; } }
 
 .single .entry-footer {
-  margin-bottom: 2em;
-  margin-top: 2.25em; }
+  margin-top: 5.625em;
+  margin-bottom: 2em; }
 
 .single .entry-meta .sd-sharing-enabled ul {
   text-align: right; }
@@ -9843,6 +9807,7 @@ h4 {
   text-transform: none; }
 
 .single .byline {
+  margin-bottom: .25em;
   font-size: 1.375rem;
   text-transform: lowercase;
   line-height: 1.3; }
@@ -9987,6 +9952,53 @@ h4 {
 :placeholder-shown {
   /* Standard one last! */ }
 
+.top-search {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 2px solid #e7e7e7;
+  transition: all .2s ease-in-out; }
+  .top-search.collapsed {
+    max-height: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0; }
+  .top-search.expanded {
+    max-height: 300px;
+    visibility: visible;
+    opacity: 1; }
+  @media screen and (min-width: 936px) {
+    .top-search #searchform {
+      padding-left: 0; }
+      .top-search #searchform .field {
+        padding-left: 1rem; } }
+  .top-search input[type=text] {
+    border: none;
+    font-size: 1.125rem;
+    color: #555;
+    font-family: "Source Sans Pro", sans-serif; }
+    .top-search input[type=text]:placeholder {
+      font-size: 1.125rem;
+      color: #9b9b9b;
+      font-family: "Source Sans Pro", sans-serif; }
+  .top-search input[type=submit] {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute !important; }
+  .top-search .search-control {
+    text-align: right;
+    padding-left: 1rem; }
+    .top-search .search-control button {
+      height: 38.5px;
+      width: 17px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-image: url("../images/close.svg");
+      background-position: center; }
+
 .embed-responsive, .iframe-container {
   background-color: #d3d3d3; }
   @media screen and (min-width: 936px) {
@@ -10041,6 +10053,8 @@ figure {
   background-size: cover; }
 
 #wrapper-footer-full {
+  padding-top: 112px;
+  padding-bottom: 90px;
   color: #555; }
   #wrapper-footer-full .widget-1 {
     margin-bottom: 2em; }
@@ -10063,10 +10077,6 @@ figure {
     background-color: #194668;
     padding: .5em;
     border-radius: 50%; }
-  #wrapper-footer-full .widget_caldera_forms_widget input[type=submit] {
-    background-color: #ce5351;
-    border-color: #ce5351;
-    text-transform: uppercase; }
   #wrapper-footer-full .widget_caldera_forms_widget .control-label {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
