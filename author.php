@@ -30,12 +30,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<header class="page-header author-header">
 
-					<?php if ( ! empty( $author->ID ) ) : ?>
-						<figure class="author-avatar">
-							<?php echo get_avatar( $author->ID ); ?>
-						</figure>
-					<?php endif; ?>
-
 					<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );

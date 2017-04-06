@@ -88,6 +88,26 @@ li[class$='link'] + li[class$='link'] {
   margin-left: 2em;
 }
 
-.btn {
+.btn,
+button {
   text-transform: uppercase;
+  font-family: $font__sans-serif;
+}
+
+.btn-primary {
+  &:hover,
+  &:focus {
+    background-color: $color__accent;
+    border-color: $color__accent;
+    color: $color__text-inverted;
+  }
+}
+
+.btn-secondary {
+  &:hover,
+  &:focus {
+    background-color: $color__secondary;
+    border-color: $color__secondary;
+    color: $color__text-inverted !important;
+  }
 }

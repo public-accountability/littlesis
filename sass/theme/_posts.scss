@@ -62,15 +62,19 @@
   }
 
   .entry-title {
-    margin-bottom: .75em;
-    font-size: 3.4375rem;
-    line-height: 61px;
+    margin-bottom: .5em;
+    font-size: 2rem;
+    /*line-height: 61px;*/
     letter-spacing: 0.73px;
+
+    @include breakpoint(md) {
+      font-size: 3.4375rem;
+    }
   }
 
   .entry-footer {
+    margin-top: 5.625em;
     margin-bottom: 2em;
-    margin-top: 2.25em;
   }
 
   .entry-meta {
@@ -107,6 +111,7 @@
   }
 
   .byline {
+    margin-bottom: .25em;
     font-size: 1.375rem;
     text-transform: lowercase;
     line-height: 1.3;
@@ -172,7 +177,7 @@
       margin-bottom: 1.75em;
     }
     .entry-meta {
-      margin-bottom: 1.75em;
+      margin-bottom: .5em;
     }
   }
 }

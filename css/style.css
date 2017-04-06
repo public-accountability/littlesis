@@ -689,25 +689,25 @@ pre {
       padding-right: 18.5px;
       padding-left: 18.5px; } }
 
-.row, .top-search, .nav-links, .single .entry-meta {
+.row, .nav-links, .single .entry-meta, .top-search {
   display: flex;
   flex-wrap: wrap;
   margin-right: -18.5px;
   margin-left: -18.5px; }
   @media (min-width: 640px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 936px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 1140px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
   @media (min-width: 1200px) {
-    .row, .top-search, .nav-links, .single .entry-meta {
+    .row, .nav-links, .single .entry-meta, .top-search {
       margin-right: -18.5px;
       margin-left: -18.5px; } }
 
@@ -1739,8 +1739,9 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-sm > textarea.form-control-static, .wpcf7 .input-group-sm > .form-control-static.wpcf7-validation-errors,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.form-control-static[type=submit], #infinite-scroll
-  .input-group-sm > .input-group-btn > button.form-control-static, #infinite-handle
+  .input-group-sm > .input-group-btn > input.form-control-static[type=submit], #infinite-handle
+  .input-group-sm > .input-group-btn > button.form-control-static,
+  #infinite-scroll
   .input-group-sm > .input-group-btn > button.form-control-static, .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .wpcf7 .input-group-lg > input.form-control-static[type=text],
   .wpcf7 .input-group-lg > input.form-control-static[type=search],
   .wpcf7 .input-group-lg > input.form-control-static[type=url],
@@ -1761,8 +1762,9 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-lg > textarea.form-control-static, .wpcf7 .input-group-lg > .form-control-static.wpcf7-validation-errors,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.form-control-static[type=submit], #infinite-scroll
-  .input-group-lg > .input-group-btn > button.form-control-static, #infinite-handle
+  .input-group-lg > .input-group-btn > input.form-control-static[type=submit], #infinite-handle
+  .input-group-lg > .input-group-btn > button.form-control-static,
+  #infinite-scroll
   .input-group-lg > .input-group-btn > button.form-control-static {
     padding-right: 0;
     padding-left: 0; }
@@ -1787,8 +1789,9 @@ select.form-control:focus::-ms-value,
 .wpcf7 .input-group-sm > textarea, .wpcf7 .input-group-sm > .wpcf7-validation-errors,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .wpcf7
-.input-group-sm > .input-group-btn > input[type=submit], #infinite-scroll
-.input-group-sm > .input-group-btn > button, #infinite-handle
+.input-group-sm > .input-group-btn > input[type=submit], #infinite-handle
+.input-group-sm > .input-group-btn > button,
+#infinite-scroll
 .input-group-sm > .input-group-btn > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -1820,8 +1823,9 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .wpcf7 .input-group-lg > textarea, .wpcf7 .input-group-lg > .wpcf7-validation-errors,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .wpcf7
-.input-group-lg > .input-group-btn > input[type=submit], #infinite-scroll
-.input-group-lg > .input-group-btn > button, #infinite-handle
+.input-group-lg > .input-group-btn > input[type=submit], #infinite-handle
+.input-group-lg > .input-group-btn > button,
+#infinite-scroll
 .input-group-lg > .input-group-btn > button {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
@@ -2124,7 +2128,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .has-feedback .form-control-feedback {
       top: 0; } }
 
-.btn, .wpcf7 input[type=submit], #infinite-scroll button, #infinite-handle button {
+.btn, .wpcf7 input[type=submit], #infinite-handle button,
+#infinite-scroll button {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -2137,15 +2142,23 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   font-size: 1rem;
   border-radius: 0;
   transition: all 0.2s ease-in-out; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, #infinite-scroll button:focus, #infinite-handle button:focus, .btn:hover, .wpcf7 input[type=submit]:hover, #infinite-scroll button:hover, #infinite-handle button:hover {
+  .btn:focus, .wpcf7 input[type=submit]:focus, #infinite-handle button:focus,
+  #infinite-scroll button:focus, .btn:hover, .wpcf7 input[type=submit]:hover, #infinite-handle button:hover,
+  #infinite-scroll button:hover {
     text-decoration: none; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, #infinite-scroll button:focus, #infinite-handle button:focus, .btn.focus, .wpcf7 input.focus[type=submit], #infinite-scroll button.focus, #infinite-handle button.focus {
+  .btn:focus, .wpcf7 input[type=submit]:focus, #infinite-handle button:focus,
+  #infinite-scroll button:focus, .btn.focus, .wpcf7 input.focus[type=submit], #infinite-handle button.focus,
+  #infinite-scroll button.focus {
     outline: 0;
     box-shadow: 0 0 0 2px rgba(38, 27, 21, 0.25); }
-  .btn.disabled, .wpcf7 input.disabled[type=submit], #infinite-scroll button.disabled, #infinite-handle button.disabled, .btn:disabled, .wpcf7 input[type=submit]:disabled, #infinite-scroll button:disabled, #infinite-handle button:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], #infinite-handle button.disabled,
+  #infinite-scroll button.disabled, .btn:disabled, .wpcf7 input[type=submit]:disabled, #infinite-handle button:disabled,
+  #infinite-scroll button:disabled {
     cursor: not-allowed;
     opacity: .65; }
-  .btn:active, .wpcf7 input[type=submit]:active, #infinite-scroll button:active, #infinite-handle button:active, .btn.active, .wpcf7 input.active[type=submit], #infinite-scroll button.active, #infinite-handle button.active {
+  .btn:active, .wpcf7 input[type=submit]:active, #infinite-handle button:active,
+  #infinite-scroll button:active, .btn.active, .wpcf7 input.active[type=submit], #infinite-handle button.active,
+  #infinite-scroll button.active {
     background-image: none; }
 
 a.btn.disabled,
@@ -2172,22 +2185,31 @@ fieldset[disabled] a.btn {
     background-image: none;
     border-color: #b03432; }
 
-.btn-secondary, #infinite-scroll button, #infinite-handle button {
+.btn-secondary, #infinite-handle button,
+#infinite-scroll button {
   color: #fff;
   background-color: #194668;
   border-color: #194668; }
-  .btn-secondary:hover, #infinite-scroll button:hover, #infinite-handle button:hover {
+  .btn-secondary:hover, #infinite-handle button:hover,
+  #infinite-scroll button:hover {
     color: #fff;
     background-color: #0f2a3f;
     border-color: #0d2537; }
-  .btn-secondary:focus, #infinite-scroll button:focus, #infinite-handle button:focus, .btn-secondary.focus, #infinite-scroll button.focus, #infinite-handle button.focus {
+  .btn-secondary:focus, #infinite-handle button:focus,
+  #infinite-scroll button:focus, .btn-secondary.focus, #infinite-handle button.focus,
+  #infinite-scroll button.focus {
     box-shadow: 0 0 0 2px rgba(25, 70, 104, 0.5); }
-  .btn-secondary.disabled, #infinite-scroll button.disabled, #infinite-handle button.disabled, .btn-secondary:disabled, #infinite-scroll button:disabled, #infinite-handle button:disabled {
+  .btn-secondary.disabled, #infinite-handle button.disabled,
+  #infinite-scroll button.disabled, .btn-secondary:disabled, #infinite-handle button:disabled,
+  #infinite-scroll button:disabled {
     background-color: #194668;
     border-color: #194668; }
-  .btn-secondary:active, #infinite-scroll button:active, #infinite-handle button:active, .btn-secondary.active, #infinite-scroll button.active, #infinite-handle button.active,
-  .show > .btn-secondary.dropdown-toggle, #infinite-scroll
-  .show > button.dropdown-toggle, #infinite-handle
+  .btn-secondary:active, #infinite-handle button:active,
+  #infinite-scroll button:active, .btn-secondary.active, #infinite-handle button.active,
+  #infinite-scroll button.active,
+  .show > .btn-secondary.dropdown-toggle, #infinite-handle
+  .show > button.dropdown-toggle,
+  #infinite-scroll
   .show > button.dropdown-toggle {
     color: #fff;
     background-color: #0f2a3f;
@@ -2414,12 +2436,14 @@ fieldset[disabled] a.btn {
     .btn-link:disabled:focus, .btn-link:disabled:hover {
       text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], #infinite-scroll .btn-group-lg > button, #infinite-handle .btn-group-lg > button {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], #infinite-handle .btn-group-lg > button,
+#infinite-scroll .btn-group-lg > button {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], #infinite-scroll .btn-group-sm > button, #infinite-handle .btn-group-sm > button {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], #infinite-handle .btn-group-sm > button,
+#infinite-scroll .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -2570,76 +2594,100 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], #infinite-scroll .btn-group > button, #infinite-handle .btn-group > button,
+  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], #infinite-handle .btn-group > button,
+  #infinite-scroll .btn-group > button,
   .btn-group-vertical > .btn, .wpcf7
-  .btn-group-vertical > input[type=submit], #infinite-scroll
-  .btn-group-vertical > button, #infinite-handle
+  .btn-group-vertical > input[type=submit], #infinite-handle
+  .btn-group-vertical > button,
+  #infinite-scroll
   .btn-group-vertical > button {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, #infinite-scroll .btn-group > button:hover, #infinite-handle .btn-group > button:hover,
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, #infinite-handle .btn-group > button:hover,
+    #infinite-scroll .btn-group > button:hover,
     .btn-group-vertical > .btn:hover, .wpcf7
-    .btn-group-vertical > input[type=submit]:hover, #infinite-scroll
-    .btn-group-vertical > button:hover, #infinite-handle
+    .btn-group-vertical > input[type=submit]:hover, #infinite-handle
+    .btn-group-vertical > button:hover,
+    #infinite-scroll
     .btn-group-vertical > button:hover {
       z-index: 2; }
-    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, #infinite-scroll .btn-group > button:focus, #infinite-handle .btn-group > button:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, #infinite-scroll .btn-group > button:active, #infinite-handle .btn-group > button:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], #infinite-scroll .btn-group > button.active, #infinite-handle .btn-group > button.active,
+    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, #infinite-handle .btn-group > button:focus,
+    #infinite-scroll .btn-group > button:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, #infinite-handle .btn-group > button:active,
+    #infinite-scroll .btn-group > button:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], #infinite-handle .btn-group > button.active,
+    #infinite-scroll .btn-group > button.active,
     .btn-group-vertical > .btn:focus, .wpcf7
-    .btn-group-vertical > input[type=submit]:focus, #infinite-scroll
-    .btn-group-vertical > button:focus, #infinite-handle
+    .btn-group-vertical > input[type=submit]:focus, #infinite-handle
+    .btn-group-vertical > button:focus,
+    #infinite-scroll
     .btn-group-vertical > button:focus,
     .btn-group-vertical > .btn:active, .wpcf7
-    .btn-group-vertical > input[type=submit]:active, #infinite-scroll
-    .btn-group-vertical > button:active, #infinite-handle
+    .btn-group-vertical > input[type=submit]:active, #infinite-handle
+    .btn-group-vertical > button:active,
+    #infinite-scroll
     .btn-group-vertical > button:active,
     .btn-group-vertical > .btn.active, .wpcf7
-    .btn-group-vertical > input.active[type=submit], #infinite-scroll
-    .btn-group-vertical > button.active, #infinite-handle
+    .btn-group-vertical > input.active[type=submit], #infinite-handle
+    .btn-group-vertical > button.active,
+    #infinite-scroll
     .btn-group-vertical > button.active {
       z-index: 2; }
-  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group #infinite-scroll button + .btn, #infinite-scroll .btn-group button + .btn, .btn-group #infinite-handle button + .btn, #infinite-handle .btn-group button + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group #infinite-scroll .wpcf7 button + input[type=submit], .wpcf7 .btn-group #infinite-scroll button + input[type=submit], #infinite-scroll .btn-group .wpcf7 button + input[type=submit], .wpcf7 #infinite-scroll .btn-group button + input[type=submit], .btn-group #infinite-handle .wpcf7 button + input[type=submit], .wpcf7 .btn-group #infinite-handle button + input[type=submit], #infinite-handle .btn-group .wpcf7 button + input[type=submit], .wpcf7 #infinite-handle .btn-group button + input[type=submit], .btn-group #infinite-scroll .btn + button, #infinite-scroll .btn-group .btn + button, .btn-group .wpcf7 #infinite-scroll input[type=submit] + button, #infinite-scroll .btn-group .wpcf7 input[type=submit] + button, .wpcf7 .btn-group #infinite-scroll input[type=submit] + button, #infinite-scroll .wpcf7 .btn-group input[type=submit] + button, .btn-group #infinite-scroll button + button, #infinite-scroll .btn-group button + button, .btn-group #infinite-handle .btn + button, #infinite-handle .btn-group .btn + button, .btn-group .wpcf7 #infinite-handle input[type=submit] + button, #infinite-handle .btn-group .wpcf7 input[type=submit] + button, .wpcf7 .btn-group #infinite-handle input[type=submit] + button, #infinite-handle .wpcf7 .btn-group input[type=submit] + button, .btn-group #infinite-handle button + button, #infinite-handle .btn-group button + button,
+  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group #infinite-handle button + .btn, #infinite-handle .btn-group button + .btn, .btn-group
+  #infinite-scroll button + .btn,
+  #infinite-scroll .btn-group button + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group #infinite-handle .wpcf7 button + input[type=submit], .wpcf7 .btn-group #infinite-handle button + input[type=submit], #infinite-handle .btn-group .wpcf7 button + input[type=submit], .wpcf7 #infinite-handle .btn-group button + input[type=submit], .btn-group
+  #infinite-scroll .wpcf7 button + input[type=submit], .wpcf7 .btn-group
+  #infinite-scroll button + input[type=submit],
+  #infinite-scroll .btn-group .wpcf7 button + input[type=submit], .wpcf7
+  #infinite-scroll .btn-group button + input[type=submit], .btn-group #infinite-handle .btn + button, #infinite-handle .btn-group .btn + button, .btn-group .wpcf7 #infinite-handle input[type=submit] + button, #infinite-handle .btn-group .wpcf7 input[type=submit] + button, .wpcf7 .btn-group #infinite-handle input[type=submit] + button, #infinite-handle .wpcf7 .btn-group input[type=submit] + button, .btn-group #infinite-handle button + button, #infinite-handle .btn-group button + button, .btn-group
+  #infinite-scroll .btn + button,
+  #infinite-scroll .btn-group .btn + button, .btn-group .wpcf7
+  #infinite-scroll input[type=submit] + button,
+  #infinite-scroll .btn-group .wpcf7 input[type=submit] + button, .wpcf7 .btn-group
+  #infinite-scroll input[type=submit] + button,
+  #infinite-scroll .wpcf7 .btn-group input[type=submit] + button, .btn-group #infinite-scroll button + button, #infinite-scroll .btn-group button + button,
   .btn-group .btn + .btn-group,
   .btn-group .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group input[type=submit] + .btn-group,
-  .btn-group #infinite-scroll button + .btn-group, #infinite-scroll
-  .btn-group button + .btn-group,
   .btn-group #infinite-handle button + .btn-group, #infinite-handle
+  .btn-group button + .btn-group,
+  .btn-group
+  #infinite-scroll button + .btn-group,
+  #infinite-scroll
   .btn-group button + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group .btn-group + input[type=submit],
-  .btn-group #infinite-scroll .btn-group + button, #infinite-scroll
-  .btn-group .btn-group + button,
   .btn-group #infinite-handle .btn-group + button, #infinite-handle
+  .btn-group .btn-group + button,
+  .btn-group
+  #infinite-scroll .btn-group + button,
+  #infinite-scroll
   .btn-group .btn-group + button,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn, .wpcf7
   .btn-group-vertical input[type=submit] + .btn,
-  .btn-group-vertical #infinite-scroll button + .btn, #infinite-scroll
-  .btn-group-vertical button + .btn,
   .btn-group-vertical #infinite-handle button + .btn, #infinite-handle
+  .btn-group-vertical button + .btn,
+  .btn-group-vertical
+  #infinite-scroll button + .btn,
+  #infinite-scroll
   .btn-group-vertical button + .btn,
   .btn-group-vertical .wpcf7 .btn + input[type=submit], .wpcf7
   .btn-group-vertical .btn + input[type=submit],
   .btn-group-vertical .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .btn-group-vertical input[type=submit] + input[type=submit],
-  .btn-group-vertical #infinite-scroll .wpcf7 button + input[type=submit], .wpcf7
-  .btn-group-vertical #infinite-scroll button + input[type=submit], #infinite-scroll
-  .btn-group-vertical .wpcf7 button + input[type=submit], .wpcf7 #infinite-scroll
-  .btn-group-vertical button + input[type=submit],
   .btn-group-vertical #infinite-handle .wpcf7 button + input[type=submit], .wpcf7
   .btn-group-vertical #infinite-handle button + input[type=submit], #infinite-handle
   .btn-group-vertical .wpcf7 button + input[type=submit], .wpcf7 #infinite-handle
   .btn-group-vertical button + input[type=submit],
-  .btn-group-vertical #infinite-scroll .btn + button, #infinite-scroll
-  .btn-group-vertical .btn + button,
-  .btn-group-vertical .wpcf7 #infinite-scroll input[type=submit] + button, #infinite-scroll
-  .btn-group-vertical .wpcf7 input[type=submit] + button, .wpcf7
-  .btn-group-vertical #infinite-scroll input[type=submit] + button, #infinite-scroll .wpcf7
-  .btn-group-vertical input[type=submit] + button,
-  .btn-group-vertical #infinite-scroll button + button, #infinite-scroll
-  .btn-group-vertical button + button,
+  .btn-group-vertical
+  #infinite-scroll .wpcf7 button + input[type=submit], .wpcf7
+  .btn-group-vertical
+  #infinite-scroll button + input[type=submit],
+  #infinite-scroll
+  .btn-group-vertical .wpcf7 button + input[type=submit], .wpcf7
+  #infinite-scroll
+  .btn-group-vertical button + input[type=submit],
   .btn-group-vertical #infinite-handle .btn + button, #infinite-handle
   .btn-group-vertical .btn + button,
   .btn-group-vertical .wpcf7 #infinite-handle input[type=submit] + button, #infinite-handle
@@ -2648,19 +2696,37 @@ tbody.collapse.show {
   .btn-group-vertical input[type=submit] + button,
   .btn-group-vertical #infinite-handle button + button, #infinite-handle
   .btn-group-vertical button + button,
+  .btn-group-vertical
+  #infinite-scroll .btn + button,
+  #infinite-scroll
+  .btn-group-vertical .btn + button,
+  .btn-group-vertical .wpcf7
+  #infinite-scroll input[type=submit] + button,
+  #infinite-scroll
+  .btn-group-vertical .wpcf7 input[type=submit] + button, .wpcf7
+  .btn-group-vertical
+  #infinite-scroll input[type=submit] + button,
+  #infinite-scroll .wpcf7
+  .btn-group-vertical input[type=submit] + button,
+  .btn-group-vertical #infinite-scroll button + button, #infinite-scroll
+  .btn-group-vertical button + button,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group-vertical input[type=submit] + .btn-group,
-  .btn-group-vertical #infinite-scroll button + .btn-group, #infinite-scroll
-  .btn-group-vertical button + .btn-group,
   .btn-group-vertical #infinite-handle button + .btn-group, #infinite-handle
+  .btn-group-vertical button + .btn-group,
+  .btn-group-vertical
+  #infinite-scroll button + .btn-group,
+  #infinite-scroll
   .btn-group-vertical button + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group-vertical .btn-group + input[type=submit],
-  .btn-group-vertical #infinite-scroll .btn-group + button, #infinite-scroll
-  .btn-group-vertical .btn-group + button,
   .btn-group-vertical #infinite-handle .btn-group + button, #infinite-handle
+  .btn-group-vertical .btn-group + button,
+  .btn-group-vertical
+  #infinite-scroll .btn-group + button,
+  #infinite-scroll
   .btn-group-vertical .btn-group + button,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
@@ -2671,16 +2737,20 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle), #infinite-scroll .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), #infinite-handle .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:first-child):not(:last-child):not(.dropdown-toggle), #infinite-handle .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle),
+#infinite-scroll .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, #infinite-scroll .btn-group > button:first-child, #infinite-handle .btn-group > button:first-child {
+.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, #infinite-handle .btn-group > button:first-child,
+#infinite-scroll .btn-group > button:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle), #infinite-scroll .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), #infinite-handle .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:first-child:not(:last-child):not(.dropdown-toggle), #infinite-handle .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle),
+  #infinite-scroll .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child), #infinite-scroll .btn-group > button:last-child:not(:first-child), #infinite-handle .btn-group > button:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .wpcf7 .btn-group > input[type=submit]:last-child:not(:first-child), #infinite-handle .btn-group > button:last-child:not(:first-child),
+#infinite-scroll .btn-group > button:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2688,15 +2758,18 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit], #infinite-scroll .btn-group > .btn-group:not(:first-child):not(:last-child) > button, #infinite-handle .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type=submit], #infinite-handle .btn-group > .btn-group:not(:first-child):not(:last-child) > button,
+#infinite-scroll .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, #infinite-scroll .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, #infinite-handle .btn-group > .btn-group:first-child:not(:last-child) > button:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, #infinite-handle .btn-group > .btn-group:first-child:not(:last-child) > button:last-child,
+#infinite-scroll .btn-group > .btn-group:first-child:not(:last-child) > button:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, #infinite-scroll .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, #infinite-handle .btn-group > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, #infinite-handle .btn-group > .btn-group:last-child:not(:first-child) > button:first-child,
+#infinite-scroll .btn-group > .btn-group:last-child:not(:first-child) > button:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2704,17 +2777,21 @@ tbody.collapse.show {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split, #infinite-scroll button + .dropdown-toggle-split, #infinite-handle button + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .wpcf7 input[type=submit] + .dropdown-toggle-split, #infinite-handle button + .dropdown-toggle-split,
+#infinite-scroll button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
-  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after, #infinite-scroll button + .dropdown-toggle-split::after, #infinite-handle button + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .wpcf7 input[type=submit] + .dropdown-toggle-split::after, #infinite-handle button + .dropdown-toggle-split::after,
+  #infinite-scroll button + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, #infinite-scroll .btn-group-sm > button + .dropdown-toggle-split, #infinite-handle .btn-group-sm > button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, #infinite-handle .btn-group-sm > button + .dropdown-toggle-split,
+#infinite-scroll .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, #infinite-scroll .btn-group-lg > button + .dropdown-toggle-split, #infinite-handle .btn-group-lg > button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, #infinite-handle .btn-group-lg > button + .dropdown-toggle-split,
+#infinite-scroll .btn-group-lg > button + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem; }
 
@@ -2723,57 +2800,77 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical #infinite-scroll button, #infinite-scroll .btn-group-vertical button, .btn-group-vertical #infinite-handle button, #infinite-handle .btn-group-vertical button,
+  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical #infinite-handle button, #infinite-handle .btn-group-vertical button, .btn-group-vertical
+  #infinite-scroll button,
+  #infinite-scroll .btn-group-vertical button,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, #infinite-scroll .btn-group-vertical > button + .btn, #infinite-handle .btn-group-vertical > button + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], #infinite-scroll .wpcf7 .btn-group-vertical > button + input[type=submit], .wpcf7 #infinite-scroll .btn-group-vertical > button + input[type=submit], #infinite-handle .wpcf7 .btn-group-vertical > button + input[type=submit], .wpcf7 #infinite-handle .btn-group-vertical > button + input[type=submit], #infinite-scroll .btn-group-vertical > .btn + button, .wpcf7 #infinite-scroll .btn-group-vertical > input[type=submit] + button, #infinite-scroll .wpcf7 .btn-group-vertical > input[type=submit] + button, #infinite-scroll .btn-group-vertical > button + button, #infinite-handle .btn-group-vertical > .btn + button, .wpcf7 #infinite-handle .btn-group-vertical > input[type=submit] + button, #infinite-handle .wpcf7 .btn-group-vertical > input[type=submit] + button, #infinite-handle .btn-group-vertical > button + button,
+  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, #infinite-handle .btn-group-vertical > button + .btn,
+  #infinite-scroll .btn-group-vertical > button + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], #infinite-handle .wpcf7 .btn-group-vertical > button + input[type=submit], .wpcf7 #infinite-handle .btn-group-vertical > button + input[type=submit],
+  #infinite-scroll .wpcf7 .btn-group-vertical > button + input[type=submit], .wpcf7
+  #infinite-scroll .btn-group-vertical > button + input[type=submit], #infinite-handle .btn-group-vertical > .btn + button, .wpcf7 #infinite-handle .btn-group-vertical > input[type=submit] + button, #infinite-handle .wpcf7 .btn-group-vertical > input[type=submit] + button, #infinite-handle .btn-group-vertical > button + button,
+  #infinite-scroll .btn-group-vertical > .btn + button, .wpcf7
+  #infinite-scroll .btn-group-vertical > input[type=submit] + button,
+  #infinite-scroll .wpcf7 .btn-group-vertical > input[type=submit] + button, #infinite-scroll .btn-group-vertical > button + button,
   .btn-group-vertical > .btn + .btn-group, .wpcf7
-  .btn-group-vertical > input[type=submit] + .btn-group, #infinite-scroll
-  .btn-group-vertical > button + .btn-group, #infinite-handle
+  .btn-group-vertical > input[type=submit] + .btn-group, #infinite-handle
+  .btn-group-vertical > button + .btn-group,
+  #infinite-scroll
   .btn-group-vertical > button + .btn-group,
   .btn-group-vertical > .btn-group + .btn, .wpcf7
-  .btn-group-vertical > .btn-group + input[type=submit], #infinite-scroll
-  .btn-group-vertical > .btn-group + button, #infinite-handle
+  .btn-group-vertical > .btn-group + input[type=submit], #infinite-handle
+  .btn-group-vertical > .btn-group + button,
+  #infinite-scroll
   .btn-group-vertical > .btn-group + button,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child), #infinite-scroll .btn-group-vertical > button:not(:first-child):not(:last-child), #infinite-handle .btn-group-vertical > button:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child):not(:last-child), #infinite-handle .btn-group-vertical > button:not(:first-child):not(:last-child),
+#infinite-scroll .btn-group-vertical > button:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child), #infinite-scroll .btn-group-vertical > button:first-child:not(:last-child), #infinite-handle .btn-group-vertical > button:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .wpcf7 .btn-group-vertical > input[type=submit]:first-child:not(:last-child), #infinite-handle .btn-group-vertical > button:first-child:not(:last-child),
+#infinite-scroll .btn-group-vertical > button:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child), #infinite-scroll .btn-group-vertical > button:last-child:not(:first-child), #infinite-handle .btn-group-vertical > button:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:last-child:not(:first-child), #infinite-handle .btn-group-vertical > button:last-child:not(:first-child),
+#infinite-scroll .btn-group-vertical > button:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit], #infinite-scroll .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, #infinite-handle .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .wpcf7 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type=submit], #infinite-handle .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button,
+#infinite-scroll .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, #infinite-scroll .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, #infinite-handle .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .wpcf7 .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type=submit]:last-child, #infinite-handle .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
+#infinite-scroll .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, #infinite-scroll .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, #infinite-handle .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .wpcf7 .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type=submit]:first-child, #infinite-handle .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child,
+#infinite-scroll .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"], #infinite-scroll [data-toggle="buttons"] > button input[type="radio"], #infinite-handle [data-toggle="buttons"] > button input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], .wpcf7 [data-toggle="buttons"] > input[type=submit] input[type="radio"], #infinite-handle [data-toggle="buttons"] > button input[type="radio"],
+#infinite-scroll [data-toggle="buttons"] > button input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > input[type=submit] input[type="checkbox"], #infinite-scroll
-[data-toggle="buttons"] > button input[type="checkbox"], #infinite-handle
+[data-toggle="buttons"] > input[type=submit] input[type="checkbox"], #infinite-handle
+[data-toggle="buttons"] > button input[type="checkbox"],
+#infinite-scroll
 [data-toggle="buttons"] > button input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"], #infinite-scroll
-[data-toggle="buttons"] > .btn-group > button input[type="radio"], #infinite-handle
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="radio"], #infinite-handle
+[data-toggle="buttons"] > .btn-group > button input[type="radio"],
+#infinite-scroll
 [data-toggle="buttons"] > .btn-group > button input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .wpcf7
-[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"], #infinite-scroll
-[data-toggle="buttons"] > .btn-group > button input[type="checkbox"], #infinite-handle
+[data-toggle="buttons"] > .btn-group > input[type=submit] input[type="checkbox"], #infinite-handle
+[data-toggle="buttons"] > .btn-group > button input[type="checkbox"],
+#infinite-scroll
 [data-toggle="buttons"] > .btn-group > button input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -3119,8 +3216,9 @@ tbody.collapse.show {
   .wpcf7 .input-group-sm > textarea.input-group-addon, .wpcf7 .input-group-sm > .input-group-addon.wpcf7-validation-errors,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit], #infinite-scroll
-  .input-group-sm > .input-group-btn > button.input-group-addon, #infinite-handle
+  .input-group-sm > .input-group-btn > input.input-group-addon[type=submit], #infinite-handle
+  .input-group-sm > .input-group-btn > button.input-group-addon,
+  #infinite-scroll
   .input-group-sm > .input-group-btn > button.input-group-addon {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
@@ -3145,8 +3243,9 @@ tbody.collapse.show {
   .wpcf7 .input-group-lg > textarea.input-group-addon, .wpcf7 .input-group-lg > .input-group-addon.wpcf7-validation-errors,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn, .wpcf7
-  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit], #infinite-scroll
-  .input-group-lg > .input-group-btn > button.input-group-addon, #infinite-handle
+  .input-group-lg > .input-group-btn > input.input-group-addon[type=submit], #infinite-handle
+  .input-group-lg > .input-group-btn > button.input-group-addon,
+  #infinite-scroll
   .input-group-lg > .input-group-btn > button.input-group-addon {
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
@@ -3192,21 +3291,25 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:last-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:last-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit], #infinite-scroll
-.input-group-btn:not(:last-child) > button, #infinite-handle
+.input-group-btn:not(:last-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:last-child) > button,
+#infinite-scroll
 .input-group-btn:not(:last-child) > button,
 .input-group-btn:not(:last-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group > input[type=submit], #infinite-scroll
-.input-group-btn:not(:last-child) > .btn-group > button, #infinite-handle
+.input-group-btn:not(:last-child) > .btn-group > input[type=submit], #infinite-handle
+.input-group-btn:not(:last-child) > .btn-group > button,
+#infinite-scroll
 .input-group-btn:not(:last-child) > .btn-group > button,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle), #infinite-scroll
-.input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle), #infinite-handle
+.input-group-btn:not(:first-child) > input[type=submit]:not(:last-child):not(.dropdown-toggle), #infinite-handle
+.input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle),
+#infinite-scroll
 .input-group-btn:not(:first-child) > button:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit], #infinite-scroll
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button, #infinite-handle
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button,
+#infinite-scroll
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
@@ -3251,21 +3354,25 @@ tbody.collapse.show {
 .wpcf7 .input-group textarea:not(:first-child), .input-group .wpcf7 .wpcf7-validation-errors:not(:first-child), .wpcf7 .input-group .wpcf7-validation-errors:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:first-child) > input[type=submit], #infinite-scroll
-.input-group-btn:not(:first-child) > button, #infinite-handle
+.input-group-btn:not(:first-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:first-child) > button,
+#infinite-scroll
 .input-group-btn:not(:first-child) > button,
 .input-group-btn:not(:first-child) > .btn-group > .btn, .wpcf7
-.input-group-btn:not(:first-child) > .btn-group > input[type=submit], #infinite-scroll
-.input-group-btn:not(:first-child) > .btn-group > button, #infinite-handle
+.input-group-btn:not(:first-child) > .btn-group > input[type=submit], #infinite-handle
+.input-group-btn:not(:first-child) > .btn-group > button,
+#infinite-scroll
 .input-group-btn:not(:first-child) > .btn-group > button,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child), .wpcf7
-.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child), #infinite-scroll
-.input-group-btn:not(:last-child) > button:not(:first-child), #infinite-handle
+.input-group-btn:not(:last-child) > input[type=submit]:not(:first-child), #infinite-handle
+.input-group-btn:not(:last-child) > button:not(:first-child),
+#infinite-scroll
 .input-group-btn:not(:last-child) > button:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .wpcf7
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit], #infinite-scroll
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button, #infinite-handle
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type=submit], #infinite-handle
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button,
+#infinite-scroll
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -3294,21 +3401,36 @@ tbody.collapse.show {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit], #infinite-scroll .input-group-btn > button, #infinite-handle .input-group-btn > button {
+  .input-group-btn > .btn, .wpcf7 .input-group-btn > input[type=submit], #infinite-handle .input-group-btn > button,
+  #infinite-scroll .input-group-btn > button {
     position: relative;
     flex: 1; }
-    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, #infinite-scroll .input-group-btn > button + .btn, #infinite-handle .input-group-btn > button + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit], #infinite-scroll .wpcf7 .input-group-btn > button + input[type=submit], .wpcf7 #infinite-scroll .input-group-btn > button + input[type=submit], #infinite-handle .wpcf7 .input-group-btn > button + input[type=submit], .wpcf7 #infinite-handle .input-group-btn > button + input[type=submit], #infinite-scroll .input-group-btn > .btn + button, .wpcf7 #infinite-scroll .input-group-btn > input[type=submit] + button, #infinite-scroll .wpcf7 .input-group-btn > input[type=submit] + button, #infinite-scroll .input-group-btn > button + button, #infinite-handle .input-group-btn > .btn + button, .wpcf7 #infinite-handle .input-group-btn > input[type=submit] + button, #infinite-handle .wpcf7 .input-group-btn > input[type=submit] + button, #infinite-handle .input-group-btn > button + button {
+    .input-group-btn > .btn + .btn, .wpcf7 .input-group-btn > input[type=submit] + .btn, #infinite-handle .input-group-btn > button + .btn,
+    #infinite-scroll .input-group-btn > button + .btn, .wpcf7 .input-group-btn > .btn + input[type=submit], .wpcf7 .input-group-btn > input[type=submit] + input[type=submit], #infinite-handle .wpcf7 .input-group-btn > button + input[type=submit], .wpcf7 #infinite-handle .input-group-btn > button + input[type=submit],
+    #infinite-scroll .wpcf7 .input-group-btn > button + input[type=submit], .wpcf7
+    #infinite-scroll .input-group-btn > button + input[type=submit], #infinite-handle .input-group-btn > .btn + button, .wpcf7 #infinite-handle .input-group-btn > input[type=submit] + button, #infinite-handle .wpcf7 .input-group-btn > input[type=submit] + button, #infinite-handle .input-group-btn > button + button,
+    #infinite-scroll .input-group-btn > .btn + button, .wpcf7
+    #infinite-scroll .input-group-btn > input[type=submit] + button,
+    #infinite-scroll .wpcf7 .input-group-btn > input[type=submit] + button, #infinite-scroll .input-group-btn > button + button {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, #infinite-scroll .input-group-btn > button:focus, #infinite-handle .input-group-btn > button:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, #infinite-scroll .input-group-btn > button:active, #infinite-handle .input-group-btn > button:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover, #infinite-scroll .input-group-btn > button:hover, #infinite-handle .input-group-btn > button:hover {
+    .input-group-btn > .btn:focus, .wpcf7 .input-group-btn > input[type=submit]:focus, #infinite-handle .input-group-btn > button:focus,
+    #infinite-scroll .input-group-btn > button:focus, .input-group-btn > .btn:active, .wpcf7 .input-group-btn > input[type=submit]:active, #infinite-handle .input-group-btn > button:active,
+    #infinite-scroll .input-group-btn > button:active, .input-group-btn > .btn:hover, .wpcf7 .input-group-btn > input[type=submit]:hover, #infinite-handle .input-group-btn > button:hover,
+    #infinite-scroll .input-group-btn > button:hover {
       z-index: 3; }
-  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit], #infinite-scroll .input-group-btn:not(:last-child) > button, #infinite-handle .input-group-btn:not(:last-child) > button,
+  .input-group-btn:not(:last-child) > .btn, .wpcf7 .input-group-btn:not(:last-child) > input[type=submit], #infinite-handle .input-group-btn:not(:last-child) > button,
+  #infinite-scroll .input-group-btn:not(:last-child) > button,
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit], #infinite-scroll .input-group-btn:not(:first-child) > button, #infinite-handle .input-group-btn:not(:first-child) > button,
+  .input-group-btn:not(:first-child) > .btn, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit], #infinite-handle .input-group-btn:not(:first-child) > button,
+  #infinite-scroll .input-group-btn:not(:first-child) > button,
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, #infinite-scroll .input-group-btn:not(:first-child) > button:focus, #infinite-handle .input-group-btn:not(:first-child) > button:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, #infinite-scroll .input-group-btn:not(:first-child) > button:active, #infinite-handle .input-group-btn:not(:first-child) > button:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover, #infinite-scroll .input-group-btn:not(:first-child) > button:hover, #infinite-handle .input-group-btn:not(:first-child) > button:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:focus, #infinite-handle .input-group-btn:not(:first-child) > button:focus,
+    #infinite-scroll .input-group-btn:not(:first-child) > button:focus, .input-group-btn:not(:first-child) > .btn:active, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:active, #infinite-handle .input-group-btn:not(:first-child) > button:active,
+    #infinite-scroll .input-group-btn:not(:first-child) > button:active, .input-group-btn:not(:first-child) > .btn:hover, .wpcf7 .input-group-btn:not(:first-child) > input[type=submit]:hover, #infinite-handle .input-group-btn:not(:first-child) > button:hover,
+    #infinite-scroll .input-group-btn:not(:first-child) > button:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -4101,7 +4223,8 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .wpcf7 input[type=submit] .badge, #infinite-scroll button .badge, #infinite-handle button .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge, #infinite-handle button .badge,
+#infinite-scroll button .badge {
   position: relative;
   top: -1px; }
 
@@ -9474,8 +9597,23 @@ li[class$='link'] a {
 li[class$='link'] + li[class$='link'] {
   margin-left: 2em; }
 
-.btn, .wpcf7 input[type=submit], #infinite-scroll button, #infinite-handle button {
-  text-transform: uppercase; }
+.btn, .wpcf7 input[type=submit], #infinite-handle button,
+#infinite-scroll button,
+button {
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif; }
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #194668;
+  border-color: #194668;
+  color: #fff; }
+
+.btn-secondary:hover, #infinite-handle button:hover,
+#infinite-scroll button:hover, .btn-secondary:focus, #infinite-handle button:focus,
+#infinite-scroll button:focus {
+  background-color: #ce5351;
+  border-color: #ce5351;
+  color: #fff !important; }
 
 .archive .site-main,
 .page .site-main,
@@ -9564,50 +9702,6 @@ h4 {
   background-repeat: no-repeat;
   background-size: contain; }
 
-.top-search {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-top: 2px solid #e7e7e7;
-  transition: all .2s ease-in-out; }
-  .top-search.collapsed {
-    max-height: 0;
-    padding: 0;
-    visibility: hidden;
-    opacity: 0; }
-  .top-search.expanded {
-    max-height: 300px;
-    visibility: visible;
-    opacity: 1; }
-  @media screen and (min-width: 936px) {
-    .top-search #searchform {
-      padding-left: 0; } }
-  .top-search input[type=text] {
-    border: none;
-    font-size: 1.125rem;
-    color: #555;
-    font-family: "Source Sans Pro", sans-serif; }
-    .top-search input[type=text]:placeholder {
-      font-size: 1.125rem;
-      color: #9b9b9b;
-      font-family: "Source Sans Pro", sans-serif; }
-  .top-search input[type=submit] {
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    position: absolute !important; }
-  .top-search .search-control {
-    text-align: right; }
-    .top-search .search-control button {
-      height: 38.5px;
-      width: 17px;
-      padding: 0;
-      border: none;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-image: url("../images/close.svg");
-      background-position: center; }
-
 /**
  * Homepage Filters
  */
@@ -9643,13 +9737,6 @@ h4 {
   align-content: space-between; }
   .nav-links .nav-next {
     text-align: right; }
-
-/**
- * Infinite Scroll
- */
-#wrapper-footer-full {
-  padding-top: 56px;
-  padding-bottom: 180px; }
 
 .single .site-main > article > .entry-header,
 .single .site-main > article > .entry-content {
@@ -9694,14 +9781,17 @@ h4 {
       margin-top: .5em; }
 
 .single .entry-title {
-  margin-bottom: .75em;
-  font-size: 3.4375rem;
-  line-height: 61px;
+  margin-bottom: .5em;
+  font-size: 2rem;
+  /*line-height: 61px;*/
   letter-spacing: 0.73px; }
+  @media screen and (min-width: 936px) {
+    .single .entry-title {
+      font-size: 3.4375rem; } }
 
 .single .entry-footer {
-  margin-bottom: 2em;
-  margin-top: 2.25em; }
+  margin-top: 5.625em;
+  margin-bottom: 2em; }
 
 .single .entry-meta .sd-sharing-enabled ul {
   text-align: right; }
@@ -9717,6 +9807,7 @@ h4 {
   text-transform: none; }
 
 .single .byline {
+  margin-bottom: .25em;
   font-size: 1.375rem;
   text-transform: lowercase;
   line-height: 1.3; }
@@ -9760,7 +9851,7 @@ h4 {
   .home .grid article .featured-image {
     margin-bottom: 1.75em; }
   .home .grid article .entry-meta {
-    margin-bottom: 1.75em; }
+    margin-bottom: .5em; }
 
 .archive .page-header,
 .search .page-header {
@@ -9861,6 +9952,53 @@ h4 {
 :placeholder-shown {
   /* Standard one last! */ }
 
+.top-search {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 2px solid #e7e7e7;
+  transition: all .2s ease-in-out; }
+  .top-search.collapsed {
+    max-height: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0; }
+  .top-search.expanded {
+    max-height: 300px;
+    visibility: visible;
+    opacity: 1; }
+  @media screen and (min-width: 936px) {
+    .top-search #searchform {
+      padding-left: 0; }
+      .top-search #searchform .field {
+        padding-left: 1rem; } }
+  .top-search input[type=text] {
+    border: none;
+    font-size: 1.125rem;
+    color: #555;
+    font-family: "Source Sans Pro", sans-serif; }
+    .top-search input[type=text]:placeholder {
+      font-size: 1.125rem;
+      color: #9b9b9b;
+      font-family: "Source Sans Pro", sans-serif; }
+  .top-search input[type=submit] {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute !important; }
+  .top-search .search-control {
+    text-align: right;
+    padding-left: 1rem; }
+    .top-search .search-control button {
+      height: 38.5px;
+      width: 17px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-image: url("../images/close.svg");
+      background-position: center; }
+
 .embed-responsive, .iframe-container {
   background-color: #d3d3d3; }
   @media screen and (min-width: 936px) {
@@ -9915,6 +10053,8 @@ figure {
   background-size: cover; }
 
 #wrapper-footer-full {
+  padding-top: 112px;
+  padding-bottom: 90px;
   color: #555; }
   #wrapper-footer-full .widget-1 {
     margin-bottom: 2em; }
@@ -9937,10 +10077,6 @@ figure {
     background-color: #194668;
     padding: .5em;
     border-radius: 50%; }
-  #wrapper-footer-full .widget_caldera_forms_widget input[type=submit] {
-    background-color: #ce5351;
-    border-color: #ce5351;
-    text-transform: uppercase; }
   #wrapper-footer-full .widget_caldera_forms_widget .control-label {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -10000,8 +10136,14 @@ figure {
     font-size: 22px;
     line-height: 1.125; }
 
-#infinite-handle button {
-  text-transform: uppercase; }
+#infinite-handle,
+#infinite-scroll {
+  text-align: center; }
+  #infinite-handle button,
+  #infinite-scroll button {
+    padding: 1em 2em;
+    text-transform: uppercase;
+    font-size: 0.875rem; }
 
 .single .sd-social-icon .sd-content ul li a.sd-button,
 .single .sd-social-text .sd-content ul li a.sd-button,
@@ -10317,7 +10459,7 @@ figure {
     .featured-content article .entry-body {
       padding-left: 30px; }
       .featured-content article .entry-body .entry-title {
-        margin-bottom: 30px; }
+        margin-bottom: 9px; }
       .featured-content article .entry-body .entry-meta {
         margin-bottom: 30px; } }
 

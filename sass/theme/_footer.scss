@@ -1,4 +1,6 @@
 #wrapper-footer-full {
+  padding-top: 112px;
+  padding-bottom: 90px;
 
   color: $color__text-light;
 
@@ -45,12 +47,6 @@
   }
 
   .widget_caldera_forms_widget {
-
-    input[type=submit] {
-      background-color: $color__secondary;
-      border-color: $color__secondary;
-      text-transform: uppercase;
-    }
 
     .control-label {
       @include visually-hidden;
