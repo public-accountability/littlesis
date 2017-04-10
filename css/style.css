@@ -6,6 +6,7 @@
  * Color variables
  */
 /* Social Media - http://www.paulund.co.uk/social-media-colours */
+/*$color__link:           $color__accent;*/
 /**
  * Typography Variables
  */
@@ -19,6 +20,7 @@
  * Color variables
  */
 /* Social Media - http://www.paulund.co.uk/social-media-colours */
+/*$color__link:           $color__accent;*/
 /**
  * Typography Variables
  */
@@ -345,7 +347,7 @@ blockquote {
   margin: 0 0 1rem; }
 
 a {
-  color: #194668;
+  color: #337AB7;
   text-decoration: none; }
   a:focus, a:hover {
     color: #ce5351;
@@ -2419,7 +2421,7 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: normal;
-  color: #194668;
+  color: #337AB7;
   border-radius: 0; }
   .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {
     background-color: transparent; }
@@ -4176,7 +4178,7 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #194668;
+  color: #337AB7;
   background-color: #fff;
   border: 1px solid #ddd; }
   .page-link:focus, .page-link:hover {
@@ -9927,7 +9929,7 @@ h4 {
   margin-bottom: 2.5em;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
-  font-size: 0.875;
+  font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.3px;
   border-bottom: 1px solid #d3d3d3; }
@@ -10067,36 +10069,231 @@ figure {
     font-weight: bold;
     font-family: "Source Sans Pro", sans-serif;
     color: #555; }
+  #wrapper-footer-full .widget_caldera_forms_widget .mc4wp-form-fields,
+  #wrapper-footer-full .caldera-grid .mc4wp-form-fields,
+  #wrapper-footer-full .mc4wp-form .mc4wp-form-fields {
+    display: flex;
+    flex-wrap: no-wrap; }
   #wrapper-footer-full .widget_caldera_forms_widget .control-label,
-  #wrapper-footer-full .caldera-grid .control-label {
+  #wrapper-footer-full .caldera-grid .control-label,
+  #wrapper-footer-full .mc4wp-form .control-label {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     width: 1px;
     overflow: hidden;
     position: absolute !important; }
+  #wrapper-footer-full .widget_caldera_forms_widget .form-control, #wrapper-footer-full .widget_caldera_forms_widget .wpcf7 input[type=text], .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=text], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=search],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=search], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=url],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=url], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=tel],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=tel], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=number],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=number], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=range],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=range], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=date],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=date], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=month],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=month], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=week],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=week], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=time],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=time], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=datetime],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=datetime], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=datetime-local],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=datetime-local], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=color],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=color], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=email],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=email], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=file],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=file], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 input[type=submit],
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget input[type=submit], #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 select,
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget select, #wrapper-footer-full .widget_caldera_forms_widget
+  .wpcf7 textarea,
+  .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget textarea, #wrapper-footer-full .widget_caldera_forms_widget .wpcf7 .wpcf7-validation-errors, .wpcf7 #wrapper-footer-full .widget_caldera_forms_widget .wpcf7-validation-errors,
+  #wrapper-footer-full .caldera-grid .form-control,
+  #wrapper-footer-full .caldera-grid .wpcf7 input[type=text], .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=text],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=search],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=search],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=url],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=url],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=tel],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=tel],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=number],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=number],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=range],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=range],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=date],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=date],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=month],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=month],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=week],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=week],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=time],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=time],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=datetime],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=datetime],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=datetime-local],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=datetime-local],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=color],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=color],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=email],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=email],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=file],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=file],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 input[type=submit],
+  .wpcf7
+  #wrapper-footer-full .caldera-grid input[type=submit],
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 select,
+  .wpcf7
+  #wrapper-footer-full .caldera-grid select,
+  #wrapper-footer-full .caldera-grid
+  .wpcf7 textarea,
+  .wpcf7
+  #wrapper-footer-full .caldera-grid textarea,
+  #wrapper-footer-full .caldera-grid .wpcf7 .wpcf7-validation-errors, .wpcf7
+  #wrapper-footer-full .caldera-grid .wpcf7-validation-errors,
+  #wrapper-footer-full .mc4wp-form .form-control,
+  #wrapper-footer-full .mc4wp-form .wpcf7 input[type=text], .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=text],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=search],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=search],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=url],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=url],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=tel],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=tel],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=number],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=number],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=range],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=range],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=date],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=date],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=month],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=month],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=week],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=week],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=time],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=time],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=datetime],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=datetime],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=datetime-local],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=datetime-local],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=color],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=color],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=email],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=email],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=file],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=file],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 input[type=submit],
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form input[type=submit],
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 select,
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form select,
+  #wrapper-footer-full .mc4wp-form
+  .wpcf7 textarea,
+  .wpcf7
+  #wrapper-footer-full .mc4wp-form textarea,
+  #wrapper-footer-full .mc4wp-form .wpcf7 .wpcf7-validation-errors, .wpcf7
+  #wrapper-footer-full .mc4wp-form .wpcf7-validation-errors {
+    font-size: 0.875rem; }
   #wrapper-footer-full .widget_caldera_forms_widget input[type=email],
   #wrapper-footer-full .widget_caldera_forms_widget input[type=submit],
   #wrapper-footer-full .caldera-grid input[type=email],
-  #wrapper-footer-full .caldera-grid input[type=submit] {
+  #wrapper-footer-full .caldera-grid input[type=submit],
+  #wrapper-footer-full .mc4wp-form input[type=email],
+  #wrapper-footer-full .mc4wp-form input[type=submit] {
     height: 50px;
     border: none;
-    font-size: 0.875;
+    font-size: 0.875rem;
     border-radius: 0; }
   #wrapper-footer-full .widget_caldera_forms_widget input[type=email]::placeholder,
-  #wrapper-footer-full .caldera-grid input[type=email]::placeholder {
+  #wrapper-footer-full .caldera-grid input[type=email]::placeholder,
+  #wrapper-footer-full .mc4wp-form input[type=email]::placeholder {
     text-transform: uppercase; }
   #wrapper-footer-full .widget_caldera_forms_widget .col-sm-9,
-  #wrapper-footer-full .caldera-grid .col-sm-9 {
+  #wrapper-footer-full .caldera-grid .col-sm-9,
+  #wrapper-footer-full .mc4wp-form .col-sm-9 {
     flex-basis: calc( 100% - 72px);
     padding-right: 0;
-    padding-left: 5px;
+    padding-left: 0;
     margin-right: 0; }
   #wrapper-footer-full .widget_caldera_forms_widget .col-sm-3,
-  #wrapper-footer-full .caldera-grid .col-sm-3 {
+  #wrapper-footer-full .caldera-grid .col-sm-3,
+  #wrapper-footer-full .mc4wp-form .col-sm-3 {
     flex-basis: 72px;
     padding-right: 0;
     padding-left: 0;
     margin-left: 0; }
+  #wrapper-footer-full .mc4wp-form {
+    margin-bottom: 15px; }
   #wrapper-footer-full .widget_text .littlesis-logo {
     width: 157px;
     height: 33px;
@@ -10122,7 +10319,7 @@ figure {
     margin-bottom: 2.5em;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: bold;
-    font-size: 0.875;
+    font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.3px;
     border-bottom: 1px solid #d3d3d3; }
@@ -10443,6 +10640,9 @@ figure {
       background-image: url("../images/twitter.svg");
       background-repeat: no-repeat;
       background-position: center; }
+
+.mc4wp-success {
+  color: #555; }
 
 #wrapper-static-hero {
   background-color: transparent;

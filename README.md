@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.3
-Version: 0.1.7
+Version: 0.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,10 @@ Templates
 
 
 ## Changelog
+
+* 0.1.9 April 10, 2017
+  * Added styles for MailChimp form
+  * Changed link color to #337AB7
 
 * 0.1.8 April 5, 2017
   * Final styling updates
