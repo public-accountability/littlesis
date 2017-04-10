@@ -51,7 +51,8 @@ $color__youtube:        #bb0000;
 $color__background:     $color__white;
 $color__foreground:     $color__black;
 
-$color__link:           $color__accent;
+/*$color__link:           $color__accent;*/
+$color__link:           #337AB7;
 $color__link-hover:     $color__secondary;
 
 $color__text-primary:   $color__gray-darkest;
@@ -86,9 +87,9 @@ $font__size-h3:         1rem;
 $font__size-h4:         1.375rem;
 $font__size-h5:         1.125rem;
 $font__size-h6:         1rem; //16px
-$font__size-small:      .875; //14px
-$font__size-smaller:    .75; //12px
-$font__size-smallest:   .6875;
+$font__size-small:      .875rem; //14px
+$font__size-smaller:    .75rem; //12px
+$font__size-smallest:   .6875rem;
 
 $font__weight-default:  400;
 $font__weight-bold:     700;
