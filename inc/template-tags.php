@@ -76,9 +76,9 @@
  function littlesis_get_the_term_list( $taxonomy = 'category', $post_id = null ) {
    $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
    $term_list = get_the_term_list( $post_id, $taxonomy, '<ul class="' . $taxonomy . '-links"><li class="' . $taxonomy . '-link">', '</li><li class="' . $taxonomy . '-link">', '</li></ul>' );
-    if ( $term_list ) {
-      echo $term_list;
-    }
+   if ( !empty( $term_list ) && !is_wp_error( $term_list ) ) {
+     echo $term_list;
+   }
  }
 
 /**
@@ -92,7 +92,7 @@
  function littlesis_series( $post_id = null, $taxonomy = 'series' ) {
    $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
    $term_list = get_the_term_list( $post_id, $taxonomy, '<ul class="' . $taxonomy . '-links"><span class="taxonomy-label">' . __( 'In the Series:', 'littlesis' ) . '</span> <li class="' . $taxonomy . '-link">', '</li><li class="' . $taxonomy . '-link">', '</li></ul>' );
-    if ( $term_list ) {
+    if ( !empty( $term_list ) && !is_wp_error( $term_list ) ) {
       echo $term_list;
     }
 
