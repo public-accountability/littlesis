@@ -110,7 +110,6 @@
    $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
 
    $image_id = get_post_thumbnail_id( $post_id );
-   $caption = get_post_field( 'post_excerpt', $image_id );
    $image = sprintf(' <figure class="featured-image size-%s %s"><a href="%s" rel="bookmark">%s</a></figure>',
      $size,
      ( has_post_thumbnail( $post_id ) ) ? esc_attr( ' has-thumbnail' ) : esc_attr( ' no-thumbnail' ),
@@ -133,11 +132,9 @@ function littlesis_the_post_thumbnail_single( $post_id = null, $size = 'full' ) 
   $post_id = ( $post_id ) ? (int) $post_id : get_the_ID();
   if( has_post_thumbnail( $post_id ) ) {
     $image_id = get_post_thumbnail_id( $post_id );
-    $caption = get_post_field( 'post_excerpt', $image_id );
-    $image = sprintf(' <figure class="single-post-image size-%s">%s<figcaption>%s</figcaption></figure>',
+    $image = sprintf(' <figure class="single-post-image size-%s">%s</figure>',
       $size,
-      get_the_post_thumbnail( $post_id, $size ),
-      $caption
+      get_the_post_thumbnail( $post_id, $size )
     );
     echo $image;
   }
