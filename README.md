@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.7.3
-Version: 0.1.10
+Version: 0.1.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,10 @@ Templates
 
 
 ## Changelog
+
+* 0.1.11 May 9, 2017
+  * Updated styles to fix featured image height on mobile size
+  * Removed featured image captions
 
 * 0.1.10 May 1, 2017
   * [bugfix] Fixed error in `template-tags.php`
