@@ -16,13 +16,11 @@ global $post;
 
 <!-- Display 1 Featured Posts -->
 <?php
-$sticky = get_option( 'sticky_posts' );
+$featured = littlesis_get_featured_post();
 
-if( !empty( $sticky ) ) : ?>
+if( !empty( $featured ) ) : ?>
 
-	<?php $sticky = $sticky[0]; ?>
-
-	<?php $featured_post = get_posts( array( 'include' => $sticky ) ); ?>
+	<?php $featured_post = get_posts( array( 'include' => $featured ) ); ?>
 
 	<?php foreach ( $featured_post as $post ) : setup_postdata( $post ); ?>
 
@@ -52,17 +50,23 @@ if( !empty( $sticky ) ) : ?>
 				<div class="row results">
 
 					<?php $posts_per_page = get_option( 'posts_per_page' ); ?>
-					<?php $args = ( $sticky ) ?  array( 'posts_per_page' => $posts_per_page, 'post__not_in' => array( $sticky ) ) : array( 'posts_per_page' => $posts_per_page ); ?>
-					<?php $posts = get_posts( $args ); ?>
+					<?php $args = array(
+						'posts_per_page' 				 => $posts_per_page,
+						'ignore_sticky_posts'		=> true
+					); ?>
+					<?php if( $featured ) : ?>
+						<?php $args['post__not_in'] = $featured; ?>
+					<?php endif; ?>
+
+					<?php $query = new WP_Query( $args ); ?>
 
 						<?php /* Start the Loop */ ?>
 
-						<?php if( $posts ) :  ?>
+						<?php if( $query->have_posts() ) :  ?>
 
-							<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+							<?php while( $query->have_posts() ) : $query->the_post(); ?>
 
 							<?php
-
 							/*
 							 * Include the Post-Format-specific template for the content.
 							 * If you want to override this in a child theme, then include a file
@@ -71,7 +75,7 @@ if( !empty( $sticky ) ) : ?>
 							get_template_part( 'loop-templates/content', 'grid' );
 							?>
 
-						<?php endforeach; ?>
+						<?php endwhile; ?>
 
 					<?php else : ?>
 
