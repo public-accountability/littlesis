@@ -49,22 +49,15 @@ if( !empty( $featured ) ) : ?>
 
 				<div class="row results">
 
-					<?php $posts_per_page = get_option( 'posts_per_page' ); ?>
-					<?php $args = array(
-						'posts_per_page' 				 => $posts_per_page,
-						'ignore_sticky_posts'		=> true
-					); ?>
-					<?php if( $featured ) : ?>
-						<?php $args['post__not_in'] = $featured; ?>
-					<?php endif; ?>
+						<?php
+						/**
+						 * Start the Main Loop
+						 * Homepage main post loop is filtered to exclude $featured post, `ignore_sticky_posts` and only display "publish" post status
+						 * @see ./inc/category-filters.php
+						 */ ?>
+						<?php if( have_posts() ) :  ?>
 
-					<?php $query = new WP_Query( $args ); ?>
-
-						<?php /* Start the Loop */ ?>
-
-						<?php if( $query->have_posts() ) :  ?>
-
-							<?php while( $query->have_posts() ) : $query->the_post(); ?>
+							<?php while( have_posts() ) : the_post(); ?>
 
 							<?php
 							/*
