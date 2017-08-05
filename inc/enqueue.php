@@ -50,18 +50,6 @@ function theme_enqueue_styles() {
   wp_enqueue_style( 'littlesis-styles', get_stylesheet_directory_uri() . '/css/style.min.css', array(), $the_theme->get( 'Version' ) );
   wp_enqueue_script( 'littlesis-scripts', get_stylesheet_directory_uri() . '/js/app.min.js', array(), $the_theme->get( 'Version' ), true );
   wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro:400,600,700', array(), null );
-
-  if( is_home() ) {
-    $button_text = get_option( 'taxonomy_filters_button_text', __( 'Load More', 'littlesis' ) );
-    $args = array(
-      'nonce'           => wp_create_nonce( 'littlesis_taxonomy_filters' ),
-      'ajax_url'        => admin_url( 'admin-ajax.php' ),
-      'button_text'     => $button_text,
-      'posts_per_page'  => get_option( 'posts_per_page' )
-    );
-    wp_enqueue_script( 'littlesis-tax-filters',  get_stylesheet_directory_uri() . '/js/category-filters.js', array( 'jquery' ), null, true );
-    wp_localize_script( 'littlesis-tax-filters', 'littlesis_taxonomy_filters', $args );
-  }
-
+  
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
