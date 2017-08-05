@@ -4,13 +4,13 @@
 *
 * @package understrap
 * @subpackage littlesis
-* @since 0.0.3
+* @since 0.0.12
 */
 
 /**
  * Enqueue Load More Scripts
  *
- * @since 0.1.2
+ * @since 0.1.12
  *
  * @uses wp_localize_script()
  *
@@ -34,6 +34,8 @@ add_action( 'wp_enqueue_scripts', 'littlesis_load_more_enqueue_scripts' );
  * Pre-get Filters
  *
  * Filter post query
+ *
+ * @since 0.1.12
  *
  * @uses pre_get_posts filter
  * @link https://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
@@ -141,7 +143,9 @@ add_action( 'wp_ajax_nopriv_do_taxonomy_filters', 'littlesis_filter_posts' );
 
 /**
  * Display Taxonomy Filters
- * Output on screen markup for taxonomy filterss
+ * Output on screen markup for taxonomy filters
+ *
+ * @since 0.0.3
  *
  * @param array $args
  * @return void

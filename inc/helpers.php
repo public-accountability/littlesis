@@ -4,14 +4,14 @@
  *
  * @package understrap
  * @subpackage littlesis
- * @since 0.1.2
+ * @since 0.1.12
  */
 
 /**
  * Get Latest Sticky Post
  * Get the most recent sticky post ID in an array
  *
- * @since 0.1.2
+ * @since 0.1.12
  *
  * @return array | null
  */
@@ -35,7 +35,7 @@ function littlesis_get_latest_sticky_post() {
  * Get Featured Post
  * If there are sticky posts, the featured post is the latest post; otherwise, it's the latest post
  *
- * @since 0.1.2
+ * @since 0.1.12
  *
  * @uses littlesis_get_latest_sticky_post()
  *
