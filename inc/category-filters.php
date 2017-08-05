@@ -31,6 +31,30 @@ function littlesis_load_more_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'littlesis_load_more_enqueue_scripts' );
 
 /**
+ * Pre-get Filters
+ *
+ * Filter post query
+ *
+ * @uses pre_get_posts filter
+ * @link https://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
+ *
+ * @param {obj} $query
+ * @return void
+ */
+function littlesis_pre_get_posts( $query ) {
+  if( $query->is_home() && $query->is_main_query() ) {
+    $posts_per_page = get_option( 'posts_per_page', 9 );
+    $query->set( 'posts_per_page', $posts_per_page );
+    $query->set( 'post_status', 'publish' );
+    if( $featured = littlesis_get_featured_post() ) {
+      $query->set( 'post__not_in', $featured );
+      $query->set( 'ignore_sticky_posts', true );
+    }
+  }
+}
+add_action( 'pre_get_posts', 'littlesis_pre_get_posts' );
+
+/**
 * Get Posts
 * Get $_POST values and return content
 *
@@ -71,8 +95,7 @@ function littlesis_filter_posts() {
     $args['paged'] = intval( $_POST['args']['paged'] );
   }
 
-  $featured = littlesis_get_featured_post();
-  if( $featured ) {
+  if( $featured = littlesis_get_featured_post() ) {
     $args['post__not_in'] = $featured;
   }
 
