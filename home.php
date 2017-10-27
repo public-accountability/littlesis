@@ -16,13 +16,11 @@ global $post;
 
 <!-- Display 1 Featured Posts -->
 <?php
-$sticky = get_option( 'sticky_posts' );
+$featured = littlesis_get_featured_post();
 
-if( !empty( $sticky ) ) : ?>
+if( !empty( $featured ) ) : ?>
 
-	<?php $sticky = $sticky[0]; ?>
-
-	<?php $featured_post = get_posts( array( 'include' => $sticky ) ); ?>
+	<?php $featured_post = get_posts( array( 'include' => $featured ) ); ?>
 
 	<?php foreach ( $featured_post as $post ) : setup_postdata( $post ); ?>
 
@@ -51,18 +49,17 @@ if( !empty( $sticky ) ) : ?>
 
 				<div class="row results">
 
-					<?php $posts_per_page = get_option( 'posts_per_page' ); ?>
-					<?php $args = ( $sticky ) ?  array( 'posts_per_page' => $posts_per_page, 'post__not_in' => array( $sticky ) ) : array( 'posts_per_page' => $posts_per_page ); ?>
-					<?php $posts = get_posts( $args ); ?>
+						<?php
+						/**
+						 * Start the Main Loop
+						 * Homepage main post loop is filtered to exclude $featured post, `ignore_sticky_posts` and only display "publish" post status
+						 * @see ./inc/category-filters.php
+						 */ ?>
+						<?php if( have_posts() ) :  ?>
 
-						<?php /* Start the Loop */ ?>
-
-						<?php if( $posts ) :  ?>
-
-							<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+							<?php while( have_posts() ) : the_post(); ?>
 
 							<?php
-
 							/*
 							 * Include the Post-Format-specific template for the content.
 							 * If you want to override this in a child theme, then include a file
@@ -71,7 +68,7 @@ if( !empty( $sticky ) ) : ?>
 							get_template_part( 'loop-templates/content', 'grid' );
 							?>
 
-						<?php endforeach; ?>
+						<?php endwhile; ?>
 
 					<?php else : ?>
 
