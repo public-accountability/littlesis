@@ -29,6 +29,16 @@ add_action( 'after_setup_theme', 'littlesis_setup', 20 );
  */
 function littlesis_widgets(){
   register_sidebar( array(
+    'name'          => __( 'Post Info', 'littlesis' ),
+    'id'            => 'post-info',
+    'description'   => 'Post info area. Could be used for promo text or sign-up form.',
+    'before_widget' => '<div id="%1$s" class="post-info %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
+  ) );
+
+  register_sidebar( array(
     'name'          => __( 'Footer Info', 'littlesis' ),
     'id'            => 'footer-info',
     'description'   => 'Footer info area. Could be used for copyright information or terms.',

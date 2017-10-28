@@ -43,6 +43,10 @@
 
 	<footer class="entry-footer">
 
+		<?php if( is_active_sidebar( 'post-info' ) ) : ?>
+			<?php dynamic_sidebar( 'post-info' ); ?>
+		<?php endif; ?>
+
 		<?php littlesis_series(); ?>
 
 		<?php if( function_exists( 'littlesis_core_related_posts' ) ) : ?>
