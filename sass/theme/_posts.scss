@@ -64,7 +64,6 @@
   .entry-title {
     margin-bottom: .5em;
     font-size: 2rem;
-    /*line-height: 61px;*/
     letter-spacing: 0.73px;
 
     @include breakpoint(md) {
@@ -92,10 +91,6 @@
     .sd-sharing-enabled {
       ul {
         text-align: right;
-      }
-
-      a.sd-button {
-        background-color: $color__gray !important;
       }
     }
 
@@ -148,6 +143,19 @@
 
     img {
       object-fit: cover;
+    }
+  }
+
+  .post-info {
+    padding-top: $spacer;
+    margin-bottom: $spacer * 2;
+    border-top: 1px solid $color__gray;
+    border-bottom: 1px solid $color__gray;
+    text-align: center;
+
+    .textwidget {
+      font-size: 1.125rem;
+      font-weight: bold;
     }
   }
 }

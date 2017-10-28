@@ -76,7 +76,6 @@
     width: 30px;
     border-radius: 50% !important;
     color: $color__text-inverted;
-    background-color: $color__gray;
     border: none !important;
     box-shadow: none;
     text-shadow: none;
@@ -87,7 +86,7 @@
        content: none;
      }
 
-    &:active {
+    /*&:active {
       border: none;
       background-color: $color__gray;
     }
@@ -96,23 +95,40 @@
     &:focus {
       border: none;
       background-color: $color__accent !important;
-    }
+    }*/
 
     span {
       @include visually-hidden;
     }
   }
 
+  li[class^="share"] {
+    a {
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      border: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $color__gray !important;
+      }
+    }
+  }
+
   li.share-facebook a {
+    background-color: $color__facebook !important;
     background-image: url( '../images/facebook.svg' ) !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
   }
 
   li.share-twitter a {
+    background-color: $color__twitter !important;
     background-image: url( '../images/twitter.svg' ) !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
+  }
+
+  li.share-reddit a {
+    background-color: $color__reddit !important;
+    background-image: url( '../images/reddit.svg' ) !important;
   }
 
 }

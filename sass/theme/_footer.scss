@@ -14,7 +14,7 @@
   }
   .widget-2 {
     @extend .col-md-4;
-    @extend .offset-md-4;
+    @extend .offset-md-4 !optional;
   }
   .widget-3 {
     @extend .col-md-4;
