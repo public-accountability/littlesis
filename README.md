@@ -92,7 +92,9 @@ Templates
   * Changed grid image to thumbnail
   * #6 Excluded Friday Fossil Fuel Runoff Series Posts from Frontpage Loop
   * #5 Added widget area to single posts
-  * #4 Add social menu buttons to bottom of single posts
+  * #4 Modified social links on single posts
+    * Added to bottom of single posts
+    * Added styling for Reddit
 
 * 0.1.11 May 9, 2017
   * Updated styles to fix featured image height on mobile size

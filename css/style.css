@@ -9585,30 +9585,40 @@ h4 {
     .navbar > .container {
       width: 100%;
       padding-right: 0;
-      padding-left: 0; }
+      padding-left: 0;
+      padding-bottom: 1rem; }
   .navbar-toggler {
     padding-right: 0;
     margin-right: 14px; }
   .navbar-brand {
-    margin-bottom: 22px;
     margin-left: 14px; }
     .navbar-brand img {
       width: 200px;
       height: auto; }
   .navbar-nav {
     padding: 22px 14px;
-    background-color: #f8f9fa; } }
+    background-color: #f8f9fa; }
+  .navbar-collapse:not(.show) {
+    display: none; } }
+
+#wrapper-navbar .container {
+  align-items: center; }
 
 @media (min-width: 640px) {
   #wrapper-navbar .container {
     flex-direction: row; }
   #wrapper-navbar .navbar-brand {
-    width: 222px; }
+    width: 222px;
+    margin-left: 0; }
   #wrapper-navbar #navbarNavDropdown {
     flex-basis: calc( 100% - (222px + 14px));
     width: calc( 100% - 222px); }
   #wrapper-navbar .navbar-toggler {
-    display: none; } }
+    display: none; }
+  #wrapper-navbar .navbar-collapse {
+    display: block; }
+  #wrapper-navbar .navbar-nav {
+    background-color: transparent; } }
 
 /**
  * Search Bar
