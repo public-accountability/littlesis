@@ -74,6 +74,8 @@
     })
     .success(function(response, textStatus, XMLHttpRequest) {
 
+      console.log( response );
+
       //If a paged request, append posts
       if( response.paged ) {
         contentEl.append( response.content );

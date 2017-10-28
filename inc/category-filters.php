@@ -52,6 +52,23 @@ function littlesis_pre_get_posts( $query ) {
       $query->set( 'post__not_in', $featured );
       $query->set( 'ignore_sticky_posts', true );
     }
+    /**
+     * Exclude Series Term from Main Homepage Query
+     * @since 0.1.13
+     */
+    if( term_exists( 'friday-fossil-fuel-runoff', 'series' ) ) {
+      $tax_query = array(
+        array(
+          'taxonomy'         => 'series',
+          'terms'            => 'friday-fossil-fuel-runoff',
+          'field'            => 'slug',
+          'operator'         => 'NOT IN',
+        ),
+      );
+
+      $query->set( 'tax_query', $tax_query );
+    }
+
   }
 }
 add_action( 'pre_get_posts', 'littlesis_pre_get_posts' );
@@ -78,19 +95,34 @@ function littlesis_filter_posts() {
     die( 'Permission denied' );
   }
 
-  $tax_query[] = array(
-    'taxonomy'  => sanitize_text_field( $_POST['args']['taxonomy'] ),
-    'field'           => 'slug',
-    'terms'         => sanitize_text_field( $_POST['args']['term'] )
-  );
+  if( $_POST['args']['term'] ) {
+    $tax_query[] = array(
+      'taxonomy'      => sanitize_text_field( $_POST['args']['taxonomy'] ),
+      'field'         => 'slug',
+      'terms'         => sanitize_text_field( $_POST['args']['term'] )
+    );
+  }
+
+  /**
+   * Exclude Series Term from Main Homepage Query
+   * @since 0.1.13
+   */
+  if( term_exists( 'friday-fossil-fuel-runoff', 'series' ) ) {
+    $tax_query[] = array(
+      'taxonomy'         => 'series',
+      'terms'            => 'friday-fossil-fuel-runoff',
+      'field'            => 'slug',
+      'operator'         => 'NOT IN',
+    );
+  }
 
   $posts_per_page = get_option( 'posts_per_page', 9 );
 
   $args = array(
-    'posts_per_page'         => $posts_per_page,
-    'post_type'                   => 'post',
-    'ignore_sticky_posts'   => true,
-    'post_status'                => 'publish'
+    'posts_per_page'          => $posts_per_page,
+    'post_type'               => 'post',
+    'ignore_sticky_posts'     => true,
+    'post_status'             => 'publish'
   );
 
   if( isset( $_POST['args']['paged'] ) ) {
@@ -101,7 +133,7 @@ function littlesis_filter_posts() {
     $args['post__not_in'] = $featured;
   }
 
-  if( $_POST['args']['term'] ) {
+  if( $tax_query ) {
     $args['tax_query'] = $tax_query;
   }
 
@@ -130,7 +162,8 @@ function littlesis_filter_posts() {
     'paged'           => $posts_query->query_vars['paged'],
     'posts_per_page'  => intval( $posts_query->query_vars['posts_per_page'] ),
     'max_pages'       => ceil( intval( $posts_query->found_posts ) / intval( $posts_query->query_vars['posts_per_page'] ) ),
-    'query_vars'      => $posts_query->query_vars
+    'query_vars'      => $posts_query->query_vars,
+    'tax_query'            => $tax_query,
   );
 
   wp_send_json( $response );
