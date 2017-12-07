@@ -20,8 +20,14 @@
  */
  function all_excerpts_get_more_link( $post_excerpt ) {
 
-   return $post_excerpt . ' ...<p><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More <span>&rarr;</span>',
-   'littlesis' ) . '</a></p>';
+   if( has_excerpt( get_the_id() ) ) {
+     return $post_excerpt . '<p><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More <span>&rarr;</span>',
+     'littlesis' ) . '</a></p>';
+   } else {
+     return $post_excerpt . ' ...<p><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More <span>&rarr;</span>',
+     'littlesis' ) . '</a></p>';
+   }
+
  }
 
 /**
