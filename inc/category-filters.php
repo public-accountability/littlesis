@@ -171,7 +171,7 @@ function littlesis_filter_posts() {
   die();
 
 }
-add_action( 'wp_ajax_do_taxonomy_filters', 'littlesis_filter_posts' );
+add_action( 'wp_ajax_do_taxonomy_filters', 'littlesis_filter_posts' ); // Corresponds to the action in our category-filters.js file
 add_action( 'wp_ajax_nopriv_do_taxonomy_filters', 'littlesis_filter_posts' );
 
 /**
