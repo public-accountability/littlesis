@@ -48,8 +48,9 @@ function theme_enqueue_styles() {
   $the_theme = wp_get_theme();
 
   wp_enqueue_style( 'littlesis-styles', get_stylesheet_directory_uri() . '/css/style.min.css', array(), $the_theme->get( 'Version' ) );
-  wp_enqueue_script( 'littlesis-scripts', get_stylesheet_directory_uri() . '/js/app.min.js', array(), $the_theme->get( 'Version' ), true );
+  wp_enqueue_script( 'littlesis-scripts', get_stylesheet_directory_uri() . '/js/app.js', array(), $the_theme->get( 'Version' ), true );
+  wp_enqueue_script( 'littlesis-search', get_stylesheet_directory_uri() . '/js/search.js', array(), $the_theme->get( 'Version' ), true );
   wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro:400,600,700', array(), null );
-  
+
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );

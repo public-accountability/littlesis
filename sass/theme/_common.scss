@@ -92,22 +92,32 @@ li[class$='link'] + li[class$='link'] {
 button {
   text-transform: uppercase;
   font-family: $font__sans-serif;
+  border: none !important;
 }
 
 .btn-primary {
+  background-color: $color__accent !important;
+  border: none;
+  color: $color__text-inverted;
+
   &:hover,
-  &:focus {
-    background-color: $color__accent;
-    border-color: $color__accent;
+  &:focus,
+  &:active {
+    background-color: darken($color__accent, 10%);
+    border: none;
     color: $color__text-inverted;
   }
 }
 
 .btn-secondary {
+  background-color: $color__secondary;
+  border: none;
+  color: $color__text-inverted !important;
+
   &:hover,
-  &:focus {
-    background-color: $color__secondary;
-    border-color: $color__secondary;
-    color: $color__text-inverted !important;
+  &:focus,
+  &:active {
+    background-color: darken($color__secondary,10%);
+    border: none;
   }
 }

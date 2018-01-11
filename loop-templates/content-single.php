@@ -32,6 +32,8 @@
 
 		<?php the_content(); ?>
 
+		<?php littlesis_jetpack_share(); ?>
+
 		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'littlesis' ),
@@ -42,6 +44,11 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+
+
+		<?php if( is_active_sidebar( 'post-info' ) ) : ?>
+			<?php dynamic_sidebar( 'post-info' ); ?>
+		<?php endif; ?>
 
 		<?php littlesis_series(); ?>
 

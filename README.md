@@ -3,10 +3,10 @@
 Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
-Tested up to: 4.7.3
-Version: 0.1.11
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 4.9.1
+Version: 0.1.14
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl.html
 
 ## Description
 
@@ -87,6 +87,18 @@ Templates
 
 
 ## Changelog
+
+* 0.1.14 December 7, 2017
+  * #8 Removed elipses from excerpt when custom excerpt exists for post. @link https://github.com/public-accountability/littlesis/issues/8
+  * Changed Theme URI to reflect transfer to `public-accountability` GitHub organization
+
+* 0.1.13 October 28, 2017
+  * Changed grid image to thumbnail
+  * #6 Excluded Friday Fossil Fuel Runoff Series Posts from Frontpage Loop
+  * #5 Added widget area to single posts
+  * #4 Modified social links on single posts
+    * Added to bottom of single posts
+    * Added styling for Reddit
 
 * 0.1.11 May 9, 2017
   * Updated styles to fix featured image height on mobile size

@@ -67,12 +67,15 @@
       url: littlesis_taxonomy_filters.ajax_url,
       data: {
         action: 'do_taxonomy_filters',
+        /* Action corresponds to `wp_ajax_do_` and `wp_ajax_nopriv_` actions */
         nonce: littlesis_taxonomy_filters.nonce,
         args: args
       },
       type: 'POST'
     })
     .success(function(response, textStatus, XMLHttpRequest) {
+
+      console.log( response );
 
       //If a paged request, append posts
       if( response.paged ) {
