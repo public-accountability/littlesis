@@ -55,3 +55,11 @@ figure {
     background-size: cover;
   }
 }
+
+.single {
+  .entry-content {
+    img {
+      display: inherit;
+    }
+  }
+}
