@@ -62,18 +62,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 					} ?><!-- end custom logo -->
 
 				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'navbar-collapse justify-content-end',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'depth'						=> 1,
-						'walker'          => new WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+				<?php if ( class_exists( 'WP_Bootstrap_Navwalker' ) ) : ?>
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'navbar-collapse justify-content-end',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'depth'						=> 1,
+							'walker'          => new WP_Bootstrap_Navwalker(),
+						)
+					); ?>
+				<?php elseif( class_exists( 'understrap_WP_Bootstrap_Navwalker' ) ) : ?>
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'navbar-collapse justify-content-end',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'depth'						=> 1,
+							'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+						)
+					); ?>
+				<?php endif; ?>
+
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
