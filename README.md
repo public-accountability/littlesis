@@ -4,7 +4,7 @@ Theme URI: https://github.com/misfist/littlesis
 Tags: Blog, Bootstrap 4
 Requires at least: 4.5.0
 Tested up to: 4.9.1
-Version: 0.1.16
+Version: 0.2.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.html
 
@@ -87,6 +87,8 @@ Templates
 
 
 ## Changelog
+* 0.2.0 Nov 29, 2018
+  * Modified author.php template part to properly display author name and information.
 
 * 0.1.14 December 7, 2017
   * #8 Removed elipses from excerpt when custom excerpt exists for post. @link https://github.com/public-accountability/littlesis/issues/8

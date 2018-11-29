@@ -26,14 +26,25 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 			<main class="site-main" id="main">
 
-				<?php $author = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) ); ?>
+
+				<?php
+				global $wp_query;
+				$author = $wp_query->get_queried_object();
+				?>
 
 				<header class="page-header author-header">
 
-					<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-					?>
+					<?php if( $display_name = $author->display_name ) : ?>
+						<h1 class="page-title"><?php echo apply_filters( 'the_title', $display_name ); ?></h1>
+					<?php else : ?>
+						<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+					<?php endif; ?>
+
+					<?php if( $description = $author->description ) : ?>
+						<div class="taxonomy-description"><?php echo apply_filters( 'the_content', $description ); ?></div>
+					<?php else : ?>
+						<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+					<?php endif; ?>
 
 					<h3 class="author-posts"><?php esc_html_e( 'Posts by', 'littlesis' ); ?> <?php echo esc_html( $author->display_name ); ?></h2>
 
@@ -66,7 +77,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php// understrap_pagination(); ?>
+			<?php understrap_pagination(); ?>
 
 		</div><!-- #primary -->
 
