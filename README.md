@@ -89,6 +89,7 @@ Templates
 ## Changelog
 * 0.2.0 Nov 29, 2018
   * Modified author.php template part to properly display author name and information.
+  * Added github theme URI
 
 * 0.1.14 December 7, 2017
   * #8 Removed elipses from excerpt when custom excerpt exists for post. @link https://github.com/public-accountability/littlesis/issues/8
